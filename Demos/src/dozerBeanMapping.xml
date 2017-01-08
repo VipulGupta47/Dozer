@@ -1,0 +1,1075 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://dozer.sourceforge.net
+http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+ <configuration>
+	
+	<custom-converters >
+	
+	<converter type="com.headstrong.npi.raas.engine.converter.dozer.DateCustomConverter">
+		<class-a>java.lang.String</class-a>
+		<class-b>javax.xml.datatype.XMLGregorianCalendar</class-b>
+	</converter>
+	<converter type="com.headstrong.npi.raas.engine.converter.dozer.RegulatorPrimaryConverter">
+		<class-a>java.lang.Boolean</class-a>
+		<class-b>java.lang.Enum</class-b>
+	</converter>
+	
+	<converter type="com.headstrong.npi.raas.engine.converter.dozer.StringEnumCustomConverter">
+		<class-a>java.lang.String</class-a>
+		<class-b>java.lang.Enum</class-b>
+	</converter>
+	<converter type="com.headstrong.npi.raas.engine.converter.dozer.XMLGC2XMLGCCustomConverter">
+		<class-a>javax.xml.datatype.XMLGregorianCalendar</class-a>
+		<class-b>javax.xml.datatype.XMLGregorianCalendar</class-b>
+	</converter>
+	<converter type="com.headstrong.npi.raas.engine.converter.dozer.AdditionalElementsCustomConverter">
+		<class-a>com.headstrong.npi.raas.xml.pojo.CmAttribute</class-a>
+		<class-b>com.headstrong.npi.raas.cobs.xml.pojo.Attribute</class-b>
+	</converter>
+	
+	</custom-converters>
+
+</configuration> 
+
+ <mapping type="bi-directional" wildcard="false" map-null="false" map-empty-string="true" > 
+
+<!-- a denotes src file & b denoted destination -->
+
+	<class-a>com.headstrong.npi.raas.xml.pojo.RemediationProfile</class-a>
+	<class-b>com.headstrong.npi.raas.cobs.xml.pojo.ChallengeCase</class-b>
+
+	<field>
+		<a>refData.cobsId</a>
+		<b>caseId</b>
+	</field>
+	<field>
+		<a>refData.jurisdiction</a>
+		<b>bookingJurisdiction[0]</b>
+	</field>
+	<field>
+		<a>refData.createdDT</a>
+		<b>createdDT</b>
+	</field>
+	<field>
+		<a>refData.dueDT</a>
+		<b>dueDT</b>
+	</field>
+	 <field map-id="CompanyMapper">
+	 	<a>entity</a>
+	 	<b>entityProfile.value</b>
+	 </field>
+	 
+	 </mapping>
+	 
+	<mapping type="bi-directional" wildcard="false" map-null="false" map-empty-string="true" > 
+	
+	<!-- a denotes src file & b denoted destination -->
+	
+	<class-a>com.headstrong.npi.raas.xml.pojo.RemediationProfile</class-a>
+	<class-b>com.headstrong.npi.raas.cobs.xml.pojo.FormationCase</class-b>
+	
+	<field>
+		<a>refData.cobsId</a>
+		<b>caseId</b>
+	</field>
+	<field>
+		<a>refData.jurisdiction</a>
+		<b>bookingJurisdiction[0]</b>
+	</field>
+	<field>
+		<a>refData.createdDT</a>
+		<b>createdDT</b>
+	</field>
+	<field>
+		<a>refData.dueDT</a>
+		<b>dueDT</b>
+	</field>
+	 <field map-id="CompanyMapper">
+	 	<a>entity</a>
+	 	<b>entityProfile.value</b>
+	 </field>
+	 
+	 </mapping>
+	 <mapping type="bi-directional" wildcard="false" map-null="false" map-empty-string="true" > 
+	
+	<!-- a denotes src file & b denoted destination -->
+	
+	<class-a>com.headstrong.npi.raas.xml.pojo.RemediationProfile</class-a>
+	<class-b>com.headstrong.npi.raas.cobs.xml.pojo.FullReviewCase</class-b>
+
+	<field>
+		<a>refData.cobsId</a>
+		<b>caseId</b>
+	</field>
+	<field>
+		<a>refData.jurisdiction</a>
+		<b>bookingJurisdiction[0]</b>
+	</field>
+	<field>
+		<a>refData.createdDT</a>
+		<b>createdDT</b>
+	</field>
+	<field>
+		<a>refData.dueDT</a>
+		<b>dueDT</b>
+	</field>
+	 <field map-id="CompanyMapper">
+	 	<a>entity</a>
+	 	<b>entityProfile.value</b>
+	 </field>
+	 
+	 </mapping>
+	 
+	 <mapping wildcard="false" map-id="CompanyMapper" map-null="false">
+	 
+	 	<class-a>com.headstrong.npi.raas.xml.pojo.Entity</class-a>
+		<class-b>com.headstrong.npi.raas.cobs.xml.pojo.Company</class-b>
+		
+		<!--
+			protected Entity.EntityNames entityNames;
+			
+			protected CmAttributeString shortName; protected String value;
+			protected CmAttributeString doingBusniessAs; protected String value;
+			protected CmAttributeString previousLegalName; protected String value;
+			protected CmAttributeDate previousLegalEndDate; protected XMLGregorianCalendar value;
+			
+			CmAttributeString
+			
+			CmAttributeDate
+			protected XMLGregorianCalendar value;
+			
+			protected AttributeString shortName; protected String value;
+			protected AttributeString tradingAs; protected String value;
+			protected List<AttributeCompanyEntityName> entityName; protected CompanyEntityName value;
+			CompanyEntityName
+			protected AttributeString previousLegalName; protected String value;
+			protected AttributeDate previousLegalNameEndDate; protected XMLGregorianCalendar value;
+			
+		-->
+		
+		<field >
+			<a>entityNames.shortName</a>
+			<b>shortName</b>
+		</field>
+		<field >
+			<a>entityNames.shortName.value</a>
+			<b>shortName.value</b>
+		</field>
+		<field >
+			<a>entityNames.doingBusniessAs</a>
+			<b>tradingAs</b>
+		</field>
+		<field >
+			<a>entityNames.doingBusniessAs.value</a>
+			<b>tradingAs.value</b>
+		</field>
+		<field >
+			<a>entityNames.previousLegalName.value</a>
+			<b>entityName[0].value.previousLegalName.value</b>
+		</field>
+		<field >
+			<a>entityNames.previousLegalName</a>
+			<b>entityName[0].value.previousLegalName</b>
+		</field>
+		<field>
+			<a>entityNames.previousLegalEndDate.value</a>
+			<b>entityName[0].value.previousLegalNameEndDate.value</b>
+		</field>
+		<field>
+			<a>entityNames.previousLegalEndDate</a>
+			<b>entityName[0].value.previousLegalNameEndDate</b>
+		</field>
+		
+		<!-- Formation
+		
+        protected CmAttributeString entityId; protected String value;
+        protected CmAttributeString legalName; protected String value;
+        protected CmAttributeLegalForm legalForm; protected LegalForm value;
+        protected CmAttributeEntityType entityType; protected EntityType value;
+		protected CmAttributeString entityStructure; protected String value;
+        protected CmAttributeOwnershipType ownershipType; protected OwnershipType value;
+        
+        protected String mei;
+        protected AttributeString legalName; protected String value;
+        protected AttributeLegalForm legalForm; protected String value;
+        protected AttributeEntityType entityType; protected DictionaryEntityType value;
+		protected AttributeEntityStructure structure;
+        protected AttributeCompanyFormation formation; protected CompanyFormation value;
+		
+		protected AttributeDictionaryOwnershipType ownershipType; protected String value;
+		
+		-->
+		<field>
+			<a>formation.entityId.value</a>
+			<b>mei</b>
+		</field>
+		 <field>
+			<a>formation.legalName.value</a>
+			<b>legalName.value</b>
+		</field> 
+		<field>
+			<a>formation.legalName</a>
+			<b>legalName</b>
+		</field>
+		<field>
+			<a>coreInformation.legalName.value</a>
+			<b>legalName.value</b>
+		</field>
+		<field>
+			<a>coreInformation.legalName</a>
+			<b>legalName</b>
+		</field> 
+		<field >
+			<a>formation.legalForm.value</a>
+			<b>legalForm.value</b>
+		</field> 
+		<field >
+			<a>formation.legalForm</a>
+			<b>legalForm</b>
+		</field>
+		<field>
+			<a>coreInformation.legalFormation.value</a>
+			<b>legalForm.value</b>
+		</field>
+		<field>
+			<a>coreInformation.legalFormation</a>
+			<b>legalForm</b>
+		</field> 
+		<!-- Enum -->
+		<field>
+			<a>formation.entityType.value</a>
+			<b>entityType.value</b>
+		</field>
+		<field>
+			<a>formation.entityType</a>
+			<b>entityType</b>
+		</field>
+		<!-- Enum -->
+		<field>
+			<a>formation.entityStructure.value</a>
+			<b>structure.value</b>
+		</field>
+		<field>
+			<a>formation.entityStructure</a>
+			<b>structure</b>
+		</field>
+		<field>
+			<a>formation.ownershipType.value</a>
+			<b>formation.value.ownershipType.value</b>
+		</field>
+		<field>
+			<a>formation.ownershipType</a>
+			<b>formation.value.ownershipType</b>
+		</field>
+		<field>
+			<a>formation.countryOfIncorporation.value</a>
+			<b>formation.value.incorporationCountry.value</b>
+		</field>
+		<field>
+			<a>formation.countryOfIncorporation</a>
+			<b>formation.value.incorporationCountry</b>
+		</field>
+		<field>
+			<a>coreInformation.countryOfIncorporation.value</a>
+			<b>formation.value.incorporationCountry.value</b>
+		</field>
+		<field>
+			<a>coreInformation.countryOfIncorporation</a>
+			<b>formation.value.incorporationCountry</b>
+		</field>
+		 
+		<field custom-converter="com.headstrong.npi.raas.engine.converter.dozer.ContactCustomConverter">
+			<a>contactInformation.contacts</a>
+			<b>contact</b>
+		</field>
+		
+		<field custom-converter="com.headstrong.npi.raas.engine.converter.dozer.AddressCustomConverter">
+			<a>contactInformation.address</a>
+			<b>addresses</b>
+		</field>
+		<!-- 
+		    protected Entity.WebsiteAddresses websiteAddresses;
+		   	 protected List<Entity.WebsiteAddresses.WebsiteAddress> websiteAddress;
+		    	protected CmAttributeString url;
+		    
+		    protected AttributeCompanyFormation formation;
+		   	 protected CompanyFormation value;
+		    	protected AttributeString website;
+		 -->
+		<field>
+			<a>websiteAddresses.websiteAddress[0].url.value</a>
+			<b>formation.value.website.value</b>
+		</field>
+		<field>
+			<a>websiteAddresses.websiteAddress[0].url</a>
+			<b>formation.value.website</b>
+		</field>
+		
+		<!-- 
+		Corporate Registration Information
+		
+		registrationInformation
+		
+        protected CmAttributeString name;
+        protected CmAttributeCountry country;
+        protected CmAttributeString state;
+        protected CmAttributeString number;
+        protected CmAttributeDate date;
+        protected CmAttributeDate expiryDate;
+        protected CmAttributeString agentName;
+        protected CmAttributeString govtIDType;
+        protected CmAttributeString govtIDNum;
+        protected CmAttributeDate govtIDApplDate;
+		
+		
+		
+		protected List<AttributeCompanyGovernmentIDInfo> governmentIDInfo;
+		    protected CompanyGovernmentIDInfo value;
+		
+	            protected AttributeDictionaryGovernmentIssuedIDType idType;
+			    protected AttributeString idNumber;
+			    protected AttributeDate appliedForDate;
+
+		-->
+		<field>
+			<a>registrationInformation.name.value</a>
+			<b>formation.value.authorityName.value</b>
+		</field>
+		<field>
+			<a>registrationInformation.name</a>
+			<b>formation.value.authorityName</b>
+		</field>
+		<field>
+			<a>registrationInformation.agentName.value</a>
+			<b>formation.value.agentName.value</b>
+		</field>
+		<field>
+			<a>registrationInformation.agentName</a>
+			<b>formation.value.agentName</b>
+		</field>
+		<!-- <field>
+			<a>registrationInformation.date</a>
+			<b>registrationInfo.value.date</b>
+		</field> -->
+		<field>
+			<a>registrationInformation.date.value</a>
+			<b>formation.value.incorporationDate.value</b>
+		</field>
+		<field>
+			<a>registrationInformation.date</a>
+			<b>formation.value.incorporationDate</b>
+		</field>
+		<!-- <field>
+			<a>registrationInformation.country.value</a>
+			<b>registrationInfo.value.country.value</b>
+		</field> -->
+		<field>
+			<a>registrationInformation.country.value</a>
+			<b>formation.value.incorporationCountry.value</b>
+		</field> 
+		<field>
+			<a>registrationInformation.country</a>
+			<b>formation.value.incorporationCountry</b>
+		</field> 
+<!-- 		<field>
+			<a>registrationInformation.state.value</a>
+			<b>registrationInfo.value.state.value</b>
+		</field>
+ -->		
+ 		<field>
+			<a>registrationInformation.state.value</a>
+			<b>formation.value.incorporationState.value</b>
+		</field>
+		<field>
+			<a>registrationInformation.state</a>
+			<b>formation.value.incorporationState</b>
+		</field>
+		
+		<field custom-converter="com.headstrong.npi.raas.engine.converter.dozer.GovtIDInFoCustomConverter">
+			<a>registrationInformation.govtIDInfo</a>
+			<b>governmentIDInfo</b>
+		</field>
+		<!--
+		listedInformation
+		
+       	protected CmAttributeOption isEntityPubliclyListed;
+        protected Exchanges exchanges;
+        
+        protected Exchanges exchanges;
+		    protected List<Exchanges.Exchange> exchange;
+				protected CmAttributeString name;
+				protected CmAttributeCountry country;
+				protected CmAttributeString tickerSymbol;
+				protected CmAttributeBoolean isPrimary;
+				protected Integer id;
+				
+        protected CmAttributeOption isPrimaryExchangeApproved;
+		
+		protected AttributeCompanyListedInfo listedInfo;     protected CompanyListedInfo value;
+		
+	    protected AttributeBoolean isPubliclyListed;
+	    protected AttributeDictionaryExchange primaryExchange;
+	    protected AttributeString primaryExchangeTicker;
+	    protected AttributeBoolean isPrimaryExchangeApproved;
+
+		 -->
+		<field  >
+			<a>listedInformation.isEntityPubliclyListed.value</a>
+			<b>listedInfo.value.isPubliclyListed.value</b>
+		</field>
+		<field>
+			<a>listedInformation.exchanges.exchange[0].name.value</a>
+			<b>listedInfo.value.primaryExchange.value</b>
+		</field>
+		<field >
+			<a>listedInformation.exchanges.exchange[0].tickerSymbol.value</a>
+			<b>listedInfo.value.primaryExchangeTicker.value</b>
+		</field>
+		<field  >
+			<a>listedInformation.isPrimaryExchangeApproved.value</a>
+			<b>listedInfo.value.isPrimaryExchangeApproved.value</b>
+		</field>
+		
+		<field  >
+			<a>listedInformation.isEntityPubliclyListed</a>
+			<b>listedInfo.value.isPubliclyListed</b>
+		</field>
+		<field>
+			<a>listedInformation.exchanges.exchange[0].name</a>
+			<b>listedInfo.value.primaryExchange</b>
+		</field>
+		<field >
+			<a>listedInformation.exchanges.exchange[0].tickerSymbol</a>
+			<b>listedInfo.value.primaryExchangeTicker</b>
+		</field>
+		<field  >
+			<a>listedInformation.isPrimaryExchangeApproved</a>
+			<b>listedInfo.value.isPrimaryExchangeApproved</b>
+		</field>
+		<!-- 
+		protected Entity.RegulatedInformation regulatedInformation;
+		
+		protected CmAttributeOption isRegulated;
+        protected Regulators regulators;
+        	protected List<Regulators.Regulator> regulator;
+        		protected CmAttributeString name;
+		        protected CmAttributeCountry country;
+		        protected CmAttributeString number;
+		        protected CmAttributeBoolean isPrimary;
+		        protected Integer id;
+        protected CmAttributeString regulationStatus;
+        protected CmAttributeString sroStatus;
+        protected CmAttributeOption isRegulatorApproved;
+		
+		protected AttributeCompanyRegulatedInfo regulatedInfo;     protected CompanyRegulatedInfo value;
+		
+		protected AttributeBoolean isRegulated;
+	    protected AttributeString regulationStatus;
+	    protected AttributeDictionaryRegulator regulatoryAuthority;
+	    protected AttributeString regulatoryIdentifier;
+	    protected AttributeBoolean isApprovedRegulator;
+	    protected AttributeDate regulatoryExpirationDate;
+
+		
+		-->
+		<field >
+			<a>regulatedInformation.isRegulated.value</a>
+			<b>regulatedInfo.value.isRegulated.value</b>
+		</field>
+		<field>
+			<a>regulatedInformation.regulationStatus.value</a>
+			<b>regulatedInfo.value.regulationStatus.value</b>
+		</field>
+		<field>
+			<a>regulatedInformation.regulators.regulator[0].name.value</a>
+			<b>regulatedInfo.value.regulatoryAuthority.value</b>
+		</field>
+		<!-- <field>
+			<a>regulatedInformation.regulators.regulator[0].country.value</a>
+			<b>regulatedInfo.value.authorityName.value</b>
+		</field> -->
+		<field>
+			<a>regulatedInformation.regulators.regulator[0].number.value</a>
+			<b>regulatedInfo.value.regulatoryIdentifier.value</b>
+		</field>
+		<field >
+			<a>regulatedInformation.regulators.regulator[0].isPrimary.value</a>
+			<b>regulatedInfo.value.isApprovedRegulator.value</b>
+		</field>
+		<field>
+			<a>regulatedInformation.regulators.regulator[0].expiry.value</a>
+			<b>regulatedInfo.value.regulatoryExpirationDate.value</b>
+		</field>
+		
+		
+		<field >
+			<a>regulatedInformation.isRegulated</a>
+			<b>regulatedInfo.value.isRegulated</b>
+		</field>
+		<field>
+			<a>regulatedInformation.regulationStatus</a>
+			<b>regulatedInfo.value.regulationStatus</b>
+		</field>
+		<field>
+			<a>regulatedInformation.regulators.regulator[0].name</a>
+			<b>regulatedInfo.value.regulatoryAuthority</b>
+		</field>
+		<!-- <field>
+			<a>regulatedInformation.regulators.regulator[0].country.challengeComment</a>
+			<b>regulatedInfo.value.authorityName.challengeComment</b>
+		</field> -->
+		<field>
+			<a>regulatedInformation.regulators.regulator[0].number</a>
+			<b>regulatedInfo.value.regulatoryIdentifier</b>
+		</field>
+		<field >
+			<a>regulatedInformation.regulators.regulator[0].isPrimary</a>
+			<b>regulatedInfo.value.isApprovedRegulator</b>
+		</field>
+		<field>
+			<a>regulatedInformation.regulators.regulator[0].expiry</a>
+			<b>regulatedInfo.value.regulatoryExpirationDate</b>
+		</field>
+			
+		<!-- Business Activities 
+			businessActivities
+        protected CmAttributeString natureOfBusiness;
+        protected CmAttributeString primaryBusinessActivity;
+        protected CmAttributeString percentRevenueFromPrimary;
+        protected Entity.BusinessActivities.IndustryClassifications industryClassifications;
+        	protected List<Entity.BusinessActivities.IndustryClassifications.IndustryClassification> industryClassification;
+       	  	      protected String id;
+			    protected IndustryClassificationType type;
+			    protected CmAttributeString value;
+			    protected CmAttributeString desc;
+			    protected CmAttributeOption isPrimary;
+			    protected CmAttributeString code;
+               
+        protected CmAttributeOption engageInArmsOrDefenseDealers;
+        protected CmAttributeOption engageInCasinos;
+        protected CmAttributeOption engageInMoneyRemittanceActivity;
+        protected CmAttributeOption engageInInternetGamblingBusiness;
+		
+		businessActivity         protected AttributeCompanyBusinessActivity businessActivity;
+		    protected CompanyBusinessActivity value;
+		
+	    protected AttributeString natureOfBusiness;
+	    protected AttributeString numberOfEmployees;
+	    protected AttributeBoolean economicSanctionedJurisdiction;
+	    protected AttributeBoolean revenueFromArmsDefense;
+	    protected AttributeBoolean revenueFromGambling;
+	    protected AttributeBoolean revenueFromMSB;
+	    protected AttributeBoolean revenueFromInternetGambling;
+	    
+        protected List<AttributeCompanyBusinessActivityIndustryCode> businessActivityIndustryCode;
+            protected CompanyBusinessActivityIndustryCode value;
+           protected AttributeString industryCode;
+	    protected AttributeDictionaryIndustryCodeType industryCodeType;
+	    protected AttributeString industryCodeDescription; 
+		-->
+		<field custom-converter="com.headstrong.npi.raas.engine.converter.dozer.IndustryClassificationConverter">
+			<a>businessActivities.industryClassifications</a>
+			<b>businessActivityIndustryCode</b>
+		</field>
+		<field>
+			<a>businessActivities.natureOfBusiness.value</a>
+			<b>businessActivity.value.natureOfBusiness.value</b>
+		</field>
+		<field >
+			<a>businessActivities.engageInArmsOrDefenseDealers.value</a>
+			<b>businessActivity.value.revenueFromArmsDefense.value</b>
+		</field>
+		<field >
+			<a>businessActivities.engageInCasinos.value</a>
+			<b>businessActivity.value.revenueFromGambling.value</b>
+		</field>
+		<field >
+			<a>businessActivities.engageInMoneyRemittanceActivity.value</a>
+			<b>businessActivity.value.revenueFromMSB.value</b>
+		</field>
+		<field >
+			<a>businessActivities.engageInInternetGamblingBusiness.value</a>
+			<b>businessActivity.value.revenueFromInternetGambling.value</b>
+		</field>
+		
+		<field>
+			<a>businessActivities.natureOfBusiness</a>
+			<b>businessActivity.value.natureOfBusiness</b>
+		</field>
+		<field >
+			<a>businessActivities.engageInArmsOrDefenseDealers</a>
+			<b>businessActivity.value.revenueFromArmsDefense</b>
+		</field>
+		<field >
+			<a>businessActivities.engageInCasinos</a>
+			<b>businessActivity.value.revenueFromGambling</b>
+		</field>
+		<field >
+			<a>businessActivities.engageInMoneyRemittanceActivity</a>
+			<b>businessActivity.value.revenueFromMSB</b>
+		</field>
+		<field >
+			<a>businessActivities.engageInInternetGamblingBusiness</a>
+			<b>businessActivity.value.revenueFromInternetGambling</b>
+		</field>
+		
+		<!-- Countries of Business
+		
+		placeOfBusiness
+		
+        protected List<Entity.PlaceOfBusiness.CountriesOfBusiness> countriesOfBusiness;
+        	protected String id;
+            protected CmAttributeCountry countryOfBusiness;
+            protected CmAttributeString percenetageOfBusniess;
+            
+        protected CmAttributeCountry countryOfPrimaryOperation;
+        protected CmAttributeString regionsOfBusiness;
+        protected List<Entity.PlaceOfBusiness.HighRiskCountriesOfBusiness> highRiskCountriesOfBusiness;
+	        protected String id;
+	        protected CmAttributeCountry countryOfBusiness;
+	        protected CmAttributeString percenetageOfBusniess;
+        
+        protected CmAttributeString numberOfEmployees;
+        protected CmAttributeOption inEconomicSanctionedCountries;
+		
+		protected List<AttributeCompanyCountryOfBusiness> countryOfBusiness;  protected CompanyCountryOfBusiness value;
+		
+		protected AttributeDictionaryCountry country;
+	    protected AttributeString region;
+	    protected AttributeDouble percentageOfBusinessInHRC;
+	    protected AttributeBoolean highRisk;
+
+		-->
+		<!-- 	
+		<field>
+			<a>placeOfBusiness.countriesOfBusiness.value</a>
+			<b>countryOfBusiness.value.country.value</b>
+		</field>
+		 -->
+		<field custom-converter="com.headstrong.npi.raas.engine.converter.dozer.PlaceOfBusinessConverter">
+			<a>placeOfBusiness</a>
+			<b>countryOfBusiness</b>
+		</field>
+		<field>
+			<a>placeOfBusiness.numberOfEmployees.value</a>
+			<b>businessActivity.value.numberOfEmployees.value</b>
+		</field>
+		<field >
+			<a>placeOfBusiness.inEconomicSanctionedCountries.value</a>
+			<b>businessActivity.value.economicSanctionedJurisdiction.value</b>
+		</field>
+		
+		
+		<field>
+			<a>placeOfBusiness.numberOfEmployees</a>
+			<b>businessActivity.value.numberOfEmployees</b>
+		</field>
+		<field >
+			<a>placeOfBusiness.inEconomicSanctionedCountries</a>
+			<b>businessActivity.value.economicSanctionedJurisdiction</b>
+		</field>
+		
+		<!-- Industry Identifiers
+		
+		externalIdentifier
+		protected List<Identifier> identifier;
+		protected String id;
+		protected CmAttributeString value;
+		protected CmAttributeString type;
+		
+		protected List<AttributeCompanyIndustryIdentifier> industryIdentifier;     protected CompanyIndustryIdentifier value;
+		
+		protected String identifierType;
+		protected String identifierValue;
+
+		-->
+		<field custom-converter="com.headstrong.npi.raas.engine.converter.dozer.IdentifierConverter">
+			<a>externalIdentifiers</a>
+			<b>industryIdentifier</b>
+		</field>
+		<!-- License Information 
+			
+			licenseInformation
+        protected CmAttributeOption licenseInformationAvailable;
+        protected CmAttributeString reasonForNo;
+        protected CmAttributeString nameOfIssuingAuthority;
+        protected CmAttributeString authorityJurisdiction;
+        protected CmAttributeString licenseNumber;
+        protected CmAttributeDate expiryDate;
+        protected CmAttributeOption containAnyRestriction;
+        protected CmAttributeString detialsOfRestriction;
+        protected CmAttributeOption hasOffshoreBankingLicense;
+        protected CmAttributeOption operateSolelyUnderOffshoreBankingLicense;
+		
+		licenseInfo     protected CompanyLicenseInfo value;
+		protected AttributeBoolean isLicenseInfoAvailable;
+		protected AttributeString issuingAuthority;
+		protected AttributeString licenseNumber;
+		protected AttributeDate licenseExpireDate;
+		protected AttributeDictionaryBookingJurisdiction licenseJurisdiction;
+		
+		-->
+		<field >
+			<a>licenseInformation.licenseInformationAvailable.value</a>
+			<b>licenseInfo.value.isLicenseInfoAvailable.value</b>
+		</field>
+		<field>
+			<a>licenseInformation.nameOfIssuingAuthority.value</a>
+			<b>licenseInfo.value.issuingAuthority.value</b>
+		</field>
+		<!-- <field>
+			<a>licenseInformation.authorityJurisdiction.value</a>
+			<b>licenseInfo.value.licenseJurisdiction.value</b>
+		</field> -->
+		<field>
+			<a>licenseInformation.licenseNumber.value</a>
+			<b>licenseInfo.value.licenseNumber.value</b>
+		</field>
+		<field>
+			<a>licenseInformation.expiryDate.value</a>
+			<b>licenseInfo.value.licenseExpireDate.value</b>
+		</field>
+		
+		
+		
+		<field >
+			<a>licenseInformation.licenseInformationAvailable</a>
+			<b>licenseInfo.value.isLicenseInfoAvailable</b>
+		</field>
+		<field>
+			<a>licenseInformation.nameOfIssuingAuthority</a>
+			<b>licenseInfo.value.issuingAuthority</b>
+		</field>
+		<!-- <field>
+			<a>licenseInformation.authorityJurisdiction.challengeComment</a>
+			<b>licenseInfo.value.licenseJurisdiction.challengeComment</b>
+		</field> -->
+		<field>
+			<a>licenseInformation.licenseNumber</a>
+			<b>licenseInfo.value.licenseNumber</b>
+		</field>
+		<field>
+			<a>licenseInformation.expiryDate</a>
+			<b>licenseInfo.value.licenseExpireDate</b>
+		</field>
+		
+		
+		<!-- Bearer Shares 
+			bearerShares 
+        protected CmAttributeOption countryAllowsIssuingBearerShares;
+        protected CmAttributeOption legalFormAllowsIssuingBearerShares;
+        protected CmAttributeOption capabilityofIssuingBearerShares;
+        protected CmAttributeOption bearerSharesAttestation;
+        protected CmAttributeOption bearerSharesIssued;
+        protected CmAttributeString percentageofBearerSharesIssued;
+        protected CmAttributeOption heldInCustody;
+        protected CmAttributeString custodianName;
+        protected Address custodianAddress;
+        protected CmAttributeOption ownershipStructIssuedBearerShares;
+
+
+			bearerShare     protected CompanyBearerShare value;
+			
+	    protected AttributeBoolean jurisdictionAllowsIssuance;
+	    protected AttributeBoolean articlesAllowIssuance;
+	    protected AttributeBoolean haveBeenIssued;
+	    protected AttributeDouble percentageIssued;
+	    protected AttributeBoolean heldInCustody;
+	    protected AttributeString custodianName;
+	    protected AttributeBoolean ownershipStructureIssued;
+		
+		-->
+		<field >
+			<a>bearerShares.countryAllowsIssuingBearerShares.value</a>
+			<b>bearerShare.value.jurisdictionAllowsIssuance.value</b>
+		</field>
+		<!-- TODO waiting for MarkIT response -->
+		<!-- <field >
+			<a>bearerShares.legalFormAllowsIssuingBearerShares.value</a>
+			<b>bearerShare.value.jurisdictionAllowsIssuance.value</b>
+		</field> -->
+		<field >
+			<a>bearerShares.capabilityofIssuingBearerShares.value</a>
+			<b>bearerShare.value.articlesAllowIssuance.value</b>
+		</field>
+		<!-- TODO waiting for MarkIT response -->
+		<!-- <field >
+			<a>bearerShares.bearerSharesAttestation.value</a>
+			<b>bearerShare.value.articlesAllowIssuance.value</b>
+		</field> -->
+		<field >
+			<a>bearerShares.ownershipStructIssuedBearerShares.value</a>
+			<b>bearerShare.value.ownershipStructureIssued.value</b>
+		</field>
+		<field >
+			<a>bearerShares.bearerSharesIssued.value</a>
+			<b>bearerShare.value.haveBeenIssued.value</b>
+		</field>
+		<field>
+			<a>bearerShares.percentageofBearerSharesIssued.value</a>
+			<b>bearerShare.value.percentageIssued.value</b>
+		</field>
+		<field >
+			<a>bearerShares.heldInCustody.value</a>
+			<b>bearerShare.value.heldInCustody.value</b>
+		</field>
+		
+		<field>
+			<a>bearerShares.custodianName.value</a>
+			<b>bearerShare.value.custodianName.value</b>
+		</field>
+		
+		
+		
+		<field >
+			<a>bearerShares.capabilityofIssuingBearerShares</a>
+			<b>bearerShare.value.articlesAllowIssuance</b>
+		</field>
+		<!-- TODO waiting for MarkIT response -->
+		<!-- <field >
+			<a>bearerShares.legalFormAllowsIssuingBearerShares</a>
+			<b>bearerShare.value.jurisdictionAllowsIssuance</b>
+		</field> -->
+		<field >
+			<a>bearerShares.capabilityofIssuingBearerShares</a>
+			<b>bearerShare.value.articlesAllowIssuance</b>
+		</field>
+		<!-- TODO waiting for MarkIT response -->
+		<!-- <field >
+			<a>bearerShares.bearerSharesAttestation</a>
+			<b>bearerShare.value.articlesAllowIssuance</b>
+		</field> -->
+		<field >
+			<a>bearerShares.ownershipStructIssuedBearerShares</a>
+			<b>bearerShare.value.ownershipStructureIssued</b>
+		</field>
+		<field >
+			<a>bearerShares.bearerSharesIssued</a>
+			<b>bearerShare.value.haveBeenIssued</b>
+		</field>
+		<field>
+			<a>bearerShares.percentageofBearerSharesIssued</a>
+			<b>bearerShare.value.percentageIssued</b>
+		</field>
+		<field >
+			<a>bearerShares.heldInCustody</a>
+			<b>bearerShare.value.heldInCustody</b>
+		</field>
+		
+		<field>
+			<a>bearerShares.custodianName</a>
+			<b>bearerShare.value.custodianName</b>
+		</field>
+		
+		<field custom-converter="com.headstrong.npi.raas.engine.converter.dozer.CustodianAddressCustomConverter" >
+			<a>bearerShares.custodianAddress</a>
+			<b>addresses</b>
+		</field>
+		
+		<!-- Financial Information
+		
+        protected CmAttributeString keyFinancialIndicator;
+        protected CmAttributeString totalRevenue;
+        protected CmAttributeString totalAssetSize;
+        protected CmAttributeString totalAssetsUnderManagement;
+        protected CmAttributeString totalLiquidAssets;
+        protected CmAttributeCurrency reportingCrncy;
+        protected CmAttributeDate asOfDate;
+        protected CmAttributeOption auditFlag;
+        protected CmAttributeString nameOfAuditor;
+        protected CmAttributeString signOffName;
+        protected CmAttributeDateMonthDay fiscalYearEnd;
+        
+		financialInfo protected CompanyFinancialInfo value;
+		
+		protected AttributeString totalAssetUnderManagment;
+		protected AttributeString totalLiquidAssets;
+		protected AttributeBoolean auditFlag;
+		protected AttributeString auditorName;
+		protected AttributeLong fiscalYearEndMonth;
+		protected AttributeLong fiscalYearEndDay;
+		protected AttributeDictionaryKeyFinancialIndicator mostRelevantKFI;
+		protected AttributeString totalRevenue;
+		protected AttributeString totalAssetSize;
+		
+		-->
+		<field>
+			<a>financialInformation.keyFinancialIndicator.value</a>
+			<b>financialInfo.value.mostRelevantKFI.value</b>
+		</field>
+		<field>
+			<a>financialInformation.totalRevenue.value</a>
+			<b>financialInfo.value.totalRevenue.value</b>
+		</field>
+		<field>
+			<a>financialInformation.totalAssetSize.value</a>
+			<b>financialInfo.value.totalAssetSize.value</b>
+		</field>
+		<field>
+			<a>financialInformation.totalAssetsUnderManagement.value</a>
+			<b>financialInfo.value.totalAssetUnderManagment.value</b>
+		</field>
+		<field>
+			<a>financialInformation.totalLiquidAssets.value</a>
+			<b>financialInfo.value.totalLiquidAssets.value</b>
+		</field>
+		<!-- TODO waiting for MarkIT response -->
+		<!-- <field >
+			<a>financialInformation.asOfDate.value</a>
+			<b>financialInfo.value.auditFlag.value</b>
+		</field>
+		<field >
+			<a>financialInformation.signOffName.value</a>
+			<b>financialInfo.value.auditFlag.value</b>
+		</field> -->
+		<field >
+			<a>financialInformation.auditFlag.value</a>
+			<b>financialInfo.value.auditFlag.value</b>
+		</field>
+		<field>
+			<a>financialInformation.nameOfAuditor.value</a>
+			<b>financialInfo.value.auditorName.value</b>
+		</field>
+		<field>
+			<a>financialInformation.reportingCrncy.value</a>
+			<b>financialInfo.value.reportingCurrency.value</b>
+		</field>
+		
+		
+		<field>
+			<a>financialInformation.keyFinancialIndicator</a>
+			<b>financialInfo.value.mostRelevantKFI</b>
+		</field>
+		<field>
+			<a>financialInformation.totalRevenue</a>
+			<b>financialInfo.value.totalRevenue</b>
+		</field>
+		<field>
+			<a>financialInformation.totalAssetSize</a>
+			<b>financialInfo.value.totalAssetSize</b>
+		</field>
+		<field>
+			<a>financialInformation.totalAssetsUnderManagement</a>
+			<b>financialInfo.value.totalAssetUnderManagment</b>
+		</field>
+		<field>
+			<a>financialInformation.totalLiquidAssets</a>
+			<b>financialInfo.value.totalLiquidAssets</b>
+		</field>
+		<!-- TODO waiting for MarkIT response -->
+		<!-- <field >
+			<a>financialInformation.asOfDate</a>
+			<b>financialInfo.value.auditFlag</b>
+		</field>
+		<field >
+			<a>financialInformation.signOffName</a>
+			<b>financialInfo.value.auditFlag</b>
+		</field> -->
+		<field >
+			<a>financialInformation.auditFlag</a>
+			<b>financialInfo.value.auditFlag</b>
+		</field>
+		<field>
+			<a>financialInformation.nameOfAuditor</a>
+			<b>financialInfo.value.auditorName</b>
+		</field>
+		<field>
+			<a>financialInformation.reportingCrncy</a>
+			<b>financialInfo.value.reportingCurrency</b>
+		</field>
+		
+		<!-- Derive from the two values cASE fiscalYearEndMonth & fiscalYearEndDay from fiscalYearEnd-->
+		<!-- <field>
+			<a>financialInformation.fiscalYearEnd.value</a>
+			<b>financialInfo.value.fiscalYearEndMonth.value</b>
+		</field>
+		<field>
+			<a>financialInformation.fiscalYearEnd.value</a>
+			<b>financialInfo.value.fiscalYearEndDay.value</b>
+		</field> -->
+		
+		<!-- AML Mapping -->
+		<field>
+			<a>companyAML.completedWolfsbergQuestionnaire.value</a>
+			<b>aml.value.completedWolfsbergQuestionnaireProvided.value</b>
+		</field>
+		<field>
+			<a>companyAML.signatureDateCompletedWolfsbergQuestionnaire.value</a>
+			<b>aml.value.signatureDateCompletedWolfsbergQuestionnaire.value</b>
+		</field>
+		
+		
+		<field>
+			<a>companyAML.completedWolfsbergQuestionnaire</a>
+			<b>aml.value.completedWolfsbergQuestionnaireProvided</b>
+		</field>
+		<field>
+			<a>companyAML.signatureDateCompletedWolfsbergQuestionnaire</a>
+			<b>aml.value.signatureDateCompletedWolfsbergQuestionnaire</b>
+		</field>
+		
+		<!-- DD2 Screen
+		    protected Entity.Ownership ownership;
+		    	protected List<Entity.Ownership.OwnershipCorporate> ownershipCorporate;
+        		protected List<Entity.Ownership.OwnershipIndividual> ownershipIndividual;
+        		
+		    protected List<AttributeCompanyBeneficialOwner> beneficialOwner; 
+		-->
+		<field custom-converter="com.headstrong.npi.raas.engine.converter.dozer.CorporateOwnerCustomConverter">
+			<a>ownership.ownershipCorporate</a>
+			<b>beneficialOwner</b>
+		</field>
+		<field custom-converter="com.headstrong.npi.raas.engine.converter.dozer.IndividualOwnerCustomConverter">
+			<a>ownership.ownershipIndividual</a>
+			<b>beneficialOwner</b>
+		</field>
+		<!--
+		    protected List<AttributeCompany> immediateParent;
+    		protected List<AttributeCompany> ultimateParent; 
+		 -->
+		<field custom-converter="com.headstrong.npi.raas.engine.converter.dozer.ImmediateParentCustomConverter">
+			<a>ownership.ownershipCorporate</a>
+			<b>immediateParent</b>
+		</field>
+		
+		<field custom-converter="com.headstrong.npi.raas.engine.converter.dozer.UltimateParentCustomConverter">
+			<a>ownership.ownershipCorporate</a>
+			<b>ultimateParent</b>
+		</field>
+		<!--
+		
+		    protected Entity.ControllerAndDirector controllerAndDirector;
+		    	protected List<Entity.ControllerAndDirector.ControllersAndDirectors> controllersAndDirectors;
+		    	
+	            protected CmAttributeString type;
+	            protected CmAttributeString level;
+	            protected CmAttributeString firstName;
+	            protected CmAttributeString middleName;
+	            protected CmAttributeString lastName;
+	            protected CmAttributeString mei;
+	            protected CmAttributeString aliases;
+	            protected CmAttributeGender gender;
+	            protected List<Address> address;
+	            protected CmAttributeCountry countryOfCitzenship;
+	            protected CmAttributeCountry countryOfDomicile;
+	            protected CmAttributeDate birthDate;
+	            protected CmAttributeString position;
+	            protected CmAttributeString designation;
+			    
+		    protected List<AttributeCompanyControllerDirector> controllerDirector; 
+		    	    protected CompanyControllerDirector value;
+		    	        protected AttributeString position;
+    					protected Entity entity;
+		 -->
+		
+		<field custom-converter="com.headstrong.npi.raas.engine.converter.dozer.ControllerAndDirectorCustomConverter">
+			<a>controllerAndDirector.controllersAndDirectors</a>
+			<b>controllerDirector</b>
+		</field>
+		
+ 	</mapping>
+	
+</mappings>

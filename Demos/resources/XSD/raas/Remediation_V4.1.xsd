@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema id="RemediationProcess" xmlns="www.headstrong.com"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="www.headstrong.com"
+	xmlns:entity="www.headstrong.com/entity" xmlns:common="www.headstrong.com/common"
+	xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+  	xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+  	jaxb:extensionBindingPrefixes="xjc"
+  	jaxb:version="1.0" version="5.0" >
+
+	<xs:import schemaLocation="DataTypes/Entity.xsd" namespace="www.headstrong.com/entity" />
+	<xs:import schemaLocation="DataTypes/CommonDataTypes.xsd" namespace="www.headstrong.com/common" />
+
+	<!-- JAXB extension to add serializable to all classes -->
+	<xs:annotation>
+		<xs:appinfo>
+			<jaxb:globalBindings generateIsSetMethod="false">
+				<xjc:serializable uid="1" />
+			</jaxb:globalBindings>
+		</xs:appinfo>
+	</xs:annotation>
+	
+	<xs:element name="RemediationFile">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="FileStatusInfo" minOccurs="1" type="FileStatusInfo" maxOccurs="1">
+					
+				</xs:element>
+				<xs:element name="RemediationProfile" minOccurs="0" type="RemediationProfile" maxOccurs="1">
+					
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="PublicationDateTime" type="xs:string" />
+			<xs:attribute name="PublicationId" type="xs:int" />
+			<xs:attribute name="RecordCount" type="xs:int" />
+			<xs:attribute name="Group" type="xs:string" />
+			<xs:attribute name="Client" type="xs:string" />
+			<xs:attribute name="id" type="xs:int" />
+			<xs:attribute name="RequestType" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="FileStatusInfo">
+		<xs:sequence>
+			<xs:element name="CurrentStatus" minOccurs="1"
+				maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Validated" type="xs:int" minOccurs="0">
+							<xs:annotation></xs:annotation>
+						</xs:element>
+						<xs:element name="Assigned" type="xs:int" minOccurs="0" />
+						<xs:element name="Rejected" type="xs:int" minOccurs="0" />
+						<xs:element name="Completed" type="xs:int" minOccurs="0" />
+						<xs:element name="InProcess" type="xs:int" minOccurs="0" />
+					</xs:sequence>
+					<xs:attribute name="LastUpdated" type="xs:string" />
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="RemediationProfile">
+		<xs:sequence>
+			<xs:element name="ProfileStatusInfo" minOccurs="1"
+				maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="CurrentStatus" minOccurs="1" maxOccurs="1">
+							<xs:complexType>
+								<xs:attribute name="LastUpdated" type="xs:date" />
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Current_State" nillable="true" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:attribute name="Owner" type="xs:string" />
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="EnrichmentComments" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="By" type="xs:string" minOccurs="0" />
+									<xs:element name="Remarks" type="xs:string" minOccurs="0" />
+									<xs:element name="LastUpdated" type="xs:string" minOccurs="0" />
+									<xs:element name="TaskStage" type="xs:string" minOccurs="0" />
+									<xs:element name="AttributeName" type="xs:string" minOccurs="0" />
+								</xs:sequence>
+								<xs:attribute name="Status" type="xs:string" />
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="CDDComments" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="By" type="xs:string" minOccurs="0" />
+									<xs:element name="Remarks" type="xs:string" minOccurs="0" />
+									<xs:element name="LastUpdated" type="xs:string" minOccurs="0" />
+									<xs:element name="TaskStage" type="xs:string" minOccurs="0" />
+									<xs:element name="AttributeName" type="xs:string" minOccurs="0" />
+								</xs:sequence>
+								<xs:attribute name="Status" type="xs:string" />
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="ScreeningComments" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="By" type="xs:string" minOccurs="0" />
+									<xs:element name="Remarks" type="xs:string" minOccurs="0" />
+									<xs:element name="LastUpdated" type="xs:string" minOccurs="0" />
+									<xs:element name="TaskStage" type="xs:string" minOccurs="0" />
+									<xs:element name="AttributeName" type="xs:string" minOccurs="0" />
+								</xs:sequence>
+								<xs:attribute name="Status" type="xs:string" />
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="QAComments" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="By" type="xs:string" minOccurs="0" />
+									<xs:element name="Remarks" type="xs:string" minOccurs="0" />
+									<xs:element name="LastUpdated" type="xs:string" minOccurs="0" />
+									<xs:element name="TaskStage" type="xs:string" minOccurs="0" />
+									<xs:element name="AttributeName" type="xs:string" minOccurs="0" />
+								</xs:sequence>
+								<xs:attribute name="Status" type="xs:string" />
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="RefData" minOccurs="1" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Jurisdiction" type="common:Country" minOccurs="0" />
+						<xs:element name="Language" type="common:Language" minOccurs="0" />
+						<!-- xs:element name="KYCOwner" type="xs:string" minOccurs="0" /-->
+						<xs:element name="KYCOwner" type="common:KYCOwner" minOccurs="0" maxOccurs="unbounded"/>
+						<xs:element name="LastReviewDate" type="xs:string"  minOccurs="0" />
+						<xs:element name="NextReviewDate" type="xs:string"  minOccurs="0" />
+						<xs:element name="InternalIdentifier" type="common:Identifier" minOccurs="0" maxOccurs="unbounded" />
+						<xs:element name="Products" minOccurs="0" maxOccurs="1">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Product" type="common:ProductList" minOccurs="0" maxOccurs="unbounded" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element minOccurs="0" maxOccurs="1" ref="entity:Entity" />
+			<xs:element name="Documents" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Document" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="URL" type="xs:string" minOccurs="0" />
+									<xs:element name="MetaData">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="id" type="xs:string" />
+												<xs:element name="type" type="xs:string" />
+												<xs:element name="name" type="xs:string" />
+												<xs:element name="comments" type="xs:string" />
+												<xs:element name="DocumentFormat" type="xs:string" />
+												<xs:element name="Source" type="xs:string" />
+												<xs:element name="Publisher" type="xs:string" />
+												<xs:element name="Category" type="xs:string" />
+												<xs:element name="EffectiveDate" type="xs:string" />
+												<xs:element name="ExpiryDate" type="xs:string" />
+												<xs:element name="ModificationDate" type="xs:string" />
+												<xs:element name="Language" type="xs:string" />
+												<xs:element name="RelatedTo" type="common:AttributeType" />
+												<xs:element name="LinkedToDoc">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="linkedDocType" type="xs:string"></xs:element>
+															<xs:element name="linkedDocId" type="xs:string"></xs:element>
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute name="id" type="xs:int" />
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ScreeningDetails" minOccurs="0"
+				maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="OverallSanctionStatus" type="xs:string" minOccurs="0" />
+						<xs:element name="LastReviewDate" type="xs:string" minOccurs="0" />
+						<xs:element name="LastReviewComments" type="xs:string" minOccurs="0" />
+
+						<xs:element name="SanctionsCheck" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element minOccurs="0" name="id" type="xs:string" />
+									<xs:element name="Entities" type="xs:string" minOccurs="0" />
+									<xs:element name="PartyType" type="common:PartyType" minOccurs="0" />
+									<xs:element name="EventOrListType" type="common:EventType" minOccurs="0" />
+									<!-- <xs:element name="EventOrListType" type="common:SanctionCheckEventOrListType" minOccurs="0" /> -->
+									<xs:element name="Source" type="xs:string" minOccurs="0" />
+									<xs:element name="DateCreated" type="xs:string" minOccurs="0" />
+									<xs:element name="Comments" type="xs:string" minOccurs="0" />
+									<xs:element name="URL" type="xs:string" minOccurs="0" />
+									<xs:element name="DocumentUploaded" type="xs:string" minOccurs="0" />
+									<xs:element name="SearchCriteriaApplied" type="xs:string" minOccurs="0" />
+									<xs:element name="Results" type="xs:string" minOccurs="0" />
+									<xs:element name="MatchFindingsString" type="common:MatchFindings" minOccurs="0" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+
+						<xs:element name="PEPCheck" minOccurs="0"
+							maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element minOccurs="0" name="id" type="xs:string" />
+									<xs:element name="Entities" type="xs:string" minOccurs="0" />
+									<xs:element name="PartyType" type="common:PartyType" minOccurs="0" />
+									<xs:element name="EventType" type="common:EventType" minOccurs="0" />
+									<xs:element name="RelatedTo" type="common:PEPRelatedToType" minOccurs="0" />
+									<xs:element name="PEPType" type="common:PEPType" minOccurs="0" />
+									<xs:element name="PEPPosition" type="common:PEPPosition" minOccurs="0" />
+									<xs:element name="Source" type="xs:string" minOccurs="0" />
+									<xs:element name="Comments" type="xs:string" minOccurs="0" />
+									<xs:element name="DateCreated" type="xs:string" minOccurs="0" />
+									<xs:element name="URL" type="xs:string" minOccurs="0" />
+									<xs:element name="DocumentUploaded" type="xs:string" minOccurs="0" />
+									<xs:element name="SearchCriteriaApplied" type="xs:string" minOccurs="0" />
+									<xs:element name="Results" type="xs:string" minOccurs="0" />
+									<xs:element name="MatchFinding" type="common:MatchFindings" minOccurs="0" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+
+						<xs:element name="NegativeNewsorAdverseMediaCheck"
+							minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element minOccurs="0" name="id" type="xs:string" />
+									<xs:element name="Entities" type="xs:string" minOccurs="0" />
+									<xs:element name="PartyType" type="common:PartyType" minOccurs="0" />
+									<xs:element name="EventType" type="common:EventType" minOccurs="0" />
+									<!-- <xs:element name="NewsType" type="common:NewsType" minOccurs="0" /> -->
+									
+									<xs:element name="Source" type="xs:string" minOccurs="0" />
+									<xs:element name="Comments" type="xs:string" minOccurs="0" />
+									<xs:element name="DateCreated" type="xs:string" minOccurs="0" />
+									<xs:element name="MaterialNegativeNewsScreeningGuidance" type="xs:string" minOccurs="0" />
+									<xs:element name="URL" type="xs:string" minOccurs="0" />
+									<xs:element name="DocumentUploaded" type="xs:string" minOccurs="0" />
+									<xs:element name="SearchCriteriaApplied" type="xs:string" minOccurs="0" />
+									<xs:element name="Results" type="xs:string" minOccurs="0" />
+									<xs:element name="MatchFinding" type="common:MatchFindings" minOccurs="0" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						
+						<xs:element name="CountrySpecificListsCheck"
+							minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element minOccurs="0" name="id" type="xs:string" />
+									<xs:element name="Entities" type="xs:string" minOccurs="0" />
+									<xs:element name="PartyType" type="common:PartyType" minOccurs="0" />
+									<xs:element name="EventType" type="common:EventType" minOccurs="0" />
+									<xs:element name="Source" type="xs:string" minOccurs="0" />
+									<xs:element name="Comments" type="xs:string" minOccurs="0" />
+									<xs:element name="DateCreated" type="xs:string" minOccurs="0" />
+									<xs:element name="URL" type="xs:string" minOccurs="0" />
+									<xs:element name="DocumentUploaded" type="xs:string" minOccurs="0" />
+									<xs:element name="SearchCriteriaApplied" type="xs:string" minOccurs="0" />
+									<xs:element name="Results" type="xs:string" minOccurs="0" />
+									<xs:element name="MatchFinding" type="common:MatchFindings" minOccurs="0" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						
+						<xs:element name="FirmsInternalListsCheck"
+							minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element minOccurs="0" name="id" type="xs:string" />
+									<xs:element name="Entities" type="xs:string" minOccurs="0" />
+									<xs:element name="PartyType" type="common:PartyType" minOccurs="0" />
+									<xs:element name="EventType" type="common:EventType" minOccurs="0" />
+									<xs:element name="Source" type="xs:string" minOccurs="0" />
+									<xs:element name="Comments" type="xs:string" minOccurs="0" />
+									<xs:element name="DateCreated" type="xs:string" minOccurs="0" />
+									<xs:element name="URL" type="xs:string" minOccurs="0" />
+									<xs:element name="DocumentUploaded" type="xs:string" minOccurs="0" />
+									<xs:element name="SearchCriteriaApplied" type="xs:string" minOccurs="0" />
+									<xs:element name="Results" type="xs:string" minOccurs="0" />
+									<xs:element name="MatchFinding" type="common:MatchFindings" minOccurs="0" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>			
+			<xs:element name="AdditionalAttribute">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="MiFIDClassifications" type="common:CmAttributeMiFIDClassifications"></xs:element>
+						<xs:element name="SourceOfRevenue" type="common:CmAttributeString"></xs:element>
+						<xs:element name="SourceOfRevenueOther" type="common:CmAttributeString"></xs:element>
+						<xs:element name="EstimatedAnnualRevenue" type="common:CmAttributeString"></xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="MissingInformation">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="MissingDocuments" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element minOccurs="0" name="id" type="xs:string" />
+									<xs:element name="Name" type="xs:string" minOccurs="0" />
+									<xs:element name="Description" type="xs:string" minOccurs="0" />
+									<xs:element name="Comments" type="xs:string" minOccurs="0" />								
+								</xs:sequence>							
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="MissingAttributes" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element minOccurs="0" name="id" type="xs:string" />
+									<xs:element name="Type" type="xs:string" minOccurs="0" />
+									<xs:element name="Name" type="xs:string" minOccurs="0" />
+									<xs:element name="Comments" type="xs:string" minOccurs="0" />								
+								</xs:sequence>							
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Risk" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="OriginalRisk" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="RiskValue" type="xs:string" />
+									<xs:element name="ReviewDate" type="xs:string" />
+									<xs:element name="Comments" type="xs:string" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="CalculatedRisk" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Score">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="Country" type="xs:int" />
+												<xs:element name="Product" type="xs:int" />
+												<xs:element name="OwnershipType" type="xs:int" />
+												<xs:element name="BookingEntity" type="xs:int" />
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="RiskValue" type="xs:string"></xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="FinalRisk">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="IsRiskOverriden" type="xs:boolean"></xs:element>
+									<xs:element name="RiskValue" type="xs:string" />
+									<xs:element name="OverridenBy" type="xs:string" />
+									<xs:element name="Date" type="xs:string" />
+									<xs:element name="Reason" type="xs:string" />
+									<xs:element name="Comments" type="xs:string" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute name="LastUpdated" type="xs:string" />
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="LastUpdateDate" type="xs:string" />
+		<xs:attribute name="RaasID" type="xs:string" />
+	</xs:complexType>
+	
+</xs:schema>

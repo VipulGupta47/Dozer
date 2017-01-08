@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:CobCmData xmlns:p="www.genpact.com" xmlns:p1="www.genpact.com/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="www.genpact.com cob_cm.xsd ">
+	<RequestInfo>
+		<RequestDate>2014-02-09</RequestDate>
+		<SenderIdentification>CN-1124</SenderIdentification>
+		<ReferenceId>123</ReferenceId>
+		<EntityType>NBFI-TradingAdvisor</EntityType>
+		<MessageType>Enrich</MessageType>
+		<DueDate>2014-04-30</DueDate>
+	</RequestInfo>
+	<EntityProfile LastUpdateDate="2001-12-31T12:00:00" ProfileId="A10242-21">
+		<Jurisdiction>
+			<BookingLocation>United States / United Kingdom</BookingLocation>
+		</Jurisdiction>
+		<Institution>
+			<EntityNames>
+				<ShortName></ShortName>
+				<DBA></DBA>
+				<PreviousLegalName></PreviousLegalName>
+			</EntityNames>
+			<Formation>
+				<EntityId>1124</EntityId>
+				<LegalName>AGF MANAGEMENT LTD</LegalName>
+				<CountryOfIncorporation>
+					<value>US</value>
+				</CountryOfIncorporation>
+			</Formation>
+		</Institution>
+	</EntityProfile>
+	<ResponseInfo>
+	
+	</ResponseInfo>
+</p:CobCmData>

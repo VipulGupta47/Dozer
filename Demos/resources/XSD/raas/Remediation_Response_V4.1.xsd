@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema id="RemediationProcess" xmlns="www.headstrong.com/RemidiationResponse" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="www.headstrong.com/RemidiationResponse"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:remFile="www.headstrong.com"
+	xsi:schemaLocation="www.headstrong.com Remediation_V4.1.xsd">
+
+	<xs:import schemaLocation="Remediation_V4.1.xsd" namespace="www.headstrong.com" />
+	
+	<xs:element name="RemediationResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="RemediationProfile" type="ResponseRemediationProfile" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+			<xs:attribute name="ResponsePublicationDateTime" type="xs:string" />
+			<xs:attribute name="ResponseFileId" type="xs:string" />
+			<xs:attribute name="RecordCount" type="xs:int" />
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="ResponseRemediationProfile">
+		<xs:complexContent>
+            <xs:extension base="remFile:RemediationProfile">
+            	<xs:sequence>
+            		<xs:element name="MissingInfo" type="MissingInfo" minOccurs="0" maxOccurs="1" />
+            	</xs:sequence>
+				<!--
+				Inherited attributes
+				  LastUpdateDate
+				  RaasID
+				-->
+				<xs:attribute name="PublicationDateTime" type="xs:string" />
+				<xs:attribute name="PublicationId" type="xs:int" />
+				<xs:attribute name="Group" type="xs:string" />
+				<xs:attribute name="FileID" type="xs:int" />
+				<xs:attribute name="IsRejected" type="xs:boolean" />
+            </xs:extension>
+        </xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="MissingInfo">
+         <xs:sequence>
+         	<xs:element name="MissingDocument" minOccurs="0" maxOccurs="unbounded">
+         		<xs:complexType>
+         			<xs:sequence>
+         				<xs:element name="Type" type="xs:string" />
+         				<xs:element name="Description" type="xs:string" />
+         				<xs:element name="Comments" type="xs:string" />
+         			</xs:sequence>
+         		</xs:complexType>
+         	</xs:element>
+         	<xs:element name="MissingAttribute" minOccurs="0" maxOccurs="unbounded">
+         		<xs:complexType>
+         			<xs:sequence>
+         				<xs:element name="ProfileItem" type="xs:string" />
+         				<xs:element name="Attribute" type="xs:string" />
+         				<xs:element name="Comments" type="xs:string" />
+         			</xs:sequence>
+         		</xs:complexType>
+         	</xs:element>
+         </xs:sequence>
+	</xs:complexType>
+		
+</xs:schema>

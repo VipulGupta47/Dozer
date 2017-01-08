@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:RemediationFile Client="" Group=""
+	PublicationDateTime="" PublicationId="0" RecordCount="0" RequestType=""
+	id="0" xmlns:entity="www.headstrong.com/entity" xmlns:p="www.headstrong.com"
+	xmlns:p1="www.headstrong.com/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="www.headstrong.com Remediation_V4.1.xsd ">
+	<FileStatusInfo>
+		<CurrentStatus LastUpdated="">
+			<Validated>0</Validated>
+			<Assigned>0</Assigned>
+			<Rejected>0</Rejected>
+			<Completed>0</Completed>
+			<InProcess>0</InProcess>
+		</CurrentStatus>
+	</FileStatusInfo>
+	<RemediationProfile LastUpdateDate="" RaasID="01/30/2014 13:11:16">
+		<ProfileStatusInfo>
+			<CurrentStatus LastUpdated="2001-01-01" />
+			<Current_State Owner="" />
+			<EnrichmentComments Status="">
+				<By></By>
+				<Remarks></Remarks>
+				<LastUpdated></LastUpdated>
+				<TaskStage></TaskStage>
+				<AttributeName></AttributeName>
+			</EnrichmentComments>
+			<CDDComments Status="">
+				<By></By>
+				<Remarks></Remarks>
+				<LastUpdated></LastUpdated>
+				<TaskStage></TaskStage>
+				<AttributeName></AttributeName>
+			</CDDComments>
+			<ScreeningComments Status="">
+				<By></By>
+				<Remarks></Remarks>
+				<LastUpdated></LastUpdated>
+				<TaskStage></TaskStage>
+				<AttributeName></AttributeName>
+			</ScreeningComments>
+			<QAComments Status="">
+				<By></By>
+				<Remarks></Remarks>
+				<LastUpdated></LastUpdated>
+				<TaskStage></TaskStage>
+				<AttributeName></AttributeName>
+			</QAComments>
+		</ProfileStatusInfo>
+		<RefData>
+			<Jurisdiction>United States</Jurisdiction>
+			<Language>English</Language>
+			<KYCOwner>
+                <Role></Role>
+                <Name></Name>
+                <Email></Email>
+                <ContactNo></ContactNo>
+			</KYCOwner>
+			<LastReviewDate></LastReviewDate>
+			<NextReviewDate></NextReviewDate>
+			<InternalIdentifier>
+			</InternalIdentifier>
+			<Products>
+				<Product>Select One</Product>
+			</Products>
+		</RefData>
+		<entity:Entity>
+			<EntityNames>
+				<ShortName>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>ADIA</value>
+				</ShortName>
+				<DoingBusniessAs>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>ADIA</value>
+				</DoingBusniessAs>
+				<Alias>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value></value>
+				</Alias>
+				<PreviousLegalName>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value></value>
+				</PreviousLegalName>
+			</EntityNames>
+			<Formation>
+				<EntityId>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>MEI30015</value>
+				</EntityId>
+				<LegalName>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>ABU DHABI INVESTMENT AUTHORITY</value>
+				</LegalName>
+				<legalForm>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>Private Limited Company</value>
+				</legalForm>
+				<EntityStructure>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value></value>
+				</EntityStructure>
+				<OwnershipType>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>Private Entity</value>
+				</OwnershipType>
+				<CountryOfIncorporation>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>United Arab Emirates</value>
+				</CountryOfIncorporation>
+				<StateOfIncorporation>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value></value>
+				</StateOfIncorporation>
+			</Formation>
+			<ContactInformation>
+			</ContactInformation>
+			<RegistrationInformation>
+			</RegistrationInformation>
+			<ListedInformation>
+				<IsEntityPubliclyListed>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>true</value>
+				</IsEntityPubliclyListed>
+				<Exchanges>
+				</Exchanges>
+				<IsPrimaryExchangeApproved>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>false</value>
+				</IsPrimaryExchangeApproved>
+			</ListedInformation>
+			<RegulatedInformation>
+				<Regulators>
+				</Regulators>
+				<SROStatus>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value></value>
+				</SROStatus>
+				<IsRegulatorApproved>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>false</value>
+				</IsRegulatorApproved>
+			</RegulatedInformation>
+			<ProductInformation>
+			</ProductInformation>
+			<BusinessActivities>
+				<NatureOfBusiness>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>Commercial Banking</value>
+				</NatureOfBusiness>
+				<PrimaryBusinessActivity>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value></value>
+				</PrimaryBusinessActivity>
+				<PercentRevenueFromPrimary>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value></value>
+				</PercentRevenueFromPrimary>
+				<IndustryClassifications>
+					<IndustryClassification>
+						<id>1</id>
+						<Type>NAICS</Type>
+						<Code>
+							<ReferenceDocuments>
+								<Document id="1">
+									<MCPID>MCPID</MCPID>
+								</Document>
+							</ReferenceDocuments>
+							<Comments />
+							<value>Code</value>
+						</Code>
+					</IndustryClassification>
+				</IndustryClassifications>
+			</BusinessActivities>
+			<PlaceOfBusiness>
+				<countriesOfBusiness>
+				</countriesOfBusiness>
+			</PlaceOfBusiness>
+			<LicenseInformation>
+				<LicenseInformationAvailable>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>false</value>
+				</LicenseInformationAvailable>
+				<ReasonForNo>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value></value>
+				</ReasonForNo>
+				<NameOfIssuingAuthority>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value></value>
+				</NameOfIssuingAuthority>
+				<AuthorityJurisdiction>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value></value>
+				</AuthorityJurisdiction>
+				<LicenseNumber>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value></value>
+				</LicenseNumber>
+				<ContainAnyRestriction>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>true</value>
+				</ContainAnyRestriction>
+				<DetialsOfRestriction>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value></value>
+				</DetialsOfRestriction>
+				<HasOffshoreBankingLicense>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>true</value>
+				</HasOffshoreBankingLicense>
+				<OperateSolelyUnderOffshoreBankingLicense>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>true</value>
+				</OperateSolelyUnderOffshoreBankingLicense>
+			</LicenseInformation>
+			<BearerShares>
+				<CapabilityofIssuingBearerShares>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>true</value>
+				</CapabilityofIssuingBearerShares>
+				<BearerSharesIssued>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>true</value>
+				</BearerSharesIssued>
+				<PercentageofBearerSharesIssued>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value></value>
+				</PercentageofBearerSharesIssued>
+				<HeldInCustody>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>true</value>
+				</HeldInCustody>
+				<CustodialDetails>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value></value>
+				</CustodialDetails>
+			</BearerShares>
+			<FinancialInformation>
+			</FinancialInformation>
+			<CoreInformation>
+				<LegalName>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>HAMBURGER SPARKASSE AG</value>
+				</LegalName>
+				<LegalFormation>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>Public Limited Company</value>
+				</LegalFormation>
+				<OwnershipType>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>Private Entity</value>
+				</OwnershipType>
+				<CountryOfIncorporation>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>Germany</value>
+				</CountryOfIncorporation>
+				<StateOfIncorporation>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>NA</value>
+				</StateOfIncorporation>
+				<CountryOfPrimaryOperation>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>Germany</value>
+				</CountryOfPrimaryOperation>
+				<DateOfIncorporation>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>1827-01-01</value>
+				</DateOfIncorporation>
+				<IssuingAuthorityOfIncorporation>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>Bundesanzeiger Verlag</value>
+				</IssuingAuthorityOfIncorporation>
+				<CountryOfBusiness>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>Germany</value>
+				</CountryOfBusiness>
+				<EntityAliases>
+					<PreviousNames>HAMBURGER SPARKASSE AG</PreviousNames>
+					<ShortName></ShortName>
+					<TradeStyle></TradeStyle>
+					<DoingBusinessAs>Haspa</DoingBusinessAs>
+				</EntityAliases>
+				<IndustryClassifications>
+					<IndustryClassification>
+						<id>1</id>
+						<Code>
+							<ReferenceDocuments>
+								<Document id="1">
+									<MCPID>MCPID</MCPID>
+								</Document>
+							</ReferenceDocuments>
+							<value></value>
+						</Code>
+						<Value>
+							<ReferenceDocuments>
+								<Document id="1">
+									<MCPID>MCPID</MCPID>
+								</Document>
+							</ReferenceDocuments>
+							<value>Commercial Banking</value>
+						</Value>
+						<IsPrimary>
+							<ReferenceDocuments>
+								<Document id="1">
+									<MCPID>MCPID</MCPID>
+								</Document>
+							</ReferenceDocuments>
+							<value>false</value>
+						</IsPrimary>
+						<Type>NAICS</Type>
+					</IndustryClassification>
+				</IndustryClassifications>
+				<TaxInfo>
+					<TaxIdAvailable>No</TaxIdAvailable>
+				</TaxInfo>
+			</CoreInformation>
+			<RegulatorInformation>
+				<IsRegulated>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>true</value>
+				</IsRegulated>
+				<Regulators>
+				</Regulators>
+			</RegulatorInformation>
+			<TradingInformation>
+				<IsPubliclyTraded>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>true</value>
+				</IsPubliclyTraded>
+				<Exchanges>
+				</Exchanges>
+			</TradingInformation>
+			<GovernmentOwnershipInfo>
+				<GovernmentOwned>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>true</value>
+				</GovernmentOwned>
+				<GovernmentCountry>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>Select One</value>
+				</GovernmentCountry>
+				<PercentageOwned>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>PercentageOwned</value>
+				</PercentageOwned>
+				<Circumstances>
+					<ReferenceDocuments>
+						<Document id="1">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<Comments />
+					<value>Circumstances</value>
+				</Circumstances>
+			</GovernmentOwnershipInfo>
+		</entity:Entity>
+		<AdditionalAttribute>
+			<MiFIDClassifications>
+				<ReferenceDocuments>
+					<Document id="1">
+						<MCPID>MCPID</MCPID>
+					</Document>
+				</ReferenceDocuments>
+				<Comments>
+				</Comments>
+				<value>Eligible Counterparty</value>
+			</MiFIDClassifications>
+			<SourceOfRevenue>
+				<ReferenceDocuments>
+					<Document id="1">
+						<MCPID>MCPID</MCPID>
+					</Document>
+				</ReferenceDocuments>
+				<Comments>
+				</Comments>
+				<value>SourceOfRevenue</value>
+			</SourceOfRevenue>
+			<SourceOfRevenueOther>
+				<ReferenceDocuments>
+					<Document id="1">
+						<MCPID>MCPID</MCPID>
+					</Document>
+				</ReferenceDocuments>
+				<Comments>
+					<By>By</By>
+					<Group>Enrichment</Group>
+					<Date>2001-01-01</Date>
+					<Type>Notes</Type>
+					<Comment>Comment</Comment>
+				</Comments>
+				<value>SourceOfRevenueOther</value>
+			</SourceOfRevenueOther>
+			<EstimatedAnnualRevenue>
+				<ReferenceDocuments>
+					<Document id="1">
+						<MCPID>MCPID</MCPID>
+					</Document>
+				</ReferenceDocuments>
+				<Comments>
+					<By>By</By>
+					<Group>Enrichment</Group>
+					<Date>2001-01-01</Date>
+					<Type>Notes</Type>
+					<Comment>Comment</Comment>
+				</Comments>
+				<value>EstimatedAnnualRevenue</value>
+			</EstimatedAnnualRevenue>
+		</AdditionalAttribute>
+		<MissingInformation>
+		</MissingInformation>
+		<Risk LastUpdated="">
+			<OriginalRisk>
+				<RiskValue></RiskValue>
+				<ReviewDate></ReviewDate>
+				<Comments></Comments>
+			</OriginalRisk>
+			<CalculatedRisk>
+				<Score>
+					<Country>0</Country>
+					<Product>0</Product>
+					<OwnershipType>0</OwnershipType>
+					<BookingEntity>0</BookingEntity>
+				</Score>
+				<RiskValue></RiskValue>
+			</CalculatedRisk>
+			<FinalRisk>
+				<IsRiskOverriden>false</IsRiskOverriden>
+				<RiskValue></RiskValue>
+				<OverridenBy></OverridenBy>
+				<Date></Date>
+				<Reason></Reason>
+				<Comments></Comments>
+			</FinalRisk>
+		</Risk>
+	</RemediationProfile>
+</p:RemediationFile>

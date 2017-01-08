@@ -1,0 +1,345 @@
+<xs:schema id="RemediationProcess" xmlns="www.headstrong.com"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="www.headstrong.com/entity"
+	xmlns:entity="www.headstrong.com/entity" xmlns:common="www.headstrong.com/common">
+
+	<xs:import schemaLocation="CommonDataTypes.xsd" namespace="www.headstrong.com/common" />
+	<xs:element name="Entity">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="EntityNames" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ShortName" type="common:CmAttributeString" minOccurs="0" maxOccurs="1"/>
+							<xs:element name="DoingBusniessAs" type="common:CmAttributeString" minOccurs="0" maxOccurs="1" />
+							<xs:element name="Alias" type="common:CmAttributeString" minOccurs="0" maxOccurs="1" />
+							<xs:element name="PreviousLegalName" type="common:CmAttributeString" minOccurs="0" maxOccurs="1"/>
+							<xs:element name="PreviousLegalEndDate" type="common:CmAttributeDate" minOccurs="0" maxOccurs="1"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Formation" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="EntityId" type="common:CmAttributeString" minOccurs="1" maxOccurs="1"/>
+							<xs:element name="LegalName" type="common:CmAttributeString" minOccurs="1" maxOccurs="1" />
+							<xs:element name="legalForm" type="common:CmAttributeLegalForm" minOccurs="0" maxOccurs="1" />
+							<xs:element name="EntityStructure" type="common:CmAttributeString" minOccurs="0" maxOccurs="1"/>
+							<xs:element name="OwnershipType" type="common:CmAttributeOwnershipType" minOccurs="1" />
+							<xs:element name="CountryOfIncorporation" type="common:CmAttributeCountry" minOccurs="0" />
+							<xs:element name="StateOfIncorporation" type="common:CmAttributeString" minOccurs="0" />
+							<xs:element name="DateOfFormation" type="common:CmAttributeDate" minOccurs="0" maxOccurs="1"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ContactInformation" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element minOccurs="0" name="Contacts" type="common:ContactInfo" maxOccurs="unbounded"  />
+							<xs:element name="Address" type="common:Address" minOccurs="0" maxOccurs="unbounded" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="RegistrationInformation" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Name" type="common:CmAttributeString" minOccurs="0" maxOccurs="1"/>
+							<xs:element name="Country" type="common:CmAttributeCountry" minOccurs="0" maxOccurs="1" />
+							<xs:element name="State" type="common:CmAttributeString" minOccurs="0" maxOccurs="1" />
+							<xs:element name="Number" type="common:CmAttributeString" minOccurs="0" maxOccurs="1" />
+							<xs:element name="Date" type="common:CmAttributeDate" minOccurs="0" maxOccurs="1" />
+							<xs:element name="ExpiryDate" type="common:CmAttributeDate" minOccurs="0" maxOccurs="1" />
+							<xs:element name="AgentName" type="common:CmAttributeString" minOccurs="0" maxOccurs="1" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ListedInformation" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="IsEntityPubliclyListed" type="common:CmAttributeBoolean" minOccurs="1" maxOccurs="1"/>
+							<xs:element name="Exchanges" type="common:Exchanges">
+							</xs:element>
+							<xs:element name="IsPrimaryExchangeApproved" type="common:CmAttributeBoolean" minOccurs="0" maxOccurs="1"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="RegulatedInformation" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Regulators" type="common:Regulators" minOccurs="0" maxOccurs="1" />
+							<xs:element name="SROStatus" type="common:CmAttributeString" minOccurs="0" maxOccurs="1"/>
+							<xs:element name="IsRegulatorApproved" type="common:CmAttributeBoolean" minOccurs="0" maxOccurs="1"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ProductInformation" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element minOccurs="0" name="product" type="common:CmAttributeString" maxOccurs="unbounded"  />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="BusinessActivities" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NatureOfBusiness" type="common:CmAttributeString" minOccurs="0" maxOccurs="1"/>
+							<xs:element name="PrimaryBusinessActivity" type="common:CmAttributeString" minOccurs="0" maxOccurs="1"/>
+							<xs:element name="PercentRevenueFromPrimary" type="common:CmAttributeString" minOccurs="0" maxOccurs="1"/>
+							<xs:element name="IndustryClassifications" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="IndustryClassification" nillable="true" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>												
+												<xs:sequence>
+													<xs:element minOccurs="0" name="id" type="xs:string" />																										
+													<xs:element name="Type" type="common:IndustryClassificationType" minOccurs="0" />
+													<xs:element name="Code" type="common:CmAttributeString" minOccurs="0" />
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="PlaceOfBusiness" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="countriesOfBusiness" nillable="true" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>												
+									<xs:sequence>
+										<xs:element minOccurs="0" name="id" type="xs:string" />																										
+										<xs:element name="CountryOfBusiness" type="common:CmAttributeCountry" minOccurs="0" />
+										<xs:element name="PercenetageOfBusniess" type="common:CmAttributeString" minOccurs="0" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="CountryOfPrimaryOperation" type="common:CmAttributeCountry" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ExternalIdentifier" minOccurs="0" maxOccurs="1" type="common:ExternalIdentifiers">
+				</xs:element>
+				<xs:element name="LicenseInformation" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="LicenseInformationAvailable" type="common:CmAttributeBoolean" minOccurs="0" maxOccurs="1"/>
+							<xs:element name="ReasonForNo" type="common:CmAttributeString" minOccurs="0" maxOccurs="1" />
+							<xs:element name="NameOfIssuingAuthority" type="common:CmAttributeString" minOccurs="0" maxOccurs="1" />
+							<xs:element name="AuthorityJurisdiction" type="common:CmAttributeString" minOccurs="0" />
+							<xs:element name="LicenseNumber" type="common:CmAttributeString" minOccurs="0" maxOccurs="1" />
+							<xs:element name="ExpiryDate" type="common:CmAttributeDate" minOccurs="0" maxOccurs="1" />
+							<xs:element name="ContainAnyRestriction" type="common:CmAttributeBoolean" minOccurs="0" maxOccurs="1"/>
+							<xs:element name="DetialsOfRestriction" type="common:CmAttributeString" minOccurs="0" maxOccurs="1" />
+							<xs:element name="HasOffshoreBankingLicense" type="common:CmAttributeBoolean" minOccurs="0" maxOccurs="1"/>
+							<xs:element name="OperateSolelyUnderOffshoreBankingLicense" type="common:CmAttributeBoolean" minOccurs="0" maxOccurs="1" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="BearerShares" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CapabilityofIssuingBearerShares" type="common:CmAttributeBoolean" minOccurs="0" maxOccurs="1"/>
+							<xs:element name="BearerSharesIssued" type="common:CmAttributeBoolean" minOccurs="0" maxOccurs="1" />
+							<xs:element name="PercentageofBearerSharesIssued" type="common:CmAttributeString" minOccurs="0" maxOccurs="1" />
+							<xs:element name="HeldInCustody" type="common:CmAttributeBoolean" minOccurs="0" maxOccurs="1" />
+							<xs:element name="CustodialDetails" type="common:CmAttributeString" minOccurs="0" maxOccurs="1" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="FinancialInformation" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="KeyFinancialIndicator" type="common:CmAttributeString" minOccurs="0" maxOccurs="1"/>
+							<xs:element name="TotalRevenue" type="common:CmAttributeString" minOccurs="0" maxOccurs="1" />
+							<xs:element name="TotalAssetSize" type="common:CmAttributeString" minOccurs="0" maxOccurs="1" />
+							<xs:element name="TotalAssetsUnderManagement" type="common:CmAttributeString" minOccurs="0" maxOccurs="1" />
+							<xs:element name="TotalLiquidAssets" type="common:CmAttributeString" minOccurs="0" maxOccurs="1" />
+							<xs:element name="AuditFlag" type="common:CmAttributeBoolean" minOccurs="0" maxOccurs="1"/>
+							<xs:element name="NameOfAuditor" type="common:CmAttributeString" minOccurs="0" maxOccurs="1" />
+							<xs:element name="FiscalYearEnd" type="common:CmAttributeDateMonthDay" minOccurs="0" maxOccurs="1"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+							
+				
+				<xs:element name="CoreInformation" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="LegalName" type="common:CmAttributeString" minOccurs="1" />
+							<xs:element name="LegalFormation" type="common:CmAttributeLegalForm" minOccurs="1" />
+							<xs:element name="OwnershipType" type="common:CmAttributeOwnershipType" minOccurs="1" />
+							<xs:element name="CountryOfIncorporation" type="common:CmAttributeCountry" minOccurs="0" />
+							<xs:element name="StateOfIncorporation" type="common:CmAttributeString" minOccurs="0" />
+							<xs:element name="CountryOfPrimaryOperation" type="common:CmAttributeCountry" minOccurs="0" />	
+							<xs:element name="DateOfIncorporation" type="common:CmAttributeDate" minOccurs="0" />
+							
+							<!-- Added Below part as part of Citi enhancement-->
+							
+							<xs:element name="IssuingAuthorityOfIncorporation" type="common:CmAttributeString" minOccurs="0" />							
+							<xs:element name="CountryOfBusiness" type="common:CmAttributeCountry" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="Region" type="common:Region" minOccurs="0" maxOccurs="unbounded"/>							
+
+							<xs:element name="EntityAliases" type="common:EntityAliases" minOccurs="0" maxOccurs="1"/>
+							
+							<xs:element name="IndustryClassifications" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="IndustryClassification" nillable="true" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>												
+												<xs:sequence>
+													<xs:element minOccurs="0" name="id" type="xs:string" />																										
+													<xs:element name="Code" type="common:CmAttributeString" minOccurs="0" />
+													<xs:element name="Value" type="common:CmAttributeString" minOccurs="0" />
+													<xs:element name="IsPrimary" type="common:CmAttributeBoolean" />
+													<xs:element name="Type" type="common:IndustryClassificationType" />
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>							
+							<xs:element name="TaxInfo" type="common:TaxInfo" minOccurs="0" maxOccurs="1"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="RegulatorInformation">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="IsRegulated" type="common:CmAttributeBoolean" minOccurs="0" maxOccurs="1"></xs:element>
+							<xs:element name="Regulators" type="common:Regulators" minOccurs="0" maxOccurs="1" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="TradingInformation">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="IsPubliclyTraded" type="common:CmAttributeBoolean"></xs:element>
+							<xs:element name="Exchanges" type="common:Exchanges">
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Addresses" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element minOccurs="0" name="ContactPerson" type="common:CmAttributeString" />
+							<xs:element minOccurs="0" name="ContactNumber" type="common:CmAttributeString" />
+							<xs:element name="Address" type="common:Address" minOccurs="0" maxOccurs="unbounded" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<!-- Added WebsiteAddresses as part of Citi enhancement -->
+				<xs:element name="WebsiteAddresses" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="WebsiteAddress" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element minOccurs="0" name="id" type="xs:string" />
+										<xs:element name="URL" type="common:CmAttributeString" minOccurs="0" />
+										<xs:element name="WebsiteAddressType" type="common:CmAttributeWebsiteAddressType" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<!-- END WebsiteAddresses -->
+				
+				<xs:element name="ExternalIdentifiers" minOccurs="0" maxOccurs="1" type="common:ExternalIdentifiers">
+				</xs:element>
+				
+				<xs:element name="LegalHierachy" minOccurs="0" maxOccurs="1">
+                	<xs:complexType>
+                    	<xs:sequence>
+							<xs:element name="Hierachy" minOccurs="0" maxOccurs="unbounded">
+                            	<xs:complexType>
+                                	<xs:sequence>
+                                    	<xs:element name="Parent" minOccurs="0" >
+                                        	<xs:complexType>
+                                            	<xs:sequence>
+                                                	<xs:element name="LegalName" type="common:CmAttributeString" minOccurs="0" maxOccurs="1" />
+                                                    <xs:element name="Identifier" type="common:ExternalIdentifiers" minOccurs="0" maxOccurs="1" />
+                                                    <xs:element name="ParentType" type="common:ParentType" minOccurs="0" maxOccurs="1" />
+												</xs:sequence>
+                                                <xs:attribute name="id" type="xs:int" />
+											</xs:complexType>
+										</xs:element>
+                                        <xs:element name="HierachyType" type="common:HierachyType" minOccurs="0" maxOccurs="1" />
+									</xs:sequence>
+                                    <xs:attribute name="id" type="xs:int" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<!-- START GovernmentOwnershipInfo -->
+				<xs:element name="GovernmentOwnershipInfo" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="GovernmentOwned" type="common:CmAttributeBoolean" minOccurs="0" />
+							<xs:element name="GovernmentCountry" type="common:CmAttributeCountry" minOccurs="0" />
+							<xs:element name="PercentageOwned" type="common:CmAttributeString" minOccurs="0" />
+							<xs:element name="Circumstances" type="common:CmAttributeString" minOccurs="0" />
+						</xs:sequence>					
+					</xs:complexType>				
+				</xs:element>
+				<!-- END GovernmentOwnershipInfo -->
+				
+				<!-- START RelatedEntitiesIndividuals -->
+				<xs:element name="RelatedEntitiesIndividuals" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="RelatedEntitiesIndividual" nillable="true" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="id" type="xs:int" minOccurs="0" />
+										<xs:element name="FullName" type="common:CmAttributeString" minOccurs="0" />
+										<xs:element name="KnownAlias" type="common:CmAttributeString" minOccurs="0" />
+										<xs:element name="AssociationType" type="common:AssociationType" minOccurs="0" />
+										<xs:element name="TitlePosition" type="common:CmAttributeString" minOccurs="0" />
+										<xs:element name="AssociationStartDate" type="common:CmAttributeDate" minOccurs="0" />
+										<xs:element name="OwnershipPercentage" type="common:CmAttributeString" minOccurs="0" />
+										<xs:element name="DateOfBirth" type="common:CmAttributeDate" minOccurs="0" />
+										<xs:element name="CountryOfCitizenship" type="common:CmAttributeCountry" minOccurs="0" />
+										<xs:element name="CountryOfDomicile" type="common:CmAttributeCountry" minOccurs="0" />										
+									</xs:sequence>
+									<xs:attribute name="entityId" type="xs:int" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<!-- END RelatedEntitiesIndividuals -->
+				
+				<!-- START RelatedEntities -->
+				<xs:element name="RelatedEntities" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="RelatedEntity" nillable="true" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="id" type="xs:int" minOccurs="0" />
+										<xs:element name="LegalName" type="common:CmAttributeString" minOccurs="0" />
+										<xs:element name="AssociationType" type="common:AssociationType" minOccurs="0" />
+										<xs:element name="AssociationStartDate" type="common:CmAttributeDate" minOccurs="0" />
+										<xs:element name="OwnershipPercentage" type="common:CmAttributeString" minOccurs="0" />
+										<xs:element name="CountryOfIncorporation" type="common:CmAttributeCountry" minOccurs="0" />
+										<xs:element name="DateOfIncorporation" type="common:CmAttributeDate" minOccurs="0" />
+										<xs:element name="PrincipalPlaceofBusiness" type="common:CmAttributeCountry" minOccurs="0" />
+									</xs:sequence>
+									<xs:attribute name="entityId" type="xs:int" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<!-- END RelatedEntities -->				
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

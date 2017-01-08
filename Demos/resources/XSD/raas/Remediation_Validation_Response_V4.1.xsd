@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema id="RemediationProcess" xmlns="www.headstrong.com/RemidiationValidationResponse" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="www.headstrong.com/RemidiationValidationResponse">
+
+	<xs:element name="RemediationValidationResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="FilePath" type="xs:string" minOccurs="1" maxOccurs="1" />
+				<xs:element name="ProcessingDateTime" type="xs:dateTime" minOccurs="1" maxOccurs="1" />
+				<xs:element name="Status" type="status" minOccurs="1" maxOccurs="1" />
+				<xs:element name="ValidationErrors" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ValidationError" type="validationMessage" minOccurs="1" maxOccurs="unbounded" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ValidationWarnings" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ValidationWarning" type="validationMessage" minOccurs="1" maxOccurs="unbounded" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="InputData" type="xs:string" minOccurs="1">
+					<xs:annotation>
+						<xs:documentation>The input data will be copied here as a CDATA</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="PublicationDateTime" type="xs:string" />
+			<xs:attribute name="PublicationId" type="xs:int" />
+			<xs:attribute name="RecordCount" type="xs:int" />
+			<xs:attribute name="Group" type="xs:string" />
+			<xs:attribute name="Client" type="xs:string" />
+			<xs:attribute name="id" type="xs:int" />
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="validationMessage">
+		<xs:sequence>
+			<xs:element name="Type" type="validationType" minOccurs="0" />
+			<xs:element name="Reason" type="xs:string" minOccurs="0" />
+			<xs:element name="Line" type="xs:int" minOccurs="0" />
+			<xs:element name="Column" type="xs:int" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:simpleType name="status">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Accepted"/>
+			<xs:enumeration value="Rejected"/>
+			<xs:enumeration value="Unknown"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="validationType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Format"/>
+			<xs:enumeration value="Data"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+</xs:schema>

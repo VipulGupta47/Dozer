@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<case xmlns="http://www.markit.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.markit.com cob_cm.xsd " xsi:type="FullReviewCase">
+	<caseId>18942</caseId>
+	<entityProfile>
+		<value xsi:type="Company">
+			<mei></mei>
+
+			<entityType>
+				<value>Corporation</value>
+			</entityType>
+			<legalForm>
+				<value>Limited Company</value>
+			</legalForm>
+			<legalName>
+				<value>AFRICAN DEVELOPMENT BANK -HEAD OFFICE</value>
+			</legalName>
+			<shortName>
+				<value>Short Name</value>
+			</shortName>
+			<tradingAs>
+				<value>Trading as</value>
+			</tradingAs>
+			<formation>
+				<value>
+					<ownershipType>
+						<value>Public</value>
+					</ownershipType>
+					<incorporationCountry>
+						<value>US</value>
+					</incorporationCountry>
+					<incorporationState>
+						<value>US-NY</value>
+					</incorporationState>
+					<incorporationDate>
+						<value>2001-12-31T12:00:00</value>
+					</incorporationDate>
+					<website>
+						<value>http://www.example.com</value>
+					</website>
+					<authorityName>
+						<value>Regd. Auth</value>
+					</authorityName>
+					<agentName>
+						<value>Regd. Agent</value>
+					</agentName>
+				</value>
+			</formation>
+			<entityName>
+				<value>
+					<previousLegalName>
+						<value>Prev DBA</value>
+					</previousLegalName>
+					<previousLegalNameEndDate>
+						<value>2001-12-31T12:00:00</value>
+					</previousLegalNameEndDate>
+				</value>
+			</entityName>
+		</value>
+	</entityProfile>
+	<bookingJurisdiction>United States / United Kingdom</bookingJurisdiction>
+	<createdDT>2001-10-10T12:00:00</createdDT>
+	<dueDT>2014-10-15T12:00:00</dueDT>
+	<responseStatus>Completed</responseStatus>
+	<completedDT>2001-12-31T12:00:00</completedDT>
+</case>

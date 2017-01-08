@@ -1,0 +1,1207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema id="CobCm" xmlns="www.genpact.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="www.genpact.com"
+	xmlns:common="www.genpact.com/common" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" 
+	jaxb:extensionBindingPrefixes="xjc" jaxb:version="1.0" version="0.2">
+
+	<xs:annotation>
+		<xs:documentation>A set of procedures, policies, processes and risk based controls that are designed to enable an organization to have a reasonable belief that it knows the true
+			identity of each of its clients. This will also include designing an approach to monitoring client activities and transactions that capture the risks associated with their clients and which will 
+			satisfactorily identify those transactions or activities that may be unusual or suspicious.
+		</xs:documentation>
+	</xs:annotation>
+
+	<xs:import schemaLocation="DataTypes/CommonDataTypes.xsd" namespace="www.genpact.com/common" />
+
+	<!-- JAXB extension to add serializable to all classes -->
+	<xs:annotation>
+		<xs:appinfo>
+			<jaxb:globalBindings generateIsSetMethod="false">
+				<xjc:serializable uid="1" />
+			</jaxb:globalBindings>
+		</xs:appinfo>
+	</xs:annotation>
+
+	<xs:element name="CobCmData">
+		<xs:annotation>
+			<xs:documentation>
+				Root element of the proprietary XML that acts as a standard format for transferring profile data from the sender's system to COS CM application for profile management.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="RequestInfo" minOccurs="1" type="RequestInfo" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Information regarding the request.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="EntityProfile" minOccurs="1" type="EntityProfile" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							The profile data stored in COB CM application.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ResponseInfo" minOccurs="0" type="ResponseInfo" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							Information regarding the response.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="RequestInfo">
+		<xs:sequence>
+			<xs:element name="RequestDate" minOccurs="1" maxOccurs="1" type="xs:date">
+				<xs:annotation>
+					<xs:documentation>The date when the request was sent</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SenderIdentification" minOccurs="1" maxOccurs="1" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Sender's identification</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ReferenceId" minOccurs="1" maxOccurs="1" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Sender's reference Id for the request</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EntityType" minOccurs="1" maxOccurs="1" type="common:EntityType">
+				<xs:annotation>
+					<xs:documentation>Entity type</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MessageType" minOccurs="1" maxOccurs="1" type="common:MessageType">
+				<xs:annotation>
+					<xs:documentation>Request type</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DueDate" minOccurs="0" maxOccurs="1" type="xs:date">
+				<xs:annotation>
+					<xs:documentation>Optional date by when the profile should be completed</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ChallengeDetails" minOccurs="0" maxOccurs="1" type="ChallengeDetails">
+				<xs:annotation>
+					<xs:documentation>Details on the challenge request</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DocumentList" minOccurs="0" maxOccurs="unbounded" type="Document">
+				<xs:annotation>
+					<xs:documentation>List of documents identified for the profile</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="EntityProfile">
+		<xs:sequence>
+			<xs:element name="Jurisdiction" maxOccurs="1" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>The jurisdiction for which the CM is to be done</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="BookingLocation" type="xs:string" maxOccurs="1" minOccurs="1"></xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:choice minOccurs="1" maxOccurs="1">
+				<xs:element name="Institution" type="Institution" minOccurs="0" maxOccurs="1"></xs:element>
+				<xs:element name="Individual" type="Individual" minOccurs="0" maxOccurs="1"></xs:element>
+				<xs:element name="Trust" type="Trust" minOccurs="0" maxOccurs="1"></xs:element>
+			</xs:choice>
+			<xs:element name="ReferenceDocuments" minOccurs="0" maxOccurs="1" type="common:ReferenceDocuments">
+				<xs:annotation>
+					<xs:documentation>The list of reference documents that were previously identified for this profile.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="LastUpdateDate" type="xs:dateTime" />
+		<xs:attribute name="ProfileId" type="xs:string" />
+	</xs:complexType>
+
+	<xs:complexType name="ResponseInfo">
+		<xs:sequence>
+			<xs:element name="ResponseDate" minOccurs="1" maxOccurs="1" type="xs:date">
+				<xs:annotation>
+					<xs:documentation>
+						Date when the response was generated.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CmProfileId" minOccurs="1" maxOccurs="1" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>
+						The id for the profile in the COS CM application.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProfileStatus" minOccurs="1" maxOccurs="1" type="common:ProfileStatus">
+				<xs:annotation>
+					<xs:documentation>
+						Status of the profile when the response was generated.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Comments" minOccurs="0" maxOccurs="1" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>
+						Optional overall comments of case.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ChallengeDetails">
+		<xs:sequence>
+			<xs:element name="PreviousReferenceId" minOccurs="0" maxOccurs="1" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>
+						The reference Id sent for the previous request
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PreviousCmProfileId" minOccurs="0" maxOccurs="1" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>
+						The id for the profile in the COS CM application which is being challenged.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PreviousResponseDate" minOccurs="0" maxOccurs="1" type="xs:date">
+				<xs:annotation>
+					<xs:documentation>
+						Date when the previous response was generated.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Comments" minOccurs="0" maxOccurs="1" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>
+						Comments describing the reason for the challenge.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Exchange">
+		<xs:sequence>
+			<xs:element name="Name" type="common:CmAttributeString" />
+			<xs:element name="Country" type="common:CmAttributeCountry" />
+			<xs:element name="TickerSymbol" type="common:CmAttributeString" />
+			<xs:element name="IsApprovedExchange" type="common:CmAttributeBoolean" />
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:int"></xs:attribute>
+	</xs:complexType>
+	
+	<xs:complexType name="Regulator">
+		<xs:sequence>
+			<xs:element name="Name" type="common:CmAttributeString" />
+			<xs:element name="Country" minOccurs="0" type="common:CmAttributeCountry"/>
+			<xs:element name="IdentificationNumber" type="common:CmAttributeString" />
+			<xs:element name="IsApprovedRegulator" minOccurs="0" type="common:CmAttributeBoolean" />
+			<xs:element name="SROStatus" minOccurs="0" type="common:CmAttributeString" />
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:int"></xs:attribute>
+	</xs:complexType>
+	
+	<xs:complexType name="Product">
+		<xs:sequence>
+			<xs:element name="Product" type="common:ProductList" minOccurs="1" maxOccurs="1" />
+			<xs:element name="ReferenceDocuments" minOccurs="1" maxOccurs="1" type="common:ReferenceDocuments" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="License">
+		<xs:sequence>
+			<xs:element name="IssuingAuthorityName" type="common:CmAttributeString" />
+			<xs:element name="LicenseNumber" type="common:CmAttributeString" />
+			<xs:element name="LicenseExpiryDate" minOccurs="0" type="common:CmAttributeDate" />
+			<xs:element name="HasLicenseRestrictions" type="common:CmAttributeBoolean" />
+			<xs:element name="LicenseRestrictionDetails" minOccurs="0" type="common:CmAttributeString" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Contact">
+		<xs:sequence>
+			<xs:element name="Role" minOccurs="1" maxOccurs="1" type="common:CmAttributeString">
+				<xs:annotation>
+					<xs:documentation>
+						The role for the contact.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Position" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+				<xs:annotation>
+					<xs:documentation>
+						The position in the entity for the contact.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FirstName" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+				<xs:annotation>
+					<xs:documentation>
+						The first name for the contact.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MiddleName" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+				<xs:annotation>
+					<xs:documentation>
+						The middle name for the contact.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LastName" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+				<xs:annotation>
+					<xs:documentation>
+						The last name for the contact.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CountryOfDomicile" minOccurs="0" maxOccurs="1" type="common:CmAttributeCountry">
+				<xs:annotation>
+					<xs:documentation>
+						The country where the contact resides.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CountryOfCitizenship" minOccurs="0" maxOccurs="1" type="common:CmAttributeCountry">
+				<xs:annotation>
+					<xs:documentation>
+						The country of which the contact is a citizen.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Address" minOccurs="0" maxOccurs="1" type="common:Address">
+				<xs:annotation>
+					<xs:documentation>
+						The address for the contact.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Phone" minOccurs="0" maxOccurs="1" type="common:CmAttributeLong">
+				<xs:annotation>
+					<xs:documentation>
+						The phone for the contact.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Fax" minOccurs="0" maxOccurs="1" type="common:CmAttributeLong">
+				<xs:annotation>
+					<xs:documentation>
+						The fax for the contact.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Email" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+				<xs:annotation>
+					<xs:documentation>
+						The Email for the contact.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Corporate">
+		<xs:sequence>
+			<xs:element name="LegalName" minOccurs="1" maxOccurs="1" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>
+						Legal name for the corporate.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EntityId" minOccurs="1" maxOccurs="1" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>
+						The MEI for the corporate.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RegisteredAddress" minOccurs="0" maxOccurs="1" type="common:Address">
+				<xs:annotation>
+					<xs:documentation>
+						The country where the parent was incorporated or formed.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LegalForm" minOccurs="0" maxOccurs="1" type="common:CmAttributeLegalForm">
+				<xs:annotation>
+					<xs:documentation>
+						Formation type for the corporate.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PercentOwnership" minOccurs="0" maxOccurs="1" type="common:CmAttributeDouble">
+				<xs:annotation>
+					<xs:documentation>
+						Percentage owned by the corporate.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CountryOfIncorporation" minOccurs="0" maxOccurs="1" type="common:CmAttributeCountry">
+				<xs:annotation>
+					<xs:documentation>
+						The country where the corporate was incorporated or formed.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IsPublicalyListed" minOccurs="1" maxOccurs="1" type="common:CmAttributeBoolean">
+				<xs:annotation>
+					<xs:documentation>
+						Is the corporate publicaly listed.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ListedExchange" minOccurs="0" maxOccurs="1" type="Exchange">
+				<xs:annotation>
+					<xs:documentation>
+						The primary exchange where the corporate is listed.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IsParentRegulated" minOccurs="1" maxOccurs="1" type="common:CmAttributeBoolean">
+				<xs:annotation>
+					<xs:documentation>
+						Is the parent regulated.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RegulatorInfo" minOccurs="0" maxOccurs="1" type="Regulator">
+				<xs:annotation>
+					<xs:documentation>
+						The primary regulation authority for the corporate.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="HasGovtInterest" minOccurs="0" maxOccurs="1" type="common:CmAttributeBoolean">
+				<xs:annotation>
+					<xs:documentation>
+						Does a government have ownership interest in the corporate.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GovernmentOwnership" minOccurs="0" maxOccurs="1" type="GovernmentOwnership">
+				<xs:annotation>
+					<xs:documentation>The government ownership info for the corporate.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GovtIdInfo" minOccurs="0" maxOccurs="1" type="GovernmentIdInfo">
+				<xs:annotation>
+					<xs:documentation>
+						The government Id info for the corporate.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Individual">
+		<xs:sequence>
+			<xs:element name="IndividualId" minOccurs="0" maxOccurs="1" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>
+						The MEI for the individual.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Designation" minOccurs="1" maxOccurs="1" type="common:CmAttributeString">
+				<xs:annotation>
+					<xs:documentation>
+						The designation for the individual.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FirstName" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+				<xs:annotation>
+					<xs:documentation>
+						The first name for the individual.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MiddleName" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+				<xs:annotation>
+					<xs:documentation>
+						The middle name for the individual.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LastName" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+				<xs:annotation>
+					<xs:documentation>
+						The last name for the individual.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Aliases" minOccurs="0" maxOccurs="unbounded" type="common:CmAttributeString">
+				<xs:annotation>
+					<xs:documentation>
+						The aliases for the individual.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Gender" minOccurs="0" maxOccurs="1" type="common:CmAttributeGender">
+				<xs:annotation>
+					<xs:documentation>
+						The gender of the individual.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Address" minOccurs="0" maxOccurs="1" type="common:Address">
+				<xs:annotation>
+					<xs:documentation>
+						The address for the individual.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CountryOfDomicile" minOccurs="0" maxOccurs="1" type="common:CmAttributeCountry">
+				<xs:annotation>
+					<xs:documentation>
+						The country where the individual resides.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CountryOfCitizenship" minOccurs="0" maxOccurs="1" type="common:CmAttributeCountry">
+				<xs:annotation>
+					<xs:documentation>
+						The country of which the individual is a citizen.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PercentOwnership" minOccurs="0" maxOccurs="1" type="common:CmAttributeDouble">
+				<xs:annotation>
+					<xs:documentation>
+						Percentage owned by the individual.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DateOfBirth" minOccurs="0" maxOccurs="1" type="common:CmAttributeDate">
+				<xs:annotation>
+					<xs:documentation>
+						The date of birth of the individual.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GovtIdInfo" minOccurs="0" maxOccurs="1" type="GovernmentIdInfo">
+				<xs:annotation>
+					<xs:documentation>
+						The government Id info for the individual.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SourceOfWealth" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+				<xs:annotation>
+					<xs:documentation>
+						The source of wealth for the individual.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="WealthWithHoldingCompany" minOccurs="1" maxOccurs="1" type="common:CmAttributeBoolean">
+				<xs:annotation>
+					<xs:documentation>
+						The the individual's wealth commensurate with holding in the company.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="GovernmentIdInfo">
+		<xs:sequence>
+			<xs:element name="GovtIdType" minOccurs="1" maxOccurs="1" type="common:CmAttributeString">
+				<xs:annotation>
+					<xs:documentation>
+						The type of government Id.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GovtIdNumber" minOccurs="1" maxOccurs="1" type="common:CmAttributeString">
+				<xs:annotation>
+					<xs:documentation>
+						The government Id number.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Trust">
+		<xs:sequence>
+			<xs:element name="Designation" minOccurs="1" maxOccurs="1" type="common:CmAttributeString">
+				<xs:annotation>
+					<xs:documentation>
+						The designation for the individual.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FirstName" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+				<xs:annotation>
+					<xs:documentation>
+						The first name for the individual.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MiddleName" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+				<xs:annotation>
+					<xs:documentation>
+						The middle name for the individual.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LastName" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+				<xs:annotation>
+					<xs:documentation>
+						The last name for the individual.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Aliases" minOccurs="0" maxOccurs="unbounded" type="common:CmAttributeString">
+				<xs:annotation>
+					<xs:documentation>
+						The aliases for the individual.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Gender" minOccurs="0" maxOccurs="1" type="common:CmAttributeGender">
+				<xs:annotation>
+					<xs:documentation>
+						The gender of the individual.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Role" minOccurs="1" maxOccurs="1" type="common:CmAttributeString">
+				<xs:annotation>
+					<xs:documentation>
+						The role for the trust.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PercentOwnership" minOccurs="0" maxOccurs="1" type="common:CmAttributeDouble">
+				<xs:annotation>
+					<xs:documentation>
+						Percentage owned by the individual.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DateOfBirth" minOccurs="0" maxOccurs="1" type="common:CmAttributeDate">
+				<xs:annotation>
+					<xs:documentation>
+						The date of birth of the individual.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="HasGovtInterest" minOccurs="0" maxOccurs="1" type="common:CmAttributeBoolean">
+				<xs:annotation>
+					<xs:documentation>
+						Does a government have ownership interest in the trust.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GovernmentOwnership" minOccurs="0" maxOccurs="1" type="GovernmentOwnership">
+				<xs:annotation>
+					<xs:documentation>The government ownership info for the parent.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="GovernmentOwnership">
+		<xs:sequence>
+			<xs:element name="name" minOccurs="1" maxOccurs="1" type="common:CmAttributeString">
+				<xs:annotation>
+					<xs:documentation>
+						The government name.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Percentage" minOccurs="1" maxOccurs="1" type="common:CmAttributeDouble">
+				<xs:annotation>
+					<xs:documentation>
+						The percentage ownership by the government.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Circumstances" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+				<xs:annotation>
+					<xs:documentation>
+						The circumstances leading to the government ownership.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Identifier">
+		<xs:annotation>
+			<xs:documentation>
+				Identification criteria for legal entities.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Type" type="common:IndustryClassificationType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Value" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ReferenceDocuments" type="common:ReferenceDocuments" />
+		</xs:sequence>
+	</xs:complexType>
+
+
+    <xs:complexType name="Institution">
+    	<xs:sequence>
+	    	<xs:element name="EntityNames" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ShortName" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+							<xs:annotation>
+								<xs:documentation>The short name for the entity.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="DBA" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+							<xs:annotation>
+								<xs:documentation>Trading as/doing business as info.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="PreviousLegalName" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>List of previous legal names.</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="LegalName" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+										<xs:annotation>
+											<xs:documentation>The name this entity was previously using.</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="EndDate" minOccurs="0" maxOccurs="1" type="common:CmAttributeDate">
+										<xs:annotation>
+											<xs:documentation>The date this name was last used.</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Formation" minOccurs="1" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="EntityId" minOccurs="1" maxOccurs="1" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>The MEI for the entity.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="LegalName" minOccurs="1" maxOccurs="1" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>Legal name for the entity.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="LegalForm" minOccurs="0" maxOccurs="1" type="common:CmAttributeLegalForm">
+							<xs:annotation>
+								<xs:documentation>Formation type for the entity.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="EntityStructure" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+							<xs:annotation>
+								<xs:documentation>Structure of the entity.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="OwnershipType" minOccurs="0" maxOccurs="1" type="common:CmAttributeOwnershipType">
+							<xs:annotation>
+								<xs:documentation>Ownership type of the entity.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="CountryOfIncorporation" minOccurs="0" maxOccurs="1" type="common:CmAttributeCountry">
+							<xs:annotation>
+								<xs:documentation>The country where the entity was incorporated or formed.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="StateOfIncorporation" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+							<xs:annotation>
+								<xs:documentation>The state or province where the entity was incorporated or formed.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="DateOfIncorporation" minOccurs="0" maxOccurs="1" type="common:CmAttributeDate">
+							<xs:annotation>
+								<xs:documentation>The date when the entity was incorporated or formed.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Addresses" minOccurs="1" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="RegisteredAddress" minOccurs="1" maxOccurs="1" type="common:Address">
+							<xs:annotation>
+								<xs:documentation>The registered address for the entity.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="PrincipalBusinessAddress" minOccurs="0" maxOccurs="1" type="common:Address">
+							<xs:annotation>
+								<xs:documentation>The address where the entity conducts most of its business.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="MailingAddress" minOccurs="0" maxOccurs="1" type="common:Address">
+							<xs:annotation>
+								<xs:documentation>The mailing address for the entity.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="DomicileAddress" minOccurs="0" maxOccurs="1" type="common:Address">
+							<xs:annotation>
+								<xs:documentation>The domicile address for the entity.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Contacts" minOccurs="0" maxOccurs="unbounded" type="Contact"></xs:element>
+			<xs:element name="RegistrationInformation" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="RegistrationAuthority" minOccurs="1" maxOccurs="1" type="common:CmAttributeString">
+							<xs:annotation>
+								<xs:documentation>The name of the authority which registered the entity.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="CountryOfRegistration" minOccurs="1" maxOccurs="1" type="common:CmAttributeCountry">
+							<xs:annotation>
+								<xs:documentation>The country where the entity is registered.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="StateOfRegistration" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+							<xs:annotation>
+								<xs:documentation>The state or province where the entity is registered.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="RegistrationNumber" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+							<xs:annotation>
+								<xs:documentation>The registration number provided by the authority.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="RegistrationDate" minOccurs="0" maxOccurs="1" type="common:CmAttributeDate">
+							<xs:annotation>
+								<xs:documentation>The date when the registration was done.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="RegistrationExpiryDate" minOccurs="0" maxOccurs="1" type="common:CmAttributeDate">
+							<xs:annotation>
+								<xs:documentation>The date when the registration expires.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="RegisteredAgent" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+							<xs:annotation>
+								<xs:documentation>
+									The registered agent for a business entity may be an individual member of the company, or (more often) a third party, such as the organization's lawyer or a service
+									company
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ListedInformation" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="IsPublicalyListed" minOccurs="1" maxOccurs="1" type="common:CmAttributeBoolean">
+							<xs:annotation>
+								<xs:documentation>Is the entity publicaly listed.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="PrimaryExchange" minOccurs="0" maxOccurs="1" type="Exchange">
+							<xs:annotation>
+								<xs:documentation>The primary exchange where the entity is listed.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="OtherExchanges" minOccurs="0" maxOccurs="unbounded" type="Exchange">
+							<xs:annotation>
+								<xs:documentation>The list of exchanges other than the primary exchange where the entity is listed.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="RegulatorInformation" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="PrimaryRegulator" minOccurs="0" maxOccurs="1" type="Regulator">
+							<xs:annotation>
+								<xs:documentation>The primary regulation authority for the entity.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="SecondaryRegulators" minOccurs="0" maxOccurs="unbounded" type="Regulator">
+							<xs:annotation>
+								<xs:documentation>The regulators other than primary.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ProductInformation" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Products" minOccurs="0" maxOccurs="unbounded" type="Product">
+							<xs:annotation>
+								<xs:documentation>The products by entity.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="BusinessActivities" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="NatureOfBusiness" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+							<xs:annotation>
+								<xs:documentation>The nature of business conducted by the entity.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="PrimaryBusinessActivity" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+							<xs:annotation>
+								<xs:documentation>The primary business actity of the entity.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="IndustryIdentifier" type="Identifier">
+							<xs:annotation>
+								<xs:documentation>
+
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="PrimaryBusinessPercentRevenue" minOccurs="0" maxOccurs="1" type="common:CmAttributeDouble">
+							<xs:annotation>
+								<xs:documentation>Percentage of revenue from primary business activity.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="PlaceOfBusiness" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="CountryOfBusiness" minOccurs="1" maxOccurs="1" type="common:CmAttributeCountry">
+							<xs:annotation>
+								<xs:documentation>Country of business for the entity.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="PercentageOfBusiness" minOccurs="0" maxOccurs="1" type="common:CmAttributeDouble">
+							<xs:annotation>
+								<xs:documentation>
+
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="CountryOfPrimaryOperation" minOccurs="0" maxOccurs="1" type="common:CmAttributeCountry">
+							<xs:annotation>
+								<xs:documentation>The country where the entity primarily operates.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="IndustryIdentifiers" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="IdentifierType" minOccurs="0" maxOccurs="unbounded" type="Identifier">
+							<xs:annotation>
+								<xs:documentation>Public identifiers for the entity.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="LicenseInformation" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="IsLicenseAvailable" minOccurs="1" maxOccurs="1" type="common:CmAttributeBoolean">
+							<xs:annotation>
+								<xs:documentation>Is the license information for the entity available.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="LicenseUnavailableReason" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+							<xs:annotation>
+								<xs:documentation>What is the reason for unavailability of license information for the entity.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="License" minOccurs="0" maxOccurs="1" type="License">
+							<xs:annotation>
+								<xs:documentation>License details for the entity.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="HasOffshoreLicense" minOccurs="1" maxOccurs="1" type="common:CmAttributeBoolean">
+							<xs:annotation>
+								<xs:documentation>Does the entity have an offshore banking license.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="SoleOperationOffshoreBanking" minOccurs="0" maxOccurs="1" type="common:CmAttributeBoolean">
+							<xs:annotation>
+								<xs:documentation>Does the entity operate solely under the offshore banking license.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="BearerShares" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="CanIssueBearerShares" minOccurs="1" maxOccurs="1" type="common:CmAttributeBoolean">
+							<xs:annotation>
+								<xs:documentation>Can the entity issue bearer shares.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="BearerSharesIssued" minOccurs="0" maxOccurs="1" type="common:CmAttributeLong">
+							<xs:annotation>
+								<xs:documentation>Bearer shares issued by the entity.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="BearerSharesIssuedPercent" minOccurs="0" maxOccurs="1" type="common:CmAttributeDouble">
+							<xs:annotation>
+								<xs:documentation>Percentage of bearer shares issued by the entity.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="HeldInCustody" minOccurs="0" maxOccurs="1" type="common:CmAttributeBoolean">
+							<xs:annotation>
+								<xs:documentation>Are the bearer shares held in custody.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="CustodialDetails" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+							<xs:annotation>
+								<xs:documentation>Custodial details of bearer shares.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="FinancialInformation" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="KeyFinancialIndicator" minOccurs="1" maxOccurs="1" type="common:CmAttributeString">
+							<xs:annotation>
+								<xs:documentation>Most relevant key financial indicator</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="TotalRevenue" minOccurs="0" maxOccurs="1" type="common:CmAttributeDouble">
+							<xs:annotation>
+								<xs:documentation>Total revenue of the entity.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="TotalAssets" minOccurs="0" maxOccurs="1" type="common:CmAttributeDouble">
+							<xs:annotation>
+								<xs:documentation>Total asset size of the entity.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="TotalManagementAssets" minOccurs="0" maxOccurs="1" type="common:CmAttributeDouble">
+							<xs:annotation>
+								<xs:documentation>Total assets under management.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="TotalLiquidAssets" minOccurs="0" maxOccurs="1" type="common:CmAttributeDouble">
+							<xs:annotation>
+								<xs:documentation>Total liquid assets.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="IsFinancialInformationAudited" minOccurs="0" maxOccurs="1" type="common:CmAttributeBoolean">
+							<xs:annotation>
+								<xs:documentation>Is financial information audited.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="AuditorName" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+							<xs:annotation>
+								<xs:documentation>Name of auditor of financial information</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="FiscalYearEnd" minOccurs="0" maxOccurs="1" type="common:CmAttributeDateMonthDay">
+							<xs:annotation>
+								<xs:documentation>Month and day when the fiscal Year ends.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="LegalHierarchy" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ImmediateParent" minOccurs="0" maxOccurs="1" type="Institution">
+							<xs:annotation>
+								<xs:documentation>The immediate parent for the entity.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="UltimateParent" minOccurs="0" maxOccurs="1" type="Institution">
+							<xs:annotation>
+								<xs:documentation>The ultimate parent for the entity.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ControllersAndDirectors" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="FirstName" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+							<xs:annotation>
+								<xs:documentation>The first name for the person.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="MiddleName" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+							<xs:annotation>
+								<xs:documentation>The middle name for the person.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="LastName" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+							<xs:annotation>
+								<xs:documentation>The last name for the person.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Position" minOccurs="0" maxOccurs="1" type="common:CmAttributeString">
+							<xs:annotation>
+								<xs:documentation>The position in the entity for the person.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Designation" minOccurs="1" maxOccurs="1" type="common:CmAttributeString">
+							<xs:annotation>
+								<xs:documentation>The designation of the person.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Aliases" minOccurs="0" maxOccurs="unbounded" type="common:CmAttributeString">
+							<xs:annotation>
+								<xs:documentation>The aliases for the person.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Gender" minOccurs="0" maxOccurs="1" type="common:CmAttributeGender">
+							<xs:annotation>
+								<xs:documentation>The gender of the person.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="DateOfBirth" minOccurs="0" maxOccurs="1" type="common:CmAttributeDate">
+							<xs:annotation>
+								<xs:documentation>The date of birth of the person.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ResidentialAddress" minOccurs="0" maxOccurs="1" type="common:Address">
+							<xs:annotation>
+								<xs:documentation>The residential address for the person.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="CountryOfCitizenship" minOccurs="0" maxOccurs="1" type="common:CmAttributeCountry">
+							<xs:annotation>
+								<xs:documentation>The country of which the person is a citizen.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="BeneficialOwners" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Institutions" minOccurs="0" maxOccurs="unbounded" type="Institution">
+							<xs:annotation>
+								<xs:documentation>The corporate beneficial owners.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Individuals" minOccurs="0" maxOccurs="unbounded" type="Individual">
+							<xs:annotation>
+								<xs:documentation>The individual beneficial owners.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Trusts" minOccurs="0" maxOccurs="unbounded" type="Trust">
+							<xs:annotation>
+								<xs:documentation>The trust beneficial owners.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="HasGovtInterest" minOccurs="0" maxOccurs="1" type="common:CmAttributeBoolean">
+				<xs:annotation>
+					<xs:documentation>Does a government have ownership interest in the entity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GovernmentOwnership" minOccurs="0" maxOccurs="1" type="GovernmentOwnership">
+				<xs:annotation>
+					<xs:documentation>The government ownership info.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RelatedParty" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The related party info.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Type" minOccurs="1" maxOccurs="1" type="common:CmAttributePartyType">
+							<xs:annotation>
+								<xs:documentation>Type of related party</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="RelationshipNature" minOccurs="1" maxOccurs="1" type="common:CmAttributeString">
+							<xs:annotation>
+								<xs:documentation>Nature of relationship</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:choice minOccurs="1" maxOccurs="1">
+							<xs:element name="Individual" minOccurs="0" maxOccurs="1" type="Individual"></xs:element>
+							<xs:element name="Institution" minOccurs="0" maxOccurs="1" type="Institution"></xs:element>
+						</xs:choice>
+						<xs:element name="SourceOfWealth" minOccurs="1" maxOccurs="1" type="common:CmAttributeString"></xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="Document">
+		<xs:annotation>
+			<xs:documentation>List of identified documents.</xs:documentation>
+		</xs:annotation>
+    	<xs:sequence>
+			<xs:element name="MCPID" minOccurs="1" maxOccurs="1" type="xs:string" >
+				<xs:annotation>
+					<xs:documentation>The name of the document</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+    		<xs:element name="DocumentName" minOccurs="1" maxOccurs="1" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The name of the document</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExpiryDate" minOccurs="0" maxOccurs="1" type="xs:date">
+				<xs:annotation>
+					<xs:documentation>The date when the document will expire</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DocumentType" minOccurs="0" maxOccurs="1" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The type of the document</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Langauage" minOccurs="0" maxOccurs="1" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The language the document is written in</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Comments" minOccurs="0" maxOccurs="1" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The comments regarding the document</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+    	</xs:sequence>
+    </xs:complexType>
+    
+</xs:schema>

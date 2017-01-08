@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://dozer.sourceforge.net
+http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+ <configuration>
+	<date-format>MM/dd/yyyy hh:mm:ss</date-format>
+
+</configuration> 
+
+ <mapping  wildcard="false" map-null="false" map-empty-string="true" > 
+
+<!-- a denotes src file & b denoted destination -->
+	<class-a>com.headstrong.npi.raas.xml.pojo.RemediationProfile</class-a>
+	<class-b>com.headstrong.npi.raas.cobs.xml.pojo.EntityProfile</class-b>
+		
+	 <field>
+	 <a>lastUpdateDate</a>
+	 <b>lastUpdateDate</b>
+	 </field>
+	 
+ 	 <field> 
+		 <a>raasID</a>
+		 <b>profileId</b>
+	 </field>
+	 <field>
+		 <a>refData.jurisdiction</a>
+		 <b>jurisdiction.bookingLocation</b>
+	 </field>
+	 <field map-id="entityNamesMapper">
+	 	<a>entity</a>
+	 	<b>institution</b>
+	 </field>
+	 
+	 </mapping>
+	 <mapping wildcard="false" map-id="entityNamesMapper" map-null="false">
+	 	<class-a>com.headstrong.npi.raas.xml.pojo.Entity</class-a>
+		<class-b>com.headstrong.npi.raas.cobs.xml.pojo.Institution</class-b>
+		
+		<field >
+			<a>entityNames.shortName</a>
+			<b>entityNames.shortName.value</b>
+		</field>
+		
+		
+		<field>
+			<a>entityNames.doingBusniessAs</a>
+			<b>entityNames.dba.value</b>
+		</field>
+	<!-- Added setter method entityNames.previousLegalName List -->
+	 <field custom-converter="com.headstrong.npi.raas.cobs.converter.dozer.CmAttributeStringCustomConverter">
+		<a>entityNames.previousLegalName</a>
+		<b>entityNames.previousLegalName[0].legalName</b>
+	</field> 
+	 <!-- <field custom-converter="com.headstrong.npi.raas.cobs.converter.dozer.CmAttributeDateCustomConverter">
+		<a>entityNames.previousLegalEndDate</a>
+		<b>entityNames.previousLegalName[0].endDate</b>
+	</field>  -->
+		
+		<!-- Formation
+		
+        protected String entityId;
+        protected String legalName;
+        protected LegalForm legalForm;
+        protected String entityStructure;
+        protected OwnershipType ownershipType;
+        protected Country countryOfIncorporation;
+        protected String stateOfIncorporation;
+        protected String dateOfFormation;
+        
+        protected String entityId;
+        protected String legalName;
+        protected CmAttributeLegalForm legalForm;
+        protected CmAttributeString entityStructure;
+        protected CmAttributeOwnershipType ownershipType;
+        protected CmAttributeCountry countryOfIncorporation;
+        protected CmAttributeString stateOfIncorporation;
+        protected CmAttributeDate dateOfIncorporation; 
+		
+		-->
+		
+		<field >
+			<a>formation.entityId</a>
+			<b>formation.entityId</b>
+		</field>
+		<field>
+			<a>formation.legalName</a>
+			<b>formation.legalName</b>
+		</field>
+		
+		 <field>
+			<a>formation.legalForm</a>
+			<b>formation.legalForm.legalForm</b>
+		</field>
+
+		<field >
+			<a>formation.entityStructure</a>
+			<b>formation.entityStructure.value</b>
+		</field>
+		
+		<field>
+			<a>formation.ownershipType</a>
+			<b>formation.ownershipType.ownershipType</b>
+		</field>
+
+		<field>
+			<a>formation.stateOfIncorporation</a>
+			<b>formation.stateOfIncorporation.value</b>
+		</field>
+		<field>
+			<a>formation.countryOfIncorporation</a>
+			<b>formation.countryOfIncorporation.country</b>
+		</field>
+		 <!-- <field custom-converter="com.headstrong.npi.raas.cobs.converter.dozer.CmAttributeDateCustomConverter">
+			<a>formation.dateOfFormation</a>
+			<b>formation.dateOfIncorporation</b>
+		</field>	 -->
+ 		
+		<!-- Formation -->
+		
+		<!-- Contact Information
+		
+        protected List<ContactInfo> contacts;
+		
+		protected String id;
+	    protected String role;
+	    protected String position;
+	    protected String firstName;
+	    protected String middleName;
+	    protected String lastName;
+	    protected String countryOfDomicile;
+	    protected String countryOfCitizenship;
+	    protected String address;
+	    protected String phone;
+	    protected String fax;
+	    protected String email;
+	    
+        protected List<Address> address;
+        
+	    protected String id;
+	    protected String addressLine1;
+	    protected String addressLine2;
+	    protected String city;
+	    protected String state;
+	    protected String country;
+	    protected String zipCode;
+	    protected AddressType type;
+			
+		protected List<Contact> contacts;
+		
+	    protected CmAttributeString role;
+	    protected CmAttributeString position;
+	    protected CmAttributeString firstName;
+	    protected CmAttributeString middleName;
+	    protected CmAttributeString lastName;
+	    protected CmAttributeCountry countryOfDomicile;
+	    protected CmAttributeCountry countryOfCitizenship;
+	    protected CmAttributeLong phone;
+	    protected CmAttributeLong fax;
+	    protected CmAttributeString email; 
+
+	    protected Address address;
+	    
+	    protected Address.AddressLine1 addressLine1;
+	    protected Address.AddressLine2 addressLine2;
+	    protected Address.City city;
+	    protected Address.State state;
+	    protected Address.Country country;
+	    protected Address.ZipCode zipCode;
+	    protected ReferenceDocuments referenceDocuments;
+		 
+		protected String value;
+        protected Comments comments;
+        protected AttributeStatus status;
+        
+		-->
+		<field custom-converter="com.headstrong.npi.raas.cobs.converter.dozer.ContactInfoCustomConverter">
+			<a >contactInformation.contacts</a>
+			<b >contacts</b>
+		</field>
+		<field custom-converter="com.headstrong.npi.raas.cobs.converter.dozer.AddressCustomConverter">
+			<a >contactInformation.address</a>
+			<b >contacts</b>
+		</field>
+				
+		<!-- Contact Information -->
+		
+		<!-- RegistrationInformation
+		
+        protected String name;
+        protected String country;
+        protected String state;
+        protected String number;
+        protected String date;
+        protected String expiryDate;
+        protected String agentName; 
+        
+        protected CmAttributeString registrationAuthority;
+        protected CmAttributeCountry countryOfRegistration;
+        protected CmAttributeString stateOfRegistration;
+        protected CmAttributeString registrationNumber;
+        protected CmAttributeDate registrationDate;
+        protected CmAttributeDate registrationExpiryDate;
+        protected CmAttributeString registeredAgent;
+		
+		-->
+		<field >
+			<a>registrationInformation.name</a>
+			<b>registrationInformation.registrationAuthority.value</b>
+		</field>
+		<field custom-converter="com.headstrong.npi.raas.cobs.converter.dozer.StringToEnumCustomConverter">
+			<a>registrationInformation.country</a>
+			<b>registrationInformation.countryOfRegistration.country</b>
+		</field>
+		
+		<field>
+			<a>registrationInformation.state</a>
+			<b>registrationInformation.stateOfRegistration.value</b>
+		</field>
+		<field>
+			<a>registrationInformation.number</a>
+			<b>registrationInformation.registrationNumber.value</b>
+		</field>
+		<!-- <field>
+			<a>registrationInformation.date</a>
+			<b>registrationInformation.registrationDate.value</b>
+		</field> -->
+		<!-- <field >
+			<a>registrationInformation.expiryDate</a>
+			<b>registrationInformation.registrationExpiryDate.value</b>
+		</field>
+		 -->
+		<field >
+			<a>registrationInformation.agentName</a>
+			<b>registrationInformation.registeredAgent.value</b>
+		</field>
+		
+		<!-- RegistrationInformation -->
+
+		<!-- ListedInformation
+		 
+        protected boolean isEntityPubliclyListed;
+        protected Entity.ListedInformation.Exchanges exchanges;
+        protected Boolean isPrimaryExchangeApproved;
+        
+        protected List<Entity.ListedInformation.Exchanges.Exchange> exchange;
+        
+        protected String name;
+        protected String country;
+        protected String tickerSymbol;
+        protected boolean isPrimary;
+        protected Integer id;
+        
+        listedInformation
+        
+        protected CmAttributeBoolean isPublicalyListed;
+        protected Exchange primaryExchange;
+        protected List<Exchange> otherExchanges;
+        
+	    protected CmAttributeString name;
+	    protected CmAttributeCountry country;
+	    protected CmAttributeString tickerSymbol;
+	    protected CmAttributeBoolean isApprovedExchange;
+	    protected Integer id;
+        
+		-->
+
+		
+		<!-- <field>
+			<a>listedInformation.isEntityPubliclyListed</a>
+			<b>listedInformation.isPublicalyListed.value</b>
+		</field> -->
+		<field custom-converter="com.headstrong.npi.raas.cobs.converter.dozer.PrimaryElementConverterId">
+			<a>listedInformation.exchanges.exchange</a>
+			<b>listedInformation.primaryExchange</b>
+		</field>
+		<!-- isPrimaryExchangeApproved getter method, Changed return type from Wrapper to primitives -->
+		<!-- <field >
+			<a>listedInformation.isPrimaryExchangeApproved</a>
+			<b>listedInformation.primaryExchange.isApprovedExchange</b>
+		</field> -->
+		<!-- <field custom-converter="com.headstrong.npi.raas.cobs.converter.dozer.SecondaryElementConverterId">
+			<a>listedInformation.exchanges.exchange</a>
+			<b>listedInformation.otherExchanges</b>
+		</field> -->
+		
+		<!-- ListedInformation -->
+		
+		<!-- RegulatedInformation
+        
+        regulatedInformation
+        
+        protected Entity.RegulatedInformation.Regulators regulators;
+        protected String sroStatus;
+        protected Boolean isRegulatorApproved;
+        
+        protected List<Entity.RegulatedInformation.Regulators.Regulator> regulator;
+        
+         protected String name;
+         protected String country;
+         protected String number;
+         protected boolean isPrimary;
+         protected Integer id;
+         
+        regulatorInformation
+        
+        protected Regulator primaryRegulator;
+        protected List<Regulator> secondaryRegulators;
+        
+	    protected CmAttributeString name;
+	    protected CmAttributeCountry country;
+	    protected CmAttributeString identificationNumber;
+	    protected CmAttributeBoolean isApprovedRegulator;
+	    protected CmAttributeString sroStatus;
+	    protected Integer id;
+	        
+		 
+		-->
+		 <!-- <field custom-converter="com.headstrong.npi.raas.cobs.converter.dozer.PrimaryRegulatorConverterId">
+			<a>regulatedInformation.regulators.regulator</a>
+			<b>regulatorInformation.primaryRegulator</b>
+		</field> -->
+		 <field>
+			<a>regulatedInformation.sroStatus</a>
+			<b>regulatorInformation.primaryRegulator.sroStatus.value</b>
+		</field>
+		<!-- isRegulatorApproved getter method, Changed return type from Wrapper to primitives -->
+		<!-- 
+		 <field custom-converter="com.headstrong.npi.raas.cobs.converter.dozer.CmAttributeStringCustomConverter">
+			<a>regulatedInformation.isRegulatorApproved</a>
+			<b>regulatorInformation.primaryRegulator.isApprovedRegulator</b>
+		</field> -->
+		<!--  <field custom-converter="com.headstrong.npi.raas.cobs.converter.dozer.SecondaryRegulatorConverterId">
+			<a>regulatedInformation.regulators.regulator</a>
+			<b>regulatorInformation.secondaryRegulators</b>
+		</field> -->
+		
+		<!-- RegulatedInformation -->
+		
+		<!-- Product Information 
+		
+		protected List<String> product;
+		
+		protected List<Product> products;
+		
+	    protected ProductList product;
+	    protected ReferenceDocuments referenceDocuments;
+		-->
+		<field custom-converter="com.headstrong.npi.raas.cobs.converter.dozer.ListToListCustomConverter">
+			<a>productInformation.product</a>
+			<b>productInformation.products</b>
+		</field>
+		
+		<!-- Product Information -->
+		
+		<!-- Business Activities
+        
+        
+         protected IndustryClassificationType type;
+         protected String code;
+        
+        protected Identifier industryIdentifier;
+		  protected IndustryClassificationType type;
+		  protected String value;
+		  protected ReferenceDocuments referenceDocuments;
+         
+		-->
+		
+		<field>
+			<a>businessActivities.natureOfBusiness</a>
+			<b>businessActivities.natureOfBusiness.value</b>
+		</field>
+		<field>
+			<a>businessActivities.primaryBusinessActivity</a>
+			<b>businessActivities.primaryBusinessActivity.value</b>
+		</field>
+		 <field>
+			<a>businessActivities.percentRevenueFromPrimary</a>
+			<b>businessActivities.primaryBusinessPercentRevenue.value</b>
+		</field> 
+		
+		<field>
+			<a>businessActivities.industryClassifications.industryClassification[0].type</a>
+			<b>businessActivities.industryIdentifier.type</b>
+		</field>
+		<field>
+			<a>businessActivities.industryClassifications.industryClassification[0].code</a>
+			<b>businessActivities.industryIdentifier.value</b>
+		</field>
+		<!-- Business Activities -->
+		
+		<!-- Place of Business
+		
+        protected List<Entity.PlaceOfBusiness.CountriesOfBusiness> countriesOfBusiness;
+        protected Country countryOfPrimaryOperation; 
+		
+			protected String id;
+         protected String countryOfBusiness;
+         protected String percenetageOfBusniess;
+         
+         
+        protected CmAttributeCountry countryOfBusiness;
+        protected CmAttributeDouble percentageOfBusiness;
+        protected CmAttributeCountry countryOfPrimaryOperation;
+		-->
+		
+		 <field custom-converter="com.headstrong.npi.raas.cobs.converter.dozer.StringToEnumCustomConverter">
+			<a>placeOfBusiness.countriesOfBusiness[0].countryOfBusiness</a>
+			<b>placeOfBusiness.countryOfBusiness.country</b>
+		</field> 
+		
+		<field>
+			<a>placeOfBusiness.countriesOfBusiness[0].percenetageOfBusniess</a>
+			<b>placeOfBusiness.percentageOfBusiness.value</b>
+		</field> 
+		<field>
+			<a>placeOfBusiness.countryOfPrimaryOperation</a>
+			<b>placeOfBusiness.countryOfPrimaryOperation.country</b>
+		</field>  
+		
+		<!-- Place of Business -->
+		
+		<!-- IndustryIdentifers -->
+		
+		<!-- IndustryIdentifers -->
+
+		<!-- LicenseInformation
+		
+        protected Boolean licenseInformationAvailable;
+        protected Boolean hasOffshoreBankingLicense;
+        protected Boolean operateSolelyUnderOffshoreBankingLicense;
+		
+		 protected CmAttributeBoolean isLicenseAvailable;
+        protected CmAttributeString licenseUnavailableReason;
+        protected License license;
+        protected CmAttributeBoolean hasOffshoreLicense;
+        protected CmAttributeBoolean soleOperationOffshoreBanking; 
+		-->
+		
+		<!-- <field custom-converter="com.headstrong.npi.raas.cobs.converter.dozer.CmAttributeBooleanCustomConverter">
+			<a>licenseInformation.licenseInformationAvailable</a>
+			<b>licenseInformation.isLicenseAvailable</b>
+		</field> -->
+		 <!-- hasOffshoreBankingLicense getter method, Changed return type from Wrapper to primitives -->
+		<!-- <field>
+			<a>licenseInformation.hasOffshoreBankingLicense</a>
+			<b>licenseInformation.hasOffshoreLicense</b>
+		</field> -->
+		<!-- operateSolelyUnderOffshoreBankingLicense getter method, Changed return type from Wrapper to primitives -->
+		<!-- <field >
+			<a>licenseInformation.operateSolelyUnderOffshoreBankingLicense</a>
+			<b>licenseInformation.soleOperationOffshoreBanking</b>
+		</field> -->
+		
+		<!-- License 
+		 protected String reasonForNo;
+        protected String nameOfIssuingAuthority;
+        protected String authorityJurisdiction;
+        protected String licenseNumber;
+        protected String expiryDate;
+        protected Boolean containAnyRestriction;
+        protected String detialsOfRestriction;
+        
+        
+	    protected CmAttributeString issuingAuthorityName;
+	    protected CmAttributeString licenseNumber;
+	    protected CmAttributeDate licenseExpiryDate;
+	    protected CmAttributeBoolean hasLicenseRestrictions;
+	    protected CmAttributeString licenseRestrictionDetails;
+		
+		-->
+		
+		<!-- <field custom-converter="com.headstrong.npi.raas.cobs.converter.dozer.CmAttributeDoubleCustomConverter">
+			<a>licenseInformation.reasonForNo</a>
+			<b>licenseInformation.percentageOfBusiness</b>
+		</field> -->
+		<field>
+			<a>licenseInformation.nameOfIssuingAuthority</a>
+			<b>licenseInformation.license.issuingAuthorityName.value</b>
+		</field>
+	<!-- 	<field custom-converter="com.headstrong.npi.raas.cobs.converter.dozer.CmAttributeDoubleCustomConverter">
+			<a>licenseInformation.authorityJurisdiction</a>
+			<b>licenseInformation.percentageOfBusiness</b>
+		</field> -->
+		<field>
+			<a>licenseInformation.licenseNumber</a>
+			<b>licenseInformation.license.licenseNumber.value</b>
+		</field>
+		<!-- <field>
+			<a>licenseInformation.expiryDate</a>
+			<b>licenseInformation.licenseExpiryDate.value</b>
+		</field> -->
+		
+		<!-- containAnyRestriction getter method, Changed return type from Wrapper to primitives -->
+		<!-- <field >
+			<a>licenseInformation.containAnyRestriction</a>
+			<b>licenseInformation.license.hasLicenseRestrictions</b>
+		</field> -->
+		<field>
+			<a>licenseInformation.detialsOfRestriction</a>
+			<b>licenseInformation.license.licenseRestrictionDetails.value</b>
+		</field>
+		
+		<!-- LicenseInformation -->
+		
+		<!-- BearerShares
+		
+        protected Boolean capabilityofIssuingBearerShares;
+        protected Boolean bearerSharesIssued;
+        protected String percentageofBearerSharesIssued;
+        protected Boolean heldInCustody;
+        protected String custodialDetails; 
+        
+        protected CmAttributeBoolean canIssueBearerShares;
+        protected CmAttributeLong bearerSharesIssued;
+        protected CmAttributeDouble bearerSharesIssuedPercent;
+        protected CmAttributeBoolean heldInCustody;
+        protected CmAttributeString custodialDetails;
+		-->
+		<!-- capabilityofIssuingBearerShares getter method, Changed return type from Wrapper to primitives -->
+		<!-- <field>
+			<a>bearerShares.capabilityofIssuingBearerShares</a>
+			<b>bearerShares.canIssueBearerShares</b>
+		</field> -->
+		<!-- bearerSharesIssued getter method, Changed return type from Wrapper to primitives -->
+		
+		<!-- <field custom-converter="com.headstrong.npi.raas.cobs.converter.dozer.CmAttributeLongCustomConverter">
+			<a>bearerShares.bearerSharesIssued</a>
+			<b>bearerShares.bearerSharesIssued</b>
+		</field> -->
+		<field>
+			<a>bearerShares.percentageofBearerSharesIssued</a>
+			<b>bearerShares.bearerSharesIssuedPercent.value</b>
+		</field>
+		<!-- heldInCustody getter method, Changed return type from Wrapper to primitives -->
+		<!-- <field>
+			<a>bearerShares.heldInCustody</a>
+			<b>bearerShares.heldInCustody.value</b>
+		</field> -->
+		<field>
+			<a>bearerShares.custodialDetails</a>
+			<b>bearerShares.custodialDetails.value</b>
+		</field>
+		<!-- BearerShares -->
+		
+		<!-- FinancialInformation
+		
+        protected String keyFinancialIndicator;
+        protected String totalRevenue;
+        protected String totalAssetSize;
+        protected String totalAssetsUnderManagement;
+        protected String totalLiquidAssets;
+        protected Boolean auditFlag;
+        protected String nameOfAuditor;
+        protected String fiscalYearEnd;
+        
+        protected CmAttributeString keyFinancialIndicator;
+        protected CmAttributeDouble totalRevenue;
+        protected CmAttributeDouble totalAssets;
+        protected CmAttributeDouble totalManagementAssets;
+        protected CmAttributeDouble totalLiquidAssets;
+        protected CmAttributeBoolean isFinancialInformationAudited;
+        protected CmAttributeString auditorName;
+        protected CmAttributeDateMonthDay fiscalYearEnd;
+		 
+		-->
+		<field custom-converter="com.headstrong.npi.raas.cobs.converter.dozer.CmAttributeStringCustomConverter">
+			<a>financialInformation.keyFinancialIndicator</a>
+			<b>financialInformation.keyFinancialIndicator</b>
+		</field>
+		<field custom-converter="com.headstrong.npi.raas.cobs.converter.dozer.CmAttributeDoubleCustomConverter">
+			<a>financialInformation.totalRevenue</a>
+			<b>financialInformation.totalRevenue</b>
+		</field>
+		<field custom-converter="com.headstrong.npi.raas.cobs.converter.dozer.CmAttributeDoubleCustomConverter">
+			<a>financialInformation.totalAssetSize</a>
+			<b>financialInformation.totalAssets</b>
+		</field>
+		
+		<field custom-converter="com.headstrong.npi.raas.cobs.converter.dozer.CmAttributeDoubleCustomConverter">
+			<a>financialInformation.totalAssetsUnderManagement</a>
+			<b>financialInformation.totalManagementAssets</b>
+		</field>
+		<field custom-converter="com.headstrong.npi.raas.cobs.converter.dozer.CmAttributeDoubleCustomConverter">
+			<a>financialInformation.totalLiquidAssets</a>
+			<b>financialInformation.totalLiquidAssets</b>
+		</field>
+		<!-- auditFlag getter method, Changed return type from Wrapper to primitives -->		
+		<!-- <field custom-converter="com.headstrong.npi.raas.cobs.converter.dozer.CmAttributeBooleanCustomConverter">
+			<a>financialInformation.auditFlag</a>
+			<b>financialInformation.isFinancialInformationAudited</b>
+		</field> -->
+		<field custom-converter="com.headstrong.npi.raas.cobs.converter.dozer.CmAttributeStringCustomConverter">
+			<a>financialInformation.nameOfAuditor</a>
+			<b>financialInformation.auditorName</b>
+		</field>
+		<field custom-converter="com.headstrong.npi.raas.cobs.converter.dozer.CmAttributeDateCustomConverter">
+			<a>financialInformation.fiscalYearEnd</a>
+			<b>financialInformation.fiscalYearEnd</b>
+		</field>
+		
+		<!-- FinancialInformation -->
+		
+		<!-- GovernmentOwnership
+		
+        protected Option governmentOwned;
+        protected Country governmentCountry;
+        protected String percentageOwned;
+        protected String circumstances;
+		
+	    protected CmAttributeString name;
+	    protected CmAttributeDouble percentage;
+	    protected CmAttributeString circumstances;
+		 
+		-->
+		<field custom-converter="com.headstrong.npi.raas.cobs.converter.dozer.StringToEnumCustomConverter">
+			<a>governmentOwnershipInfo.governmentOwned</a>
+			<b>governmentOwnership.name.value</b>
+		</field>
+		<field custom-converter="com.headstrong.npi.raas.cobs.converter.dozer.CmAttributeStringCustomConverter">
+			<a>governmentOwnershipInfo.circumstances</a>
+			<b>governmentOwnership.circumstances</b>
+		</field>
+		<field custom-converter="com.headstrong.npi.raas.cobs.converter.dozer.CmAttributeDoubleCustomConverter">
+			<a>governmentOwnershipInfo.percentageOwned</a>
+			<b>governmentOwnership.percentage</b>
+		</field>
+		
+		<!-- GovernmentOwnership -->
+
+		
+ 	
+	
+		
+				  
+ 	</mapping>
+	
+</mappings>

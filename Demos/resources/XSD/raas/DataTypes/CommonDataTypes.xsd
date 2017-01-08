@@ -1,0 +1,1308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema id="RemediationProcess" xmlns="www.headstrong.com/common"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	targetNamespace="www.headstrong.com/common" xmlns:common="www.headstrong.com/address"
+	xmlns:ns1="www.headstrong.com/common" xmlns:common1="www.headstrong.com/common">
+
+	<xs:complexType name="Identifier">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="id" type="xs:string" >
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Value" type="CmAttributeString" minOccurs="0" >
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Type" type="CmAttributeString" minOccurs="0" >
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Exchanges">
+		<xs:sequence>
+			<xs:element name="Exchange" minOccurs="0"  maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Name" type="CmAttributeString" />
+						<xs:element name="Country" type="CmAttributeCountry" />
+						<xs:element name="TickerSymbol" type="CmAttributeString" />
+						<xs:element name="IsPrimary" type="CmAttributeBoolean"></xs:element>
+					</xs:sequence>
+					<xs:attribute name="id" type="xs:int"></xs:attribute>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	
+	<xs:complexType name="Regulators">
+		<xs:sequence>
+			<xs:element name="Regulator" minOccurs="0"  maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Name" type="CmAttributeString" />
+						<xs:element name="Country" type="CmAttributeCountry" />
+						<xs:element name="Number" type="CmAttributeString" />
+						<xs:element name="IsPrimary" type="CmAttributeBoolean" />
+					</xs:sequence>
+					<xs:attribute name="id" type="xs:int"></xs:attribute>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="Language">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Select One" />
+			<xs:enumeration value="Croatian" />
+			<xs:enumeration value="Czech" />
+			<xs:enumeration value="Danish" />
+			<xs:enumeration value="Dutch" />
+			<xs:enumeration value="English" />
+			<xs:enumeration value="Estonian" />
+			<xs:enumeration value="Filipino" />
+			<xs:enumeration value="Finnish" />
+			<xs:enumeration value="French" />
+			<xs:enumeration value="German" />
+			<xs:enumeration value="Greek" />
+			<xs:enumeration value="Hebrew" />
+			<xs:enumeration value="Hindi" />
+			<xs:enumeration value="Hungarian" />
+			<xs:enumeration value="Icelandic" />
+			<xs:enumeration value="Indonesian" />
+			<xs:enumeration value="Italian" />
+			<xs:enumeration value="Japanese" />
+			<xs:enumeration value="Korean" />
+			<xs:enumeration value="Latvian" />
+			<xs:enumeration value="Lithuanian" />
+			<xs:enumeration value="Norwegian" />
+			<xs:enumeration value="Polish" />
+			<xs:enumeration value="Portuguese" />
+			<xs:enumeration value="Romanian" />
+			<xs:enumeration value="Russian" />
+			<xs:enumeration value="Serbian" />
+			<xs:enumeration value="Slovak" />
+			<xs:enumeration value="Slovenian" />
+			<xs:enumeration value="Spanish" />
+			<xs:enumeration value="Swedish" />
+			<xs:enumeration value="Thai" />
+			<xs:enumeration value="Turkish" />
+			<xs:enumeration value="Ukrainian" />
+			<xs:enumeration value="Urdu" />
+			<xs:enumeration value="Vietnamese" />
+
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="Country">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Select One" />
+			<xs:enumeration value="Andorra" />
+			<xs:enumeration value="United Arab Emirates" />
+			<xs:enumeration value="Afghanistan" />
+			<xs:enumeration value="Antigua and Barbuda" />
+			<xs:enumeration value="Anguilla" />
+			<xs:enumeration value="Albania" />
+			<xs:enumeration value="Armenia" />
+			<xs:enumeration value="Netherlands Antilles" />
+			<xs:enumeration value="Angola" />
+			<xs:enumeration value="Argentina" />
+			<xs:enumeration value="American Samoa" />
+			<xs:enumeration value="Austria" />
+			<xs:enumeration value="Australia" />
+			<xs:enumeration value="Aruba" />
+			<xs:enumeration value="Azerbaijan" />
+			<xs:enumeration value="Bosnia and Herzegovina" />
+			<xs:enumeration value="Barbados" />
+			<xs:enumeration value="Bangladesh" />
+			<xs:enumeration value="Belgium" />
+			<xs:enumeration value="Burkina Faso" />
+			<xs:enumeration value="Bulgaria" />
+			<xs:enumeration value="Bahrain" />
+			<xs:enumeration value="Burundi" />
+			<xs:enumeration value="Benin" />
+			<xs:enumeration value="Saint Barthelemy (FR)" />
+			<xs:enumeration value="Bermuda" />
+			<xs:enumeration value="Brunei Darussalam" />
+			<xs:enumeration value="Bolivia" />
+			<xs:enumeration value="Bonaire, St.Eustat, Saba" />
+			<xs:enumeration value="Brazil" />
+			<xs:enumeration value="Bahamas, The" />
+			<xs:enumeration value="Bhutan" />
+			<xs:enumeration value="Bouvet Island" />
+			<xs:enumeration value="Botswana" />
+			<xs:enumeration value="Belarus" />
+			<xs:enumeration value="Belize" />
+			<xs:enumeration value="Canada" />
+			<xs:enumeration value="Cocos (Keeling) Islands" />
+			<xs:enumeration value="Congo, Dem. Rep. of the" />
+			<xs:enumeration value="Central African Republic" />
+			<xs:enumeration value="Congo" />
+			<xs:enumeration value="Switzerland" />
+			<xs:enumeration value="Cote D Ivoire" />
+			<xs:enumeration value="Cook Islands" />
+			<xs:enumeration value="Chile" />
+			<xs:enumeration value="Cameroon" />
+			<xs:enumeration value="China" />
+			<xs:enumeration value="Colombia" />
+			<xs:enumeration value="Costa Rica" />
+			<xs:enumeration value="Montenegro" />
+			<xs:enumeration value="Cuba" />
+			<xs:enumeration value="Cape Verde" />
+			<xs:enumeration value="Christmas Island" />
+			<xs:enumeration value="Cyprus" />
+			<xs:enumeration value="Czech Republic" />
+			<xs:enumeration value="Germany" />
+			<xs:enumeration value="Djibouti" />
+			<xs:enumeration value="Denmark" />
+			<xs:enumeration value="Dominica" />
+			<xs:enumeration value="Dominican Republic" />
+			<xs:enumeration value="Algeria" />
+			<xs:enumeration value="Ecuador" />
+			<xs:enumeration value="Estonia" />
+			<xs:enumeration value="Egypt" />
+			<xs:enumeration value="Sahara, Western" />
+			<xs:enumeration value="Eritrea" />
+			<xs:enumeration value="Spain" />
+			<xs:enumeration value="Ethiopia" />
+			<xs:enumeration value="European Union" />
+			<xs:enumeration value="Finland" />
+			<xs:enumeration value="Fiji" />
+			<xs:enumeration value="Falkland Islands (Malvinas)" />
+			<xs:enumeration value="Micronesia, Fed. States of" />
+			<xs:enumeration value="Faroe Islands" />
+			<xs:enumeration value="France" />
+			<xs:enumeration value="Gabon" />
+			<xs:enumeration value="Grenada" />
+			<xs:enumeration value="Georgia" />
+			<xs:enumeration value="French Guiana" />
+			<xs:enumeration value="Guernsey and Alderney" />
+			<xs:enumeration value="Ghana" />
+			<xs:enumeration value="Gibraltar" />
+			<xs:enumeration value="Greenland" />
+			<xs:enumeration value="Gambia, the" />
+			<xs:enumeration value="Guinea" />
+			<xs:enumeration value="Guadeloupe" />
+			<xs:enumeration value="Equatorial Guinea" />
+			<xs:enumeration value="Greece" />
+			<xs:enumeration value="S.George and S.Sandwich" />
+			<xs:enumeration value="Guatemala" />
+			<xs:enumeration value="Guam" />
+			<xs:enumeration value="Guinea-Bissau" />
+			<xs:enumeration value="Guyana" />
+			<xs:enumeration value="Hong Kong, (China)" />
+			<xs:enumeration value="Heard and McDonald Is.(AU)" />
+			<xs:enumeration value="Honduras" />
+			<xs:enumeration value="Croatia" />
+			<xs:enumeration value="Haiti" />
+			<xs:enumeration value="Hungary" />
+			<xs:enumeration value="Indonesia" />
+			<xs:enumeration value="Ireland" />
+			<xs:enumeration value="Israel" />
+			<xs:enumeration value="Man, Isle of" />
+			<xs:enumeration value="India" />
+			<xs:enumeration value="British Indian Ocean T." />
+			<xs:enumeration value="Iraq" />
+			<xs:enumeration value="Iran, Islamic Republic of" />
+			<xs:enumeration value="Iceland" />
+			<xs:enumeration value="Italy" />
+			<xs:enumeration value="Jersey" />
+			<xs:enumeration value="Jamaica" />
+			<xs:enumeration value="Jordan" />
+			<xs:enumeration value="Japan" />
+			<xs:enumeration value="Kenya" />
+			<xs:enumeration value="Kyrgyzstan" />
+			<xs:enumeration value="Cambodia" />
+			<xs:enumeration value="Kiribati" />
+			<xs:enumeration value="Comoros" />
+			<xs:enumeration value="Saint Kitts and Nevis" />
+			<xs:enumeration value="Korea Dem. People's Rep." />
+			<xs:enumeration value="Korea, (South) Republic of" />
+			<xs:enumeration value="Kosovo" />
+			<xs:enumeration value="Kuwait" />
+			<xs:enumeration value="Cayman Islands" />
+			<xs:enumeration value="Kazakhstan" />
+			<xs:enumeration value="Lao Peoples Democ. Rep." />
+			<xs:enumeration value="Lebanon" />
+			<xs:enumeration value="Saint Lucia" />
+			<xs:enumeration value="Liechtenstein" />
+			<xs:enumeration value="Sri Lanka (ex-Ceilan)" />
+			<xs:enumeration value="Liberia" />
+			<xs:enumeration value="Lesotho" />
+			<xs:enumeration value="Lithuania" />
+			<xs:enumeration value="Luxembourg" />
+			<xs:enumeration value="Latvia" />
+			<xs:enumeration value="Libyan Arab Jamahiriya" />
+			<xs:enumeration value="Morocco" />
+			<xs:enumeration value="Monaco" />
+			<xs:enumeration value="Moldova, Republic of" />
+			<xs:enumeration value="Saint Martin (FR)" />
+			<xs:enumeration value="Madagascar" />
+			<xs:enumeration value="Marshall Islands" />
+			<xs:enumeration value="Macedonia, TFYR" />
+			<xs:enumeration value="Mali" />
+			<xs:enumeration value="Myanmar (ex-Burma)" />
+			<xs:enumeration value="Mongolia" />
+			<xs:enumeration value="Macao, (China)" />
+			<xs:enumeration value="Northern Mariana Islands" />
+			<xs:enumeration value="Martinique (FR)" />
+			<xs:enumeration value="Mauritania" />
+			<xs:enumeration value="Montserrat" />
+			<xs:enumeration value="Malta" />
+			<xs:enumeration value="Mauritius" />
+			<xs:enumeration value="Maldives" />
+			<xs:enumeration value="Malawi" />
+			<xs:enumeration value="Mexico" />
+			<xs:enumeration value="Malaysia" />
+			<xs:enumeration value="Mozambique" />
+			<xs:enumeration value="Namibia" />
+			<xs:enumeration value="New Caledonia" />
+			<xs:enumeration value="Niger" />
+			<xs:enumeration value="Norfolk Island" />
+			<xs:enumeration value="Nigeria" />
+			<xs:enumeration value="Nicaragua" />
+			<xs:enumeration value="Netherlands" />
+			<xs:enumeration value="Norway" />
+			<xs:enumeration value="Nepal" />
+			<xs:enumeration value="Nauru" />
+			<xs:enumeration value="Niue" />
+			<xs:enumeration value="New Zealand" />
+			<xs:enumeration value="Oman" />
+			<xs:enumeration value="Panama" />
+			<xs:enumeration value="Peru" />
+			<xs:enumeration value="French Polynesia" />
+			<xs:enumeration value="Papua New Guinea" />
+			<xs:enumeration value="Philippines" />
+			<xs:enumeration value="Pakistan" />
+			<xs:enumeration value="Poland" />
+			<xs:enumeration value="S Pierre and Miquelon(FR)" />
+			<xs:enumeration value="Pitcairn Island" />
+			<xs:enumeration value="Puerto Rico" />
+			<xs:enumeration value="Palestinian Territory" />
+			<xs:enumeration value="Portugal" />
+			<xs:enumeration value="Palau" />
+			<xs:enumeration value="Paraguay" />
+			<xs:enumeration value="Qatar" />
+			<xs:enumeration value="Reunion (FR)" />
+			<xs:enumeration value="Romania" />
+			<xs:enumeration value="Serbia" />
+			<xs:enumeration value="Russia (Russian Fed.)" />
+			<xs:enumeration value="Rwanda" />
+			<xs:enumeration value="Arabia, Saudi" />
+			<xs:enumeration value="Solomon Islands" />
+			<xs:enumeration value="Seychelles" />
+			<xs:enumeration value="Sudan" />
+			<xs:enumeration value="Sweden" />
+			<xs:enumeration value="Singapore" />
+			<xs:enumeration value="Saint Helena (UK)" />
+			<xs:enumeration value="Slovenia" />
+			<xs:enumeration value="Svalbard and Jan Mayen Is." />
+			<xs:enumeration value="Slovakia" />
+			<xs:enumeration value="Sierra Leone" />
+			<xs:enumeration value="San Marino" />
+			<xs:enumeration value="Senegal" />
+			<xs:enumeration value="Somalia" />
+			<xs:enumeration value="Suriname" />
+			<xs:enumeration value="South Sudan" />
+			<xs:enumeration value="Sao Tome and Principe" />
+			<xs:enumeration value="El Salvador" />
+			<xs:enumeration value="Syrian Arab Republic" />
+			<xs:enumeration value="Swaziland" />
+			<xs:enumeration value="Turks and Caicos Is." />
+			<xs:enumeration value="Chad" />
+			<xs:enumeration value="French Southern Terr." />
+			<xs:enumeration value="Togo" />
+			<xs:enumeration value="Thailand" />
+			<xs:enumeration value="Tajikistan" />
+			<xs:enumeration value="Tokelau" />
+			<xs:enumeration value="Turkmenistan" />
+			<xs:enumeration value="Tunisia" />
+			<xs:enumeration value="Tonga" />
+			<xs:enumeration value="East Timor (Timor-Leste)" />
+			<xs:enumeration value="Turkey" />
+			<xs:enumeration value="Trinidad and Tobago" />
+			<xs:enumeration value="Tuvalu" />
+			<xs:enumeration value="Taiwan" />
+			<xs:enumeration value="Tanzania, United Rep. of" />
+			<xs:enumeration value="Ukraine" />
+			<xs:enumeration value="Uganda" />
+			<xs:enumeration value="United Kingdom" />
+			<xs:enumeration value="US Minor Outlying Isl." />
+			<xs:enumeration value="United States" />
+			<xs:enumeration value="Uruguay" />
+			<xs:enumeration value="Uzbekistan" />
+			<xs:enumeration value="Holy See (Vatican)" />
+			<xs:enumeration value="S Vincent and Grenadines" />
+			<xs:enumeration value="Venezuela" />
+			<xs:enumeration value="British Virgin Islands" />
+			<xs:enumeration value="Virgin Islands, U.S." />
+			<xs:enumeration value="Viet Nam" />
+			<xs:enumeration value="Vanuatu" />
+			<xs:enumeration value="Wallis and Futuna" />
+			<xs:enumeration value="Samoa" />
+			<xs:enumeration value="Yemen" />
+			<xs:enumeration value="Mayotte (FR)" />
+			<xs:enumeration value="South Africa" />
+			<xs:enumeration value="Zambia" />
+			<xs:enumeration value="Zimbabwe" />
+			<xs:enumeration value="Curacao" />
+			<xs:enumeration value="Northern Cyprus" />	
+		</xs:restriction>
+	</xs:simpleType>
+
+
+	<xs:simpleType name="SanctionCheckEventOrListType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Watch List" />
+			<xs:enumeration value="Associated With" />
+			<xs:enumeration value="On List" />
+		</xs:restriction>
+	</xs:simpleType>
+
+
+	<xs:simpleType name="MiFIDClassifications">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Eligible Counterparty" />
+			<xs:enumeration value="Professional Counterparty" />
+			<xs:enumeration value="Retail Client" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="PEPEventType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Office Holder" />
+			<xs:enumeration value="Family Member" />
+			<xs:enumeration value="Close Associate" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="HierachyType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Select One" />
+			<xs:enumeration value="Legal" />
+			<xs:enumeration value="Credit" />
+			<xs:enumeration value="Sales" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ParentType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Select One" />
+			<xs:enumeration value="Immediate Parent" />
+			<xs:enumeration value="Domestic Ultimate Parent" />
+			<xs:enumeration value="Global Ultimate Parent" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PEPRelatedToType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Self" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PEPType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Foreign" />
+			<xs:enumeration value="Domestic" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PEPPosition">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Ambassadors" />
+			<xs:enumeration value="Deputy National Government Ministers" />
+			<xs:enumeration value="Heads Of The Armed Forces" />
+			<xs:enumeration value="Heads And Deputies State/National Government" />
+			<xs:enumeration value="Heads Of Regional Government" />
+			<xs:enumeration value="International Organisation Officials" />
+			<xs:enumeration value="Large City Mayors" />
+			<xs:enumeration value="Members Of The National Legislature" />
+			<xs:enumeration value="National Government Ministers" />
+			<xs:enumeration value="National Ngo Officials" />
+			<xs:enumeration value="Political Pressure And Labour Group Officials" />
+			<xs:enumeration value="Political Party Officials" />
+			<xs:enumeration value="Regional Government Ministers" />
+			<xs:enumeration value="State Agency Officials" />
+			<xs:enumeration value="State Corporation Executives" />
+			<xs:enumeration value="Senior Civil Servants In National Government" />
+			<xs:enumeration value="Senior Members Of The National Police Services, Law Enforcement Agencies Or Intelligence Services" />
+			<xs:enumeration value="Senior Members Of The Judiciary" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NewsType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Terrorist Related" />
+			<xs:enumeration value="Possession or sale of guns, weapons and explosive" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="AttributeType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Select One" />
+			<xs:enumeration value="Legal Name" />
+			<xs:enumeration value="Legal Formation" />
+			<xs:enumeration value="Ownership Type" />
+			<xs:enumeration value="Country of Incorporation" />
+			<xs:enumeration value="SIC" />
+			<xs:enumeration value="NAICS" />
+			<xs:enumeration value="Regulator Information" />
+			<xs:enumeration value="Exchange Information" />
+			<xs:enumeration value="Address" />
+			<xs:enumeration value="Identifiers" />
+			<xs:enumeration value="Immediate Parent" />
+			<xs:enumeration value="Ultimate Parent" />
+			<xs:enumeration value="Related Entities" />
+			<xs:enumeration value="Ownership Percentages" />
+			<xs:enumeration value="Ownership Position" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="OwnershipType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Select One" />
+			<xs:enumeration value="Private Entity" />
+			<xs:enumeration value="Public Entity" />
+			<xs:enumeration value="Goverment Entity" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="DocumentType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Select One" />
+			<xs:enumeration value="Proof of Address" />
+			<xs:enumeration value="Proof of Address for Associate(s)" />
+			<xs:enumeration	value="Articles of Incorporation or Memorandum and Articles of Association" />
+			<xs:enumeration	value="AML Checklist (Banks, Broker Dealers and Other Regulated Institutions)" />
+			<xs:enumeration	value="AML Checklist for Investment Advisors/Collective Investment Vehicles" />
+			<xs:enumeration value="Proof of ERISA" />
+			<xs:enumeration value="Foreign Bank Certification" />
+			<xs:enumeration value="Financial Statements" />
+			<xs:enumeration value="Formation Documents" />
+			<xs:enumeration value="Proof of Government Status" />
+			<xs:enumeration value="Proof of Identity" />
+			<xs:enumeration value="Proof of Identity for Associate(s)" />
+			<xs:enumeration value="List of Executor(s)/Administrator(s)" />
+			<xs:enumeration value="List of Authorized Trader(s)" />
+			<xs:enumeration value="List of Beneficiaries" />
+			<xs:enumeration	value="List of Beneficial Owners/Shareholders (with 10% Interest or more)" />
+			<xs:enumeration	value="List of Beneficial Owners/Shareholders (with 15% Interest or more)" />
+			<xs:enumeration	value="List of Beneficial Owners/Shareholders (with 20% Interest or more)" />
+			<xs:enumeration	value="List of Beneficial Owners/Shareholders (with 25% Interest or more)" />
+			<xs:enumeration value="List of Control Person(s)" />
+			<xs:enumeration value="List of Director(s)" />
+			<xs:enumeration value="List of General Partner(s) " />
+			<xs:enumeration value="List of Members (with 10% Interest or more)" />
+			<xs:enumeration value="List of Members (with 15% Interest or more)" />
+			<xs:enumeration value="List of Members (with 20% Interest or more)" />
+			<xs:enumeration value="List of Members (with 25% Interest or more)" />
+			<xs:enumeration value="List of Managing Member(s)" />
+			<xs:enumeration value="List of Officer(s)" />
+			<xs:enumeration value="List of Partners (with 10% Interest or more)" />
+			<xs:enumeration value="List of Partners (with 15% Interest or more)" />
+			<xs:enumeration value="List of Partners (with 20% Interest or more)" />
+			<xs:enumeration value="List of Partners (with 25% Interest or more)" />
+			<xs:enumeration value="List of Settlor/Grantor" />
+			<xs:enumeration value="Proof of Listing/ Publicly Traded Status" />
+			<xs:enumeration value="List of Trustees/Protectors" />
+			<xs:enumeration value="LLC Agreement" />
+			<xs:enumeration value="Letters of Testementary/Administration" />
+			<xs:enumeration value="Offering Memorandum" />
+			<xs:enumeration value="Partnership Agreement" />
+			<xs:enumeration value="Copy of Plan" />
+			<xs:enumeration value="Proof of Regulation" />
+			<xs:enumeration value="Tax Forms" />
+			<xs:enumeration value="Proof of Tax ID Application" />
+			<xs:enumeration value="Trust Documents/ Agreements" />
+			<xs:enumeration value="Certificate of good standing from state" />
+			<xs:enumeration value="Certificate of incorporation" />
+			<xs:enumeration value="Government issued bank licenses" />
+			<xs:enumeration value="Printout of a LexisNexis report confirming customer data" />
+			<xs:enumeration value="Printout from independent third party database" />
+			<xs:enumeration value="Operating agreements" />
+			<xs:enumeration value="Valid / Unexpired Passport" />
+			<xs:enumeration value="Current Drivers License with Photograph" />
+			<xs:enumeration value="Valid Non-Drivers ID Card with Photograph" />
+			<xs:enumeration value="Valid Non-Drivers ID Card with Photograph" />
+			<xs:enumeration value="Current Armed Forces ID" />
+			<xs:enumeration value="Valid National ID Card" />
+			<xs:enumeration value="Current Alien ID Card" />
+			<xs:enumeration value="Current Mexican Matricula" />
+			<xs:enumeration value="Valid Mexican Voter ID Card" />
+			<xs:enumeration value="Court Order" />
+			<xs:enumeration value="Court Appointment of a Fiduciary" />
+			<xs:enumeration value="Applied for SSN/TIN" />
+			<xs:enumeration value="Copy of Plan"/>			
+		</xs:restriction>
+	</xs:simpleType>
+
+
+	<xs:simpleType name="AssociationType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Select One" />
+			<xs:enumeration value="Hedge Fund Administrator"></xs:enumeration>
+			<xs:enumeration value="Sponsor"></xs:enumeration>
+			<xs:enumeration value="Principal of Sponsor"></xs:enumeration>
+			<xs:enumeration value="Administrator"></xs:enumeration>
+			<xs:enumeration value="Authorized Trader"></xs:enumeration>
+			<xs:enumeration value="Beneficial Owner/ Shareholder"></xs:enumeration>
+			<xs:enumeration
+				value="Principal - Private Equity Firm/Venture Capital Firm"></xs:enumeration>
+			<xs:enumeration value="Beneficiary"></xs:enumeration>
+			<xs:enumeration value="Close Associate"></xs:enumeration>
+			<xs:enumeration value="Contact"></xs:enumeration>
+			<xs:enumeration value="Contractor"></xs:enumeration>
+			<xs:enumeration value="Control Person"></xs:enumeration>
+			<xs:enumeration value="Custodian"></xs:enumeration>
+			<xs:enumeration value="Director"></xs:enumeration>
+			<xs:enumeration value="Employee"></xs:enumeration>
+			<xs:enumeration value="Employer who created the plan"></xs:enumeration>
+			<xs:enumeration value="Entity which created SPV/PIV"></xs:enumeration>
+			<xs:enumeration value="Executing Broker-Custody of Assets Away"></xs:enumeration>
+			<xs:enumeration value="Executing Broker-Prime Brokerage Away"></xs:enumeration>
+			<xs:enumeration value="Executive Chairman"></xs:enumeration>
+			<xs:enumeration value="Executor"></xs:enumeration>
+			<xs:enumeration value="Family Member"></xs:enumeration>
+			<xs:enumeration value="Fund Manager"></xs:enumeration>
+			<xs:enumeration value="General Partner"></xs:enumeration>
+			<xs:enumeration value="Grantor"></xs:enumeration>
+			<xs:enumeration value="Guarantor"></xs:enumeration>
+			<xs:enumeration value="Guardian"></xs:enumeration>
+			<xs:enumeration value="Investment Advisor"></xs:enumeration>
+			<xs:enumeration value="Issuer"></xs:enumeration>
+			<xs:enumeration value="Joint Account Holder"></xs:enumeration>
+			<xs:enumeration value="Managing Member"></xs:enumeration>
+			<xs:enumeration value="Member"></xs:enumeration>
+			<xs:enumeration value="Member of LLC"></xs:enumeration>
+			<xs:enumeration value="Officer"></xs:enumeration>
+			<xs:enumeration value="Partner"></xs:enumeration>
+			<xs:enumeration value="PIV Owner (Limited Partner/Member/Beneficial Owner)"></xs:enumeration>
+			<xs:enumeration value="Power of Attorney"></xs:enumeration>
+			<xs:enumeration value="Primary Account Holder"></xs:enumeration>
+			<xs:enumeration value="Prime Broker"></xs:enumeration>
+			<xs:enumeration value="Prospect"></xs:enumeration>
+			<xs:enumeration value="Secondary Account Holder"></xs:enumeration>
+			<xs:enumeration value="Settlor/ Grantor"></xs:enumeration>
+			<xs:enumeration value="Sole Proprietor"></xs:enumeration>
+			<xs:enumeration value="Supplier"></xs:enumeration>
+			<xs:enumeration value="Trust Protector"></xs:enumeration>
+			<xs:enumeration value="Trustee"></xs:enumeration>
+			<xs:enumeration value="SPV Owner (Limited Partner/Member/Beneficial Owner)"></xs:enumeration>
+			<xs:enumeration value="Limited Partner"></xs:enumeration>
+			<xs:enumeration
+				value="Beneficial Owner/ Shareholder (with 10% Financial Interest or more)"></xs:enumeration>
+			<xs:enumeration
+				value="Beneficial Owner/ Shareholder (with 15% Financial Interest or more)"></xs:enumeration>
+			<xs:enumeration
+				value="Beneficial Owner/ Shareholder (with 20% Financial Interest or more)"></xs:enumeration>
+			<xs:enumeration
+				value="Beneficial Owner/ Shareholder (with 25% Financial Interest or more)"></xs:enumeration>
+			<xs:enumeration value="Member (with 10% Financial Interest or more)"></xs:enumeration>
+			<xs:enumeration value="Member (with 15% Financial Interest or more)"></xs:enumeration>
+			<xs:enumeration value="Member (with 20% Financial Interest or more)"></xs:enumeration>
+			<xs:enumeration value="Member (with 25% Financial Interest or more)"></xs:enumeration>
+			<xs:enumeration
+				value="Limited Partner (with 10% Financial Interest or more)"></xs:enumeration>
+			<xs:enumeration
+				value="Limited Partner (with 15% Financial Interest or more)"></xs:enumeration>
+			<xs:enumeration
+				value="Limited Partner (with 20% Financial Interest or more)"></xs:enumeration>
+			<xs:enumeration
+				value="Limited Partner (with 25% Financial Interest or more)"></xs:enumeration>
+			<xs:enumeration value="Authorized Principal"></xs:enumeration>
+			<xs:enumeration value="Investment Manager"></xs:enumeration>
+			<xs:enumeration value="Chairman of the Board"></xs:enumeration>
+			<xs:enumeration value="CEO"></xs:enumeration>
+			<xs:enumeration value="Chairman"></xs:enumeration>
+			<xs:enumeration value="President"></xs:enumeration>
+			<xs:enumeration value="CFO"></xs:enumeration>
+			<xs:enumeration value="Trust Settlor"></xs:enumeration>
+			<xs:enumeration value="Authorized Signers"></xs:enumeration>
+			<xs:enumeration value="Board of Directors"></xs:enumeration>
+			<xs:enumeration value="Principals"></xs:enumeration>
+			<xs:enumeration value="Control Persons"></xs:enumeration>
+			<xs:enumeration value="COO"></xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="LegalForm">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Select One" />
+			<xs:enumeration value="Cooperative"></xs:enumeration>
+			<xs:enumeration value="Corporation/LTD"></xs:enumeration>
+			<xs:enumeration value="Estate"></xs:enumeration>
+			<xs:enumeration value="General Partnership (GP)"></xs:enumeration>
+			<xs:enumeration value="Hindu Undivided Family"></xs:enumeration>
+			<xs:enumeration value="Incorporated Company"></xs:enumeration>
+			<xs:enumeration value="Limited Company"></xs:enumeration>
+			<xs:enumeration value="Limited Liability Company (LLC)"></xs:enumeration>
+			<xs:enumeration value="Limited Liability Limited Partnership (LLLP)"></xs:enumeration>
+			<xs:enumeration value="Limited Liability Partnership (LLP)"></xs:enumeration>
+			<xs:enumeration value="Limited Partnership (LP)"></xs:enumeration>
+			<xs:enumeration value="Private Limited Company"></xs:enumeration>
+			<xs:enumeration value="Partnership"></xs:enumeration>
+			<xs:enumeration value="Professional Corporations"></xs:enumeration>
+			<xs:enumeration value="Private company limited by guarantee"></xs:enumeration>
+			<xs:enumeration value="Public Limited Company"></xs:enumeration>
+			<xs:enumeration value="Professional Limited Liability Company"></xs:enumeration>
+			<xs:enumeration value="Public Sector Undertaking (PSU)"></xs:enumeration>
+			<xs:enumeration value="Sole Proprietorship"></xs:enumeration>
+			<xs:enumeration value="Trust"></xs:enumeration>
+			<xs:enumeration value="Unlimited Company"></xs:enumeration>
+			<xs:enumeration value="Unincorporated Organization/Association"></xs:enumeration>
+			<xs:enumeration value="Society"></xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="BusinessType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Select One" />
+			<xs:enumeration value="Bank" />
+			<xs:enumeration value="Broker Dealer" />
+			<xs:enumeration value="Business Management" /> <!-- Nishant -->
+			<xs:enumeration value="Central Bank" />
+			<xs:enumeration value="Charity/Foundation/Non-profit Organization" />
+			<xs:enumeration value="Commodity Pool Operator" />
+			<xs:enumeration value="Commodity Trading Advisor" />
+			<xs:enumeration value="Credit Union" />
+			<xs:enumeration value="Currency Dealer/ Exchanger" />
+			<xs:enumeration value="Educational Institution" />
+			<xs:enumeration value="ERISA Employee Benefit Plan" />
+			<xs:enumeration value="ERISA Retirement/Pension Plan" />
+			<xs:enumeration value="Estate" />
+			<xs:enumeration value="Federal/Sovereign Government Entity/Agency" />
+			<xs:enumeration value="Federal/Sovereign Government Retirement Plan" />
+			<xs:enumeration value="Futures Commission Merchant (FCM)" />
+			<xs:enumeration value="Grant Making Foundations" />
+			<xs:enumeration value="Hedge Fund" />
+			<xs:enumeration value="Indian Tribe" />
+			<xs:enumeration value="Insurance Company" />
+			<xs:enumeration value="Introducing Broker (Futures)" />
+			<xs:enumeration value="Investment Advisor" />
+			<xs:enumeration value="Investment Bank" />
+			<xs:enumeration value="Labor Union" />
+			<xs:enumeration value="Managed Care Organization (Health Insurance)" />
+			<xs:enumeration value="Modeling Agency" />
+			<xs:enumeration value="Money Manager" />
+			<xs:enumeration value="Money Transmitter" />
+			<xs:enumeration value="Mortgage Originator" />
+			<xs:enumeration value="Municipal/Local Government Entity/Agency" />
+			<xs:enumeration value="Municipal/Local Government Retirement Plan" />
+			<xs:enumeration value="Closed-end Mutual Fund" />
+			<xs:enumeration value="Non-ERISA Non-Trust Employee Benefit Plan" />
+			<xs:enumeration value="Non-ERISA Non-Trust Retirement/Pension Plan" />
+			<xs:enumeration value="Open-end Mutual Fund" />
+			<xs:enumeration value="Personal Holding Company (PHC)" />
+			<xs:enumeration value="Personal Investment Vehicle (PIV)" />
+			<xs:enumeration value="Portfolio Manager/ Portfolio Management Company" />
+			<xs:enumeration value="Private Equity Firm" />
+			<xs:enumeration value="Private Equity Fund" />
+			<xs:enumeration value="Property and Casualty Insurer" />
+			<xs:enumeration value="Proprietary Trading Firm" />
+			<xs:enumeration value="Real Estate Investment Trust (REIT)" />
+			<xs:enumeration value="Registered Investment Advisor (RIV)" />
+			<xs:enumeration value="Securities Firm" />
+			<xs:enumeration value="Sole Proprietorship" />
+			<xs:enumeration value="Special Purpose Vehicle (SPV)" />
+			<xs:enumeration value="State/Province Government Entity/Agency" />
+			<xs:enumeration value="State/Province Government Retirement Plan" />
+			<xs:enumeration value="Transportation Company" />
+			<xs:enumeration value="Tribal Authority" />
+			<xs:enumeration value="Trust" />
+			<xs:enumeration value="Underwriting Company" />
+			<xs:enumeration value="Unincorporated Organization/Association" />
+			<xs:enumeration value="Unregistered Investment Advisor" />
+			<xs:enumeration value="Venture Capital Firm" />
+			<xs:enumeration value="Venture Capital Fund" />
+			<xs:enumeration value="Basic Materials" />
+			<xs:enumeration value="Consumer Goods" />
+			<xs:enumeration value="Healthcare" />
+			<xs:enumeration value="Industrial Goods" />
+			<xs:enumeration value="Services" />
+			<xs:enumeration value="Technology" />
+			<xs:enumeration value="Utilities" />
+			<xs:enumeration value="Non-ERISA Trust Employee Benefit Plan" />
+			<xs:enumeration value="Non-ERISA Trust Retirement/Pension Plan" />
+			<xs:enumeration value="Investment Manager" />
+		</xs:restriction>
+	</xs:simpleType>
+
+
+	<xs:simpleType name="AddressType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Select One" />
+			<xs:enumeration value="Registered" />
+			<xs:enumeration value="Principal Business" />
+			<xs:enumeration value="Mailing" />
+			<xs:enumeration value="Domicile" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="ProductList">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Select One" />
+			<xs:enumeration value="EQUITIES" />
+			<xs:enumeration value="FIXED INCOME SECURITIES" />
+			<xs:enumeration value="GOVERMENT SECURITIES" />
+			<xs:enumeration value="MORTGAGE-BACKED SECURITIES" />
+			<xs:enumeration value="DERIVATIVES" />
+			<xs:enumeration value="FOREIGN EXCHANGE" />
+			<xs:enumeration value="REPOS" />
+			<xs:enumeration value="OPTIONS" />
+			<xs:enumeration value="CONVERTIBLES" />
+			<xs:enumeration value="GILTS" />
+		</xs:restriction>
+	</xs:simpleType>
+
+
+	<xs:complexType name="Address">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="id" type="xs:string" />
+			<xs:element minOccurs="0" name="Address_Line_1" type="xs:string" />
+			<xs:element minOccurs="0" name="Address_Line_2" type="xs:string" />
+			<xs:element minOccurs="0" name="City" type="xs:string" />
+			<xs:element minOccurs="0" name="State" type="xs:string" />
+			<xs:element minOccurs="0" name="Country" type="xs:string" />
+			<xs:element minOccurs="0" name="ZipCode" type="xs:string" />
+		</xs:sequence>
+		<xs:attribute name="Type" type="common1:AddressType" />
+	</xs:complexType>
+
+
+	<xs:complexType name="ContactInfo">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="id" type="xs:string" />
+			<xs:element minOccurs="0" name="Role" type="xs:string" />
+			<xs:element minOccurs="0" name="Position" type="xs:string" />
+			<xs:element minOccurs="0" name="FirstName" type="xs:string" />
+			<xs:element minOccurs="0" name="MiddleName" type="xs:string" />
+			<xs:element minOccurs="0" name="LastName" type="xs:string" />
+			<xs:element minOccurs="0" name="CountryOfDomicile" type="xs:string" />
+			<xs:element minOccurs="0" name="CountryOfCitizenship" type="xs:string" />
+			<xs:element minOccurs="0" name="Address" type="xs:string" />
+			<xs:element minOccurs="0" name="Phone" type="xs:string" />
+			<xs:element minOccurs="0" name="Fax" type="xs:string" />
+			<xs:element minOccurs="0" name="Email" type="xs:string" />
+		</xs:sequence>
+		
+	</xs:complexType>
+
+	<xs:complexType name="ExternalIdentifiers">
+		<xs:sequence>
+			<xs:element name="Identifier" nillable="true" minOccurs="0" maxOccurs="unbounded" type="Identifier">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:simpleType name="PartyType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Select One" />
+			<xs:enumeration value="Client" />
+			<xs:enumeration value="Beneficial Owners (Corp.)" />
+			<xs:enumeration value="Beneficial Owners (Indiv.)" />
+			<xs:enumeration value="Controllers (Corp.)" />
+			<xs:enumeration value="Controllers (Indiv.)" />
+			<xs:enumeration value="Related Parties (Entity)" />
+			<xs:enumeration value="Related Parties (Indiv.)" />
+			<xs:enumeration value="Direct Appointees" />
+			<xs:enumeration value="Other Entities" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="EventType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Select One" />
+			<xs:enumeration value="EU" />
+			<xs:enumeration value="HKMA" />
+			<xs:enumeration value="OFAC" />
+			<xs:enumeration value="UKHMT" />
+			<xs:enumeration value="UN" />
+			<xs:enumeration value="FinCEN" />
+			<xs:enumeration value="IFRAUD" />
+			<xs:enumeration value="IDEMARKETING" />
+			<xs:enumeration value="Diplomat" />
+			<xs:enumeration value="Office Holder" />
+			<xs:enumeration value="Immediate family members" />
+			<xs:enumeration value="Close Associates" />
+			<xs:enumeration value="Legal" />
+			<xs:enumeration value="Military" />
+			<xs:enumeration value="Organization" />
+			<xs:enumeration value="Political Individual" />
+			<xs:enumeration value="Political Party" />
+			<xs:enumeration value="Individual" />
+			<xs:enumeration value="Criminal and Regulatory Enforcement Action" />
+			<xs:enumeration value="Financial Crime Violation" />
+			<xs:enumeration value="Illegal Activity" />
+			<xs:enumeration value="Adverse Media" />
+			<xs:enumeration value="Anti Money Laundering" />
+			<xs:enumeration value="Fraud" />
+			<xs:enumeration value="Reputational Concerns" />
+			<xs:enumeration value="Sanctions" />
+			<xs:enumeration value="Tax Evasion" />
+			<xs:enumeration value="Terriorist Financing" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="MatchFindings">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="True Match" />
+			<xs:enumeration value="Potential Match" />
+			<xs:enumeration value="No Match" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="KYCOwner">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="Role" type="xs:string" />
+			<xs:element minOccurs="0" name="Name" type="xs:string" />
+			<xs:element minOccurs="0" name="Email" type="xs:string" />
+			<xs:element minOccurs="0" name="ContactNo" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<xs:simpleType name="CustomerType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Select One" />
+			<xs:enumeration value="Investment Manager" />
+			<xs:enumeration value="Investment Advisers" />
+			<xs:enumeration value="Money Managers" />
+			<xs:enumeration value="Portfolio Managers" />
+			<xs:enumeration value="Not for Profit" />
+			<xs:enumeration value="Foreign Financial Institution" />
+			<xs:enumeration value="Personal Holding Companies" />
+			<xs:enumeration value="Fiduciary Vehicles" />
+			<xs:enumeration value="Special Purpose Vehicles" />
+			<xs:enumeration value="Non Operating Companies" />
+			<xs:enumeration value="Foreign and Domestic Personal Trusts" />
+			<xs:enumeration value="Individuals" />
+			<xs:enumeration value="Retirement Plan" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="IndustryClassificationType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Select One" />
+			<xs:enumeration value="SIC" />
+			<xs:enumeration value="NAICS" />
+			<xs:enumeration value="ISIC" />
+			<xs:enumeration value="UKSIC" />
+			<xs:enumeration value="ANZSIC" />
+		</xs:restriction>
+	</xs:simpleType>	
+	
+	<xs:complexType name="TaxInfo">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="TaxIdAvailable" type="common1:Option" />
+			<xs:element minOccurs="0" name="TaxIdIssuingCountry" type="common1:Country" />
+			<xs:element minOccurs="0" name="TaxIdType" type="xs:string" />
+			<xs:element minOccurs="0" name="TaxId" type="xs:string" />
+			<xs:element minOccurs="0" name="TaxIdAppliedForDate" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:simpleType name="WebsiteAddressType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Select One" />
+			<xs:enumeration value="Official" />
+			<xs:enumeration value="Other" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="Option">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Yes" />
+			<xs:enumeration value="No" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="Region">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Select One" />
+			<xs:enumeration value="North America" />
+			<xs:enumeration value="EMEA" />
+			<xs:enumeration value="LATAM" />
+			<xs:enumeration value="Asia-Pac" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="EntityAliases">
+		<xs:sequence>
+			<xs:element name="PreviousNames" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="ShortName" type="xs:string" minOccurs="0" />
+			<xs:element name="TradeStyle" type="xs:string" minOccurs="0" />
+			<xs:element name="DoingBusinessAs" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ReferenceDocuments">
+		<xs:annotation>
+			<xs:documentation>The list of reference documents that were previously identified for this profile.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Document" minOccurs="1" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="MCPID" type="xs:string" minOccurs="1" />
+						<xs:element name="Name" type="xs:string" minOccurs="0" />
+					</xs:sequence>
+					<xs:attribute name="id" type="xs:int"></xs:attribute>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="CmAttribute" abstract="true">
+		<xs:sequence>
+			<xs:element name="ReferenceDocuments" minOccurs="1" maxOccurs="1" type="ReferenceDocuments">
+				<xs:annotation>
+					<xs:documentation>The list of reference documents supporitng the attribute</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ChallengeComment" minOccurs="0" maxOccurs="1" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The reason for challenging this attribute.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+ 			<xs:element name="Comments" minOccurs="0" maxOccurs="unbounded" type="Comments">
+				<xs:annotation>
+					<xs:documentation>The comment for the attribute</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="status" type="AttributeStatus" />
+	</xs:complexType>
+
+	<xs:complexType name="CmAttributeDate">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="xs:date">
+						<xs:annotation>
+							<xs:documentation>
+								The date value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="CmAttributeDateMonthDay">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="xs:gMonthDay">
+						<xs:annotation>
+							<xs:documentation>
+								The date value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="CmAttributeDateTime">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="xs:dateTime">
+						<xs:annotation>
+							<xs:documentation>
+								The date with time value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="CmAttributeDouble">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="xs:double">
+						<xs:annotation>
+							<xs:documentation>
+								The double value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="CmAttributeInteger">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="xs:integer">
+						<xs:annotation>
+							<xs:documentation>
+								The integer value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="CmAttributeInt">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="xs:int">
+						<xs:annotation>
+							<xs:documentation>
+								The int value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="CmAttributeLong">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="xs:long">
+						<xs:annotation>
+							<xs:documentation>
+								The long value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="CmAttributeString">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>
+								The string value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="CmAttributeTime">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="xs:time">
+						<xs:annotation>
+							<xs:documentation>
+								The time value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="CmAttributeBoolean">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="xs:boolean">
+						<xs:annotation>
+							<xs:documentation>
+								The boolean value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="CmAttributeCountry">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="Country">
+						<xs:annotation>
+							<xs:documentation>
+								The country value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="CmAttributeOwnershipType">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="OwnershipType">
+						<xs:annotation>
+							<xs:documentation>
+								The ownership type value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="CmAttributeLegalForm">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="LegalForm">
+						<xs:annotation>
+							<xs:documentation>
+								The legal form value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="CmAttributeGender">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="GenderType">
+						<xs:annotation>
+							<xs:documentation>
+								The gender type value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="CmAttributePartyType">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="PartyType">
+						<xs:annotation>
+							<xs:documentation>
+								The party value type
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="CmAttributeMiFIDClassifications">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="MiFIDClassifications">
+						<xs:annotation>
+							<xs:documentation>
+								The mfid classification type
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="CmAttributeWebsiteAddressType">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="WebsiteAddressType">
+						<xs:annotation>
+							<xs:documentation>
+								The website address type
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:simpleType name="AttributeStatus">
+		<xs:annotation>
+			<xs:documentation>
+				
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="MissingInformation" />
+			<xs:enumeration value="Completed" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="Comments">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="By" type="xs:string" />
+			<xs:element minOccurs="0" name="Group" type="Groups" />
+			<xs:element minOccurs="0" name="Date" type="xs:date" />
+			<xs:element minOccurs="0" name="Type" type="CommentType" />
+			<xs:element minOccurs="0" name="Comment" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="GenderType">
+		<xs:annotation>
+			<xs:documentation>
+				List of gender types
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Female" />
+			<xs:enumeration value="Male" />
+			<xs:enumeration value="Other" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="Groups">
+		<xs:annotation>
+			<xs:documentation>
+				Name of team/group (Role)
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Enrichment" />
+			<xs:enumeration value="Client_Outreach" />
+			<xs:enumeration value="QA" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="CommentType">
+		<xs:annotation>
+			<xs:documentation>
+				Type of comment
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Notes" />
+			<xs:enumeration value="MissingInfo" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+</xs:schema>

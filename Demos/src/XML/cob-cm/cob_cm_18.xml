@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:CobCmData xmlns:p="www.genpact.com" xmlns:p1="www.genpact.com/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="www.genpact.com cob_cm.xsd ">
+	<RequestInfo>
+		<RequestDate>2014-02-09</RequestDate>
+		<SenderIdentification>CN-45136</SenderIdentification>
+		<ReferenceId>2014045136</ReferenceId>
+		<EntityType>NBFI-TradingAdvisor</EntityType>
+		<MessageType>Enrich</MessageType>
+		<DueDate>2014-04-30</DueDate>
+	</RequestInfo>
+	<EntityProfile LastUpdateDate="2001-12-31T12:00:00" ProfileId="A10242-18">
+		<Jurisdiction>
+			<BookingLocation>United States / United Kingdom</BookingLocation>
+		</Jurisdiction>
+		<Institution>
+			<EntityNames>
+				<ShortName></ShortName>
+				<DBA></DBA>
+				<PreviousLegalName></PreviousLegalName>
+			</EntityNames>
+			<Formation>
+				<EntityId>45136</EntityId>
+				<LegalName>E FUND MANAGEMENT COMPANY LIMITED</LegalName>
+				<CountryOfIncorporation>
+					<value>US</value>
+				</CountryOfIncorporation>
+			</Formation>
+		</Institution>
+	</EntityProfile>
+	<ResponseInfo>
+	
+	</ResponseInfo>
+</p:CobCmData>

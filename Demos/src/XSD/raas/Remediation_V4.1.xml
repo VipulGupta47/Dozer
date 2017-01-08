@@ -1,0 +1,2066 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:RemediationFile Client="" Group="" PublicationDateTime="" PublicationId="0" RecordCount="0" id="0" xmlns:entity1="www.headstrong.com/entity" xmlns:p="www.headstrong.com" xmlns:p1="www.headstrong.com/common"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="www.headstrong.com Remediation_V4.1.xsd ">
+	<FileStatusInfo>
+		<CurrentStatus LastUpdated="">
+			<Validated>0</Validated>
+			<Assigned>0</Assigned>
+			<Rejected>0</Rejected>
+			<Completed>0</Completed>
+			<InProcess>0</InProcess>
+		</CurrentStatus>
+	</FileStatusInfo>
+	<RemediationProfile LastUpdateDate="" RaasID="">
+		<ProfileStatusInfo>
+			<CurrentStatus LastUpdated="2001-01-01" />
+			<Current_State Owner="" />
+			<CaseNotes>
+				<By>By</By>
+				<Group>Enrichment</Group>
+				<Date>2001-12-31T12:00:00</Date>
+				<Type>Notes</Type>
+				<Comment>Comment</Comment>
+			</CaseNotes>
+			<RequestType>Formation</RequestType>
+		</ProfileStatusInfo>
+		<RefData>
+			<CobsId>A10242-1</CobsId>
+			<Jurisdiction>United States / United Kingdom</Jurisdiction>
+			<CreatedDT>2001-12-31T12:00:00</CreatedDT>
+			<DueDT>2001-12-31T12:00:00</DueDT>
+		</RefData>
+		<entity1:Entity>
+			<EntityNames>
+				<ShortName status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>ID102421</MCPID>
+							<Name>Doc 1</Name>
+						</Document>
+						<Document id="0">
+							<MCPID>ID102422</MCPID>
+							<Name>Doc 2</Name>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments>
+						<By>user 1</By>
+						<Date>2001-12-31T12:00:00</Date>
+						<Type>MissingInfo</Type>
+						<Comment>no data found</Comment>
+					</Comments>
+					<Comments>
+						<By>user 1</By>
+						<Date>2001-12-31T12:00:00</Date>
+						<Type>Notes</Type>
+						<Comment>could not find</Comment>
+					</Comments>
+					<value>value</value>
+				</ShortName>
+				<DoingBusniessAs status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</DoingBusniessAs>
+				<Alias status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</Alias>
+				<PreviousLegalName status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</PreviousLegalName>
+				<PreviousLegalEndDate status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>2001-01-01</value>
+				</PreviousLegalEndDate>
+			</EntityNames>
+			<Formation>
+				<EntityId status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</EntityId>
+				<LegalName status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</LegalName>
+				<legalForm status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Select One</value>
+				</legalForm>
+				<EntityType status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>NBFI-InvestmentManagement</value>
+				</EntityType>
+				<EntityStructure status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</EntityStructure>
+				<OwnershipType status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Select One</value>
+				</OwnershipType>
+				<CountryOfIncorporation status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Select One</value>
+				</CountryOfIncorporation>
+				<StateOfIncorporation status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</StateOfIncorporation>
+				<DateOfFormation status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>2001-01-01</value>
+				</DateOfFormation>
+			</Formation>
+			<ContactInformation>
+				<Contacts status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<id>id</id>
+					<Role>Role</Role>
+					<Position>Position</Position>
+					<FirstName>FirstName</FirstName>
+					<MiddleName>MiddleName</MiddleName>
+					<LastName>LastName</LastName>
+					<CountryOfDomicile>CountryOfDomicile</CountryOfDomicile>
+					<CountryOfCitizenship>CountryOfCitizenship</CountryOfCitizenship>
+					<Address>
+						<ReferenceDocuments>
+							<Document>
+								<MCPID></MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<Address_Line_1>AD11</Address_Line_1>
+						<Address_Line_2>AD21</Address_Line_2>
+						<City>C1</City>
+						<State>S1</State>
+						<Country>C1</Country>
+						<ZipCode>Z1</ZipCode>
+					</Address>
+					<Phone>Phone</Phone>
+					<Fax>Fax</Fax>
+					<Email>Email</Email>
+				</Contacts>
+				<Address Type="Select One" status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<id>id</id>
+					<Address_Line_1>Address_Line_1</Address_Line_1>
+					<Address_Line_2>Address_Line_2</Address_Line_2>
+					<City>City</City>
+					<State>State</State>
+					<Country>Country</Country>
+					<ZipCode>ZipCode</ZipCode>
+				</Address>
+			</ContactInformation>
+			<RegistrationInformation>
+				<Name status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</Name>
+				<Country status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Select One</value>
+				</Country>
+				<State status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</State>
+				<Number status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</Number>
+				<Date status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>2001-01-01</value>
+				</Date>
+				<ExpiryDate status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>2001-01-01</value>
+				</ExpiryDate>
+				<AgentName status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</AgentName>
+				<GovtIDInfo status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<GovtIDType>Tax ID/EIN</GovtIDType>
+					<GovtIDNum>Tax ID</GovtIDNum>
+					<GovtIDApplDate>2001-01-01</GovtIDApplDate>
+				</GovtIDInfo>
+				<GovtIDInfo status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<GovtIDType>Registration ID</GovtIDType>
+					<GovtIDNum>Regd. ID</GovtIDNum>
+					<GovtIDApplDate>2001-01-01</GovtIDApplDate>
+				</GovtIDInfo>
+			</RegistrationInformation>
+			<ListedInformation>
+				<IsEntityPubliclyListed status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Yes</value>
+				</IsEntityPubliclyListed>
+				<Exchanges>
+					<Exchange id="0">
+						<Name status="MissingInformation">
+							<ReferenceDocuments>
+								<Document id="0">
+									<MCPID>MCPID</MCPID>
+								</Document>
+							</ReferenceDocuments>
+							<value>value</value>
+						</Name>
+						<Country status="MissingInformation">
+							<ReferenceDocuments>
+								<Document id="0">
+									<MCPID>MCPID</MCPID>
+								</Document>
+							</ReferenceDocuments>
+							<value>Select One</value>
+						</Country>
+						<TickerSymbol status="MissingInformation">
+							<ReferenceDocuments>
+								<Document id="0">
+									<MCPID>MCPID</MCPID>
+								</Document>
+							</ReferenceDocuments>
+							<value>value</value>
+						</TickerSymbol>
+						<IsPrimary status="MissingInformation">
+							<ReferenceDocuments>
+								<Document id="0">
+									<MCPID>MCPID</MCPID>
+								</Document>
+							</ReferenceDocuments>
+							<value>Yes</value>
+						</IsPrimary>
+					</Exchange>
+				</Exchanges>
+				<IsPrimaryExchangeApproved status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Yes</value>
+				</IsPrimaryExchangeApproved>
+			</ListedInformation>
+			<RegulatedInformation>
+				<IsRegulated status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Yes</value>
+				</IsRegulated>
+				<Regulators>
+					<Regulator id="0">
+						<Name status="MissingInformation">
+							<ReferenceDocuments>
+								<Document id="0">
+									<MCPID>MCPID</MCPID>
+								</Document>
+							</ReferenceDocuments>
+							<value>value</value>
+						</Name>
+						<Country status="MissingInformation">
+							<ReferenceDocuments>
+								<Document id="0">
+									<MCPID>MCPID</MCPID>
+								</Document>
+							</ReferenceDocuments>
+							<value>Select One</value>
+						</Country>
+						<Number status="MissingInformation">
+							<ReferenceDocuments>
+								<Document id="0">
+									<MCPID>MCPID</MCPID>
+								</Document>
+							</ReferenceDocuments>
+							<value>value</value>
+						</Number>
+						<IsPrimary status="MissingInformation">
+							<ReferenceDocuments>
+								<Document id="0">
+									<MCPID>MCPID</MCPID>
+								</Document>
+							</ReferenceDocuments>
+							<value>Yes</value>
+						</IsPrimary>
+						<expiry status="MissingInformation">
+							<ReferenceDocuments>
+								<Document id="0">
+									<MCPID>MCPID</MCPID>
+								</Document>
+							</ReferenceDocuments>
+							<value>2001-01-01</value>
+						</expiry>
+					</Regulator>
+				</Regulators>
+				<RegulationStatus status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</RegulationStatus>
+				<SROStatus status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</SROStatus>
+				<IsRegulatorApproved status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Yes</value>
+				</IsRegulatorApproved>
+			</RegulatedInformation>
+			<BusinessActivities>
+				<NatureOfBusiness status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</NatureOfBusiness>
+				<PrimaryBusinessActivity status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</PrimaryBusinessActivity>
+				<PercentRevenueFromPrimary status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</PercentRevenueFromPrimary>
+				<IndustryClassifications status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<id>id</id>
+					<Type>Select One</Type>
+					<Value status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</Value>
+					<Desc status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</Desc>
+					<IsPrimary status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>Yes</value>
+					</IsPrimary>
+					<Code status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</Code>
+				</IndustryClassifications>
+				<EngageInArmsOrDefenseDealers status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Yes</value>
+				</EngageInArmsOrDefenseDealers>
+				<EngageInCasinos status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Yes</value>
+				</EngageInCasinos>
+				<EngageInMoneyRemittanceActivity status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Yes</value>
+				</EngageInMoneyRemittanceActivity>
+				<EngageInInternetGamblingBusiness status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Yes</value>
+				</EngageInInternetGamblingBusiness>
+			</BusinessActivities>
+			<PlaceOfBusiness>
+				<countriesOfBusiness>
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<id>id</id>
+					<Country status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>Select One</value>
+					</Country>
+					<PercenetageOfBusniess status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</PercenetageOfBusniess>
+				</countriesOfBusiness>
+				<CountryOfPrimaryOperation status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Select One</value>
+				</CountryOfPrimaryOperation>
+				<RegionsOfBusiness status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</RegionsOfBusiness>
+				<highRiskCountriesOfBusiness>
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<id>id</id>
+					<Country status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>Select One</value>
+					</Country>
+					<PercenetageOfBusniess status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</PercenetageOfBusniess>
+				</highRiskCountriesOfBusiness>
+				<NumberOfEmployees status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</NumberOfEmployees>
+				<InEconomicSanctionedCountries status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Yes</value>
+				</InEconomicSanctionedCountries>
+			</PlaceOfBusiness>
+			<LicenseInformation>
+				<LicenseInformationAvailable status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Yes</value>
+				</LicenseInformationAvailable>
+				<ReasonForNo status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</ReasonForNo>
+				<NameOfIssuingAuthority status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</NameOfIssuingAuthority>
+				<AuthorityJurisdiction status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</AuthorityJurisdiction>
+				<LicenseNumber status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</LicenseNumber>
+				<ExpiryDate status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>2001-01-01</value>
+				</ExpiryDate>
+				<ContainAnyRestriction status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Yes</value>
+				</ContainAnyRestriction>
+				<DetialsOfRestriction status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</DetialsOfRestriction>
+				<HasOffshoreBankingLicense status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Yes</value>
+				</HasOffshoreBankingLicense>
+				<OperateSolelyUnderOffshoreBankingLicense status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Yes</value>
+				</OperateSolelyUnderOffshoreBankingLicense>
+			</LicenseInformation>
+			<BearerShares>
+				<CountryAllowsIssuingBearerShares>
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Yes</value>
+				</CountryAllowsIssuingBearerShares>
+				<LegalFormAllowsIssuingBearerShares>
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Yes</value>
+				</LegalFormAllowsIssuingBearerShares>
+				<CapabilityofIssuingBearerShares status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Yes</value>
+				</CapabilityofIssuingBearerShares>
+				<BearerSharesAttestation>
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Yes</value>
+				</BearerSharesAttestation>
+				<BearerSharesIssued status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Yes</value>
+				</BearerSharesIssued>
+				<PercentageofBearerSharesIssued status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</PercentageofBearerSharesIssued>
+				<HeldInCustody status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Yes</value>
+				</HeldInCustody>
+				<CustodianName status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</CustodianName>
+				<CustodianAddress>
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<Address_Line_1>AD1</Address_Line_1>
+					<Address_Line_2>AD2</Address_Line_2>
+					<City>C1</City>
+					<State>ST</State>
+					<Country>US</Country>
+					<ZipCode>Zip</ZipCode>
+				</CustodianAddress>
+				<OwnershipStructIssuedBearerShares>
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Yes</value>
+				</OwnershipStructIssuedBearerShares>
+			</BearerShares>
+			<FinancialInformation>
+				<TotalRevenue status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</TotalRevenue>
+				<TotalRevenueCrncy>
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>USD</value>
+				</TotalRevenueCrncy>
+				<TotalAssetSize status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</TotalAssetSize>
+				<TotalAssetSizeCrncy>
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>USD</value>
+				</TotalAssetSizeCrncy>
+				<TotalAssetsUnderManagement status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</TotalAssetsUnderManagement>
+				<TotalAssetsUnderManagementCrncy>
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>USD</value>
+				</TotalAssetsUnderManagementCrncy>
+				<TotalLiquidAssets status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</TotalLiquidAssets>
+				<TotalLiquidAssetsCrncy>
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>USD</value>
+				</TotalLiquidAssetsCrncy>
+				<AsOfDate>
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>2001-12-31</value>
+				</AsOfDate>
+				<AuditFlag status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Yes</value>
+				</AuditFlag>
+				<NameOfAuditor status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</NameOfAuditor>
+				<SignOffName>
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>SignOffName</value>
+				</SignOffName>
+				<FiscalYearEnd status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>--01-01</value>
+				</FiscalYearEnd>
+			</FinancialInformation>
+			<Ownership>
+				<OwnershipCorporate>
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<id>0</id>
+					<Type status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</Type>
+					<Level status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</Level>
+					<PercentageOfOwnership status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</PercentageOfOwnership>
+					<LegalName status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</LegalName>
+					<MEI status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</MEI>
+					<Address Type="Select One" status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+					</Address>
+					<legalForm status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>Select One</value>
+					</legalForm>
+					<CountryOfIncorporation status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>Select One</value>
+					</CountryOfIncorporation>
+					<ListedStatus status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>true</value>
+					</ListedStatus>
+					<ListedExchange status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</ListedExchange>
+					<ApprovedExchange status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>true</value>
+					</ApprovedExchange>
+					<RegulatedStatus status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>true</value>
+					</RegulatedStatus>
+					<Regulator status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</Regulator>
+					<ApprovedRegulator status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>true</value>
+					</ApprovedRegulator>
+					<GovtInterstDirectOrIndirect status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>true</value>
+					</GovtInterstDirectOrIndirect>
+					<GovtIdentity status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</GovtIdentity>
+					<GovtIDInfo status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</GovtIDInfo>
+					<BearerSharerInfo status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</BearerSharerInfo>
+				</OwnershipCorporate>
+				<OwnershipIndividual>
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<id>0</id>
+					<Type status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</Type>
+					<Level status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</Level>
+					<PercentageOfOwnership status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</PercentageOfOwnership>
+					<FirstName status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</FirstName>
+					<MiddleName status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</MiddleName>
+					<LastName status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</LastName>
+					<MEI status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</MEI>
+					<Aliases status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</Aliases>
+					<Gender status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>Female</value>
+					</Gender>
+					<Address Type="Select One" status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+					</Address>
+					<CountryOfCitzenship status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>Select One</value>
+					</CountryOfCitzenship>
+					<CountryOfDomicile status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>Select One</value>
+					</CountryOfDomicile>
+					<BirthDate status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>2001-01-01</value>
+					</BirthDate>
+					<GovtIssuedIdType status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</GovtIssuedIdType>
+					<GovtIssuedIdNumber status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</GovtIssuedIdNumber>
+					<SourceOfWealth status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</SourceOfWealth>
+					<IsBOWealthCommensurate status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>true</value>
+					</IsBOWealthCommensurate>
+					<Designation status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</Designation>
+					<Position status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</Position>
+				</OwnershipIndividual>
+			</Ownership>
+			<RelatedPartyInformation>
+				<RelatedPartyNonIndividual>
+					<id>0</id>
+					<Type status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</Type>
+					<NatureOfRelationship status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</NatureOfRelationship>
+					<LegalName status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</LegalName>
+					<MEI status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</MEI>
+					<Address Type="Select One" status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+					</Address>
+					<CountryOfIncorporation status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>Select One</value>
+					</CountryOfIncorporation>
+					<ListedStatus status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>true</value>
+					</ListedStatus>
+					<ListedExchange status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</ListedExchange>
+					<ApprovedExchange status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>true</value>
+					</ApprovedExchange>
+					<RegulatedStatus status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>true</value>
+					</RegulatedStatus>
+					<Regulator status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</Regulator>
+					<ApprovedRegulator status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>true</value>
+					</ApprovedRegulator>
+					<GovtIdentity status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</GovtIdentity>
+					<GovtIDInfo status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</GovtIDInfo>
+				</RelatedPartyNonIndividual>
+				<RelatedPartyIndividual>
+					<id>0</id>
+					<Type status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</Type>
+					<NatureOfRelationship status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</NatureOfRelationship>
+					<Designation status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</Designation>
+					<FirstName status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</FirstName>
+					<MiddleName status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</MiddleName>
+					<LastName status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</LastName>
+					<MEI status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</MEI>
+					<Aliases status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</Aliases>
+					<Gender status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>Female</value>
+					</Gender>
+					<Address Type="Select One" status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+					</Address>
+					<CountryOfCitzenship status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>Select One</value>
+					</CountryOfCitzenship>
+					<CountryOfDomicile status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>Select One</value>
+					</CountryOfDomicile>
+					<BirthDate status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>2001-01-01</value>
+					</BirthDate>
+					<SourceOfWealth status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</SourceOfWealth>
+					<Position status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</Position>
+				</RelatedPartyIndividual>
+			</RelatedPartyInformation>
+			<ControllerAndDirector>
+				<ControllersAndDirectors>
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<id>0</id>
+					<Type status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</Type>
+					<Level status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</Level>
+					<FirstName status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</FirstName>
+					<MiddleName status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</MiddleName>
+					<LastName status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</LastName>
+					<MEI status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</MEI>
+					<Aliases status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</Aliases>
+					<Gender status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>Female</value>
+					</Gender>
+					<Address Type="Select One" status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+					</Address>
+					<CountryOfCitzenship status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>Select One</value>
+					</CountryOfCitzenship>
+					<CountryOfDomicile status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>Select One</value>
+					</CountryOfDomicile>
+					<BirthDate status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>2001-01-01</value>
+					</BirthDate>
+					<Position status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</Position>
+					<Designation status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</Designation>
+				</ControllersAndDirectors>
+			</ControllerAndDirector>
+			<CoreInformation>
+				<LegalName status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</LegalName>
+				<LegalFormation status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Select One</value>
+				</LegalFormation>
+				<OwnershipType status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Select One</value>
+				</OwnershipType>
+				<CountryOfIncorporation status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Select One</value>
+				</CountryOfIncorporation>
+				<StateOfIncorporation status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</StateOfIncorporation>
+				<CountryOfPrimaryOperation status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Select One</value>
+				</CountryOfPrimaryOperation>
+				<DateOfIncorporation status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>2001-01-01</value>
+				</DateOfIncorporation>
+				<IssuingAuthorityOfIncorporation status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</IssuingAuthorityOfIncorporation>
+				<CountryOfBusiness status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Select One</value>
+				</CountryOfBusiness>
+				<Region>Select One</Region>
+				<EntityAliases>
+					<PreviousNames>PreviousNames</PreviousNames>
+					<ShortName>ShortName</ShortName>
+					<TradeStyle>TradeStyle</TradeStyle>
+					<DoingBusinessAs>DoingBusinessAs</DoingBusinessAs>
+				</EntityAliases>
+				<TaxInfo>
+					<TaxIdAvailable>Yes</TaxIdAvailable>
+					<TaxIdIssuingCountry>Select One</TaxIdIssuingCountry>
+					<TaxIdType>TaxIdType</TaxIdType>
+					<TaxId>TaxId</TaxId>
+					<TaxIdAppliedForDate>TaxIdAppliedForDate</TaxIdAppliedForDate>
+				</TaxInfo>
+			</CoreInformation>
+			<RegulatorInformation>
+				<IsRegulated status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Yes</value>
+				</IsRegulated>
+				<Regulators>
+					<Regulator id="0">
+						<Name status="MissingInformation">
+							<ReferenceDocuments>
+								<Document id="0">
+									<MCPID>MCPID</MCPID>
+								</Document>
+							</ReferenceDocuments>
+							<value>value</value>
+						</Name>
+						<Country status="MissingInformation">
+							<ReferenceDocuments>
+								<Document id="0">
+									<MCPID>MCPID</MCPID>
+								</Document>
+							</ReferenceDocuments>
+							<value>Select One</value>
+						</Country>
+						<Number status="MissingInformation">
+							<ReferenceDocuments>
+								<Document id="0">
+									<MCPID>MCPID</MCPID>
+								</Document>
+							</ReferenceDocuments>
+							<value>value</value>
+						</Number>
+						<IsPrimary status="MissingInformation">
+							<ReferenceDocuments>
+								<Document id="0">
+									<MCPID>MCPID</MCPID>
+								</Document>
+							</ReferenceDocuments>
+							<value>Yes</value>
+						</IsPrimary>
+						<expiry status="MissingInformation">
+							<ReferenceDocuments>
+								<Document id="0">
+									<MCPID>MCPID</MCPID>
+								</Document>
+							</ReferenceDocuments>
+							<value>2001-01-01</value>
+						</expiry>
+					</Regulator>
+				</Regulators>
+			</RegulatorInformation>
+			<TradingInformation>
+				<IsPubliclyTraded status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Yes</value>
+				</IsPubliclyTraded>
+				<Exchanges>
+					<Exchange id="0">
+						<Name status="MissingInformation">
+							<ReferenceDocuments>
+								<Document id="0">
+									<MCPID>MCPID</MCPID>
+								</Document>
+							</ReferenceDocuments>
+							<value>value</value>
+						</Name>
+						<Country status="MissingInformation">
+							<ReferenceDocuments>
+								<Document id="0">
+									<MCPID>MCPID</MCPID>
+								</Document>
+							</ReferenceDocuments>
+							<value>Select One</value>
+						</Country>
+						<TickerSymbol status="MissingInformation">
+							<ReferenceDocuments>
+								<Document id="0">
+									<MCPID>MCPID</MCPID>
+								</Document>
+							</ReferenceDocuments>
+							<value>value</value>
+						</TickerSymbol>
+						<IsPrimary status="MissingInformation">
+							<ReferenceDocuments>
+								<Document id="0">
+									<MCPID>MCPID</MCPID>
+								</Document>
+							</ReferenceDocuments>
+							<value>Yes</value>
+						</IsPrimary>
+					</Exchange>
+				</Exchanges>
+			</TradingInformation>
+			<WebsiteAddresses>
+				<WebsiteAddress>
+					<id>id</id>
+					<URL status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</URL>
+					<WebsiteAddressType status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>Select One</value>
+					</WebsiteAddressType>
+				</WebsiteAddress>
+			</WebsiteAddresses>
+			<ExternalIdentifiers>
+				<lei status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</lei>
+				<Identifier status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<id>id</id>
+					<Value status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</Value>
+					<Type status="MissingInformation">
+						<ReferenceDocuments>
+							<Document id="0">
+								<MCPID>MCPID</MCPID>
+							</Document>
+						</ReferenceDocuments>
+						<value>value</value>
+					</Type>
+				</Identifier>
+			</ExternalIdentifiers>
+			<LegalHierachy>
+				<Hierachy id="0">
+					<Parent id="0" />
+					<HierachyType>Select One</HierachyType>
+				</Hierachy>
+			</LegalHierachy>
+			<GovernmentOwnershipInfo>
+				<GovernmentOwned status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>true</value>
+				</GovernmentOwned>
+				<GovernmentCountry status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Select One</value>
+				</GovernmentCountry>
+				<PercentageOwned status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</PercentageOwned>
+				<Circumstances status="MissingInformation">
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>value</value>
+				</Circumstances>
+			</GovernmentOwnershipInfo>
+			<CompanyAML>
+				<CompletedWolfsbergQuestionnaire>
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>Yes</value>
+				</CompletedWolfsbergQuestionnaire>
+				<SignatureDateCompletedWolfsbergQuestionnaire>
+					<ReferenceDocuments>
+						<Document id="0">
+							<MCPID>MCPID</MCPID>
+						</Document>
+					</ReferenceDocuments>
+					<ChallengeComment>ChallengeComment</ChallengeComment>
+					<Comments />
+					<value>2001-12-31</value>
+				</SignatureDateCompletedWolfsbergQuestionnaire>
+			</CompanyAML>
+		</entity1:Entity>
+		<Risk LastUpdated="">
+			<OriginalRisk>
+				<RiskValue>RiskValue</RiskValue>
+				<ReviewDate>ReviewDate</ReviewDate>
+				<Comments>Comments</Comments>
+			</OriginalRisk>
+			<CalculatedRisk>
+				<Score>
+					<Country>0</Country>
+					<Product>0</Product>
+					<OwnershipType>0</OwnershipType>
+					<BookingEntity>0</BookingEntity>
+				</Score>
+				<RiskValue>RiskValue</RiskValue>
+			</CalculatedRisk>
+			<FinalRisk>
+				<IsRiskOverriden>true</IsRiskOverriden>
+				<RiskValue>RiskValue</RiskValue>
+				<OverridenBy>OverridenBy</OverridenBy>
+				<Date>Date</Date>
+				<Reason>Reason</Reason>
+				<Comments>Comments</Comments>
+			</FinalRisk>
+		</Risk>
+	</RemediationProfile>
+</p:RemediationFile>

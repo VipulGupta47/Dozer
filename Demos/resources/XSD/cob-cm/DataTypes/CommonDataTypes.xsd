@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema id="CoBCm" xmlns="www.genpact.com/common" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" 
+	targetNamespace="www.genpact.com/common" version="0.2">
+
+	<xs:annotation>
+		<xs:documentation>
+			DataTypes a particular kind of data item, as defined by the values it can take, the programming language used, or the operations that can be performed on it.
+		</xs:documentation>
+	</xs:annotation>
+
+	<xs:simpleType name="Country">
+		<xs:annotation>
+			<xs:documentation>List of countries.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Select One" />
+			<xs:enumeration value="Andorra" />
+			<xs:enumeration value="United Arab Emirates" />
+			<xs:enumeration value="Afghanistan" />
+			<xs:enumeration value="Antigua and Barbuda" />
+			<xs:enumeration value="Anguilla" />
+			<xs:enumeration value="Albania" />
+			<xs:enumeration value="Armenia" />
+			<xs:enumeration value="Netherlands Antilles" />
+			<xs:enumeration value="Angola" />
+			<xs:enumeration value="Argentina" />
+			<xs:enumeration value="American Samoa" />
+			<xs:enumeration value="Austria" />
+			<xs:enumeration value="Australia" />
+			<xs:enumeration value="Aruba" />
+			<xs:enumeration value="Azerbaijan" />
+			<xs:enumeration value="Bosnia and Herzegovina" />
+			<xs:enumeration value="Barbados" />
+			<xs:enumeration value="Bangladesh" />
+			<xs:enumeration value="Belgium" />
+			<xs:enumeration value="Burkina Faso" />
+			<xs:enumeration value="Bulgaria" />
+			<xs:enumeration value="Bahrain" />
+			<xs:enumeration value="Burundi" />
+			<xs:enumeration value="Benin" />
+			<xs:enumeration value="Saint Barthelemy (FR)" />
+			<xs:enumeration value="Bermuda" />
+			<xs:enumeration value="Brunei Darussalam" />
+			<xs:enumeration value="Bolivia" />
+			<xs:enumeration value="Bonaire, St.Eustat, Saba" />
+			<xs:enumeration value="Brazil" />
+			<xs:enumeration value="Bahamas, The" />
+			<xs:enumeration value="Bhutan" />
+			<xs:enumeration value="Bouvet Island" />
+			<xs:enumeration value="Botswana" />
+			<xs:enumeration value="Belarus" />
+			<xs:enumeration value="Belize" />
+			<xs:enumeration value="Canada" />
+			<xs:enumeration value="Cocos (Keeling) Islands" />
+			<xs:enumeration value="Congo, Dem. Rep. of the" />
+			<xs:enumeration value="Central African Republic" />
+			<xs:enumeration value="Congo" />
+			<xs:enumeration value="Switzerland" />
+			<xs:enumeration value="Cote D Ivoire" />
+			<xs:enumeration value="Cook Islands" />
+			<xs:enumeration value="Chile" />
+			<xs:enumeration value="Cameroon" />
+			<xs:enumeration value="China" />
+			<xs:enumeration value="Colombia" />
+			<xs:enumeration value="Costa Rica" />
+			<xs:enumeration value="Montenegro" />
+			<xs:enumeration value="Cuba" />
+			<xs:enumeration value="Cape Verde" />
+			<xs:enumeration value="Christmas Island" />
+			<xs:enumeration value="Cyprus" />
+			<xs:enumeration value="Czech Republic" />
+			<xs:enumeration value="Germany" />
+			<xs:enumeration value="Djibouti" />
+			<xs:enumeration value="Denmark" />
+			<xs:enumeration value="Dominica" />
+			<xs:enumeration value="Dominican Republic" />
+			<xs:enumeration value="Algeria" />
+			<xs:enumeration value="Ecuador" />
+			<xs:enumeration value="Estonia" />
+			<xs:enumeration value="Egypt" />
+			<xs:enumeration value="Sahara, Western" />
+			<xs:enumeration value="Eritrea" />
+			<xs:enumeration value="Spain" />
+			<xs:enumeration value="Ethiopia" />
+			<xs:enumeration value="European Union" />
+			<xs:enumeration value="Finland" />
+			<xs:enumeration value="Fiji" />
+			<xs:enumeration value="Falkland Islands (Malvinas)" />
+			<xs:enumeration value="Micronesia, Fed. States of" />
+			<xs:enumeration value="Faroe Islands" />
+			<xs:enumeration value="France" />
+			<xs:enumeration value="Gabon" />
+			<xs:enumeration value="Grenada" />
+			<xs:enumeration value="Georgia" />
+			<xs:enumeration value="French Guiana" />
+			<xs:enumeration value="Guernsey and Alderney" />
+			<xs:enumeration value="Ghana" />
+			<xs:enumeration value="Gibraltar" />
+			<xs:enumeration value="Greenland" />
+			<xs:enumeration value="Gambia, the" />
+			<xs:enumeration value="Guinea" />
+			<xs:enumeration value="Guadeloupe" />
+			<xs:enumeration value="Equatorial Guinea" />
+			<xs:enumeration value="Greece" />
+			<xs:enumeration value="S.George and S.Sandwich" />
+			<xs:enumeration value="Guatemala" />
+			<xs:enumeration value="Guam" />
+			<xs:enumeration value="Guinea-Bissau" />
+			<xs:enumeration value="Guyana" />
+			<xs:enumeration value="Hong Kong, (China)" />
+			<xs:enumeration value="Heard and McDonald Is.(AU)" />
+			<xs:enumeration value="Honduras" />
+			<xs:enumeration value="Croatia" />
+			<xs:enumeration value="Haiti" />
+			<xs:enumeration value="Hungary" />
+			<xs:enumeration value="Indonesia" />
+			<xs:enumeration value="Ireland" />
+			<xs:enumeration value="Israel" />
+			<xs:enumeration value="Man, Isle of" />
+			<xs:enumeration value="India" />
+			<xs:enumeration value="British Indian Ocean T." />
+			<xs:enumeration value="Iraq" />
+			<xs:enumeration value="Iran, Islamic Republic of" />
+			<xs:enumeration value="Iceland" />
+			<xs:enumeration value="Italy" />
+			<xs:enumeration value="Jersey" />
+			<xs:enumeration value="Jamaica" />
+			<xs:enumeration value="Jordan" />
+			<xs:enumeration value="Japan" />
+			<xs:enumeration value="Kenya" />
+			<xs:enumeration value="Kyrgyzstan" />
+			<xs:enumeration value="Cambodia" />
+			<xs:enumeration value="Kiribati" />
+			<xs:enumeration value="Comoros" />
+			<xs:enumeration value="Saint Kitts and Nevis" />
+			<xs:enumeration value="Korea Dem. People's Rep." />
+			<xs:enumeration value="Korea, (South) Republic of" />
+			<xs:enumeration value="Kosovo" />
+			<xs:enumeration value="Kuwait" />
+			<xs:enumeration value="Cayman Islands" />
+			<xs:enumeration value="Kazakhstan" />
+			<xs:enumeration value="Lao Peoples Democ. Rep." />
+			<xs:enumeration value="Lebanon" />
+			<xs:enumeration value="Saint Lucia" />
+			<xs:enumeration value="Liechtenstein" />
+			<xs:enumeration value="Sri Lanka (ex-Ceilan)" />
+			<xs:enumeration value="Liberia" />
+			<xs:enumeration value="Lesotho" />
+			<xs:enumeration value="Lithuania" />
+			<xs:enumeration value="Luxembourg" />
+			<xs:enumeration value="Latvia" />
+			<xs:enumeration value="Libyan Arab Jamahiriya" />
+			<xs:enumeration value="Morocco" />
+			<xs:enumeration value="Monaco" />
+			<xs:enumeration value="Moldova, Republic of" />
+			<xs:enumeration value="Saint Martin (FR)" />
+			<xs:enumeration value="Madagascar" />
+			<xs:enumeration value="Marshall Islands" />
+			<xs:enumeration value="Macedonia, TFYR" />
+			<xs:enumeration value="Mali" />
+			<xs:enumeration value="Myanmar (ex-Burma)" />
+			<xs:enumeration value="Mongolia" />
+			<xs:enumeration value="Macao, (China)" />
+			<xs:enumeration value="Northern Mariana Islands" />
+			<xs:enumeration value="Martinique (FR)" />
+			<xs:enumeration value="Mauritania" />
+			<xs:enumeration value="Montserrat" />
+			<xs:enumeration value="Malta" />
+			<xs:enumeration value="Mauritius" />
+			<xs:enumeration value="Maldives" />
+			<xs:enumeration value="Malawi" />
+			<xs:enumeration value="Mexico" />
+			<xs:enumeration value="Malaysia" />
+			<xs:enumeration value="Mozambique" />
+			<xs:enumeration value="Namibia" />
+			<xs:enumeration value="New Caledonia" />
+			<xs:enumeration value="Niger" />
+			<xs:enumeration value="Norfolk Island" />
+			<xs:enumeration value="Nigeria" />
+			<xs:enumeration value="Nicaragua" />
+			<xs:enumeration value="Netherlands" />
+			<xs:enumeration value="Norway" />
+			<xs:enumeration value="Nepal" />
+			<xs:enumeration value="Nauru" />
+			<xs:enumeration value="Niue" />
+			<xs:enumeration value="New Zealand" />
+			<xs:enumeration value="Oman" />
+			<xs:enumeration value="Panama" />
+			<xs:enumeration value="Peru" />
+			<xs:enumeration value="French Polynesia" />
+			<xs:enumeration value="Papua New Guinea" />
+			<xs:enumeration value="Philippines" />
+			<xs:enumeration value="Pakistan" />
+			<xs:enumeration value="Poland" />
+			<xs:enumeration value="S Pierre and Miquelon(FR)" />
+			<xs:enumeration value="Pitcairn Island" />
+			<xs:enumeration value="Puerto Rico" />
+			<xs:enumeration value="Palestinian Territory" />
+			<xs:enumeration value="Portugal" />
+			<xs:enumeration value="Palau" />
+			<xs:enumeration value="Paraguay" />
+			<xs:enumeration value="Qatar" />
+			<xs:enumeration value="Reunion (FR)" />
+			<xs:enumeration value="Romania" />
+			<xs:enumeration value="Serbia" />
+			<xs:enumeration value="Russia (Russian Fed.)" />
+			<xs:enumeration value="Rwanda" />
+			<xs:enumeration value="Arabia, Saudi" />
+			<xs:enumeration value="Solomon Islands" />
+			<xs:enumeration value="Seychelles" />
+			<xs:enumeration value="Sudan" />
+			<xs:enumeration value="Sweden" />
+			<xs:enumeration value="Singapore" />
+			<xs:enumeration value="Saint Helena (UK)" />
+			<xs:enumeration value="Slovenia" />
+			<xs:enumeration value="Svalbard and Jan Mayen Is." />
+			<xs:enumeration value="Slovakia" />
+			<xs:enumeration value="Sierra Leone" />
+			<xs:enumeration value="San Marino" />
+			<xs:enumeration value="Senegal" />
+			<xs:enumeration value="Somalia" />
+			<xs:enumeration value="Suriname" />
+			<xs:enumeration value="South Sudan" />
+			<xs:enumeration value="Sao Tome and Principe" />
+			<xs:enumeration value="El Salvador" />
+			<xs:enumeration value="Syrian Arab Republic" />
+			<xs:enumeration value="Swaziland" />
+			<xs:enumeration value="Turks and Caicos Is." />
+			<xs:enumeration value="Chad" />
+			<xs:enumeration value="French Southern Terr." />
+			<xs:enumeration value="Togo" />
+			<xs:enumeration value="Thailand" />
+			<xs:enumeration value="Tajikistan" />
+			<xs:enumeration value="Tokelau" />
+			<xs:enumeration value="Turkmenistan" />
+			<xs:enumeration value="Tunisia" />
+			<xs:enumeration value="Tonga" />
+			<xs:enumeration value="East Timor (Timor-Leste)" />
+			<xs:enumeration value="Turkey" />
+			<xs:enumeration value="Trinidad and Tobago" />
+			<xs:enumeration value="Tuvalu" />
+			<xs:enumeration value="Taiwan" />
+			<xs:enumeration value="Tanzania, United Rep. of" />
+			<xs:enumeration value="Ukraine" />
+			<xs:enumeration value="Uganda" />
+			<xs:enumeration value="United Kingdom" />
+			<xs:enumeration value="US Minor Outlying Isl." />
+			<xs:enumeration value="United States" />
+			<xs:enumeration value="Uruguay" />
+			<xs:enumeration value="Uzbekistan" />
+			<xs:enumeration value="Holy See (Vatican)" />
+			<xs:enumeration value="S Vincent and Grenadines" />
+			<xs:enumeration value="Venezuela" />
+			<xs:enumeration value="British Virgin Islands" />
+			<xs:enumeration value="Virgin Islands, U.S." />
+			<xs:enumeration value="Viet Nam" />
+			<xs:enumeration value="Vanuatu" />
+			<xs:enumeration value="Wallis and Futuna" />
+			<xs:enumeration value="Samoa" />
+			<xs:enumeration value="Yemen" />
+			<xs:enumeration value="Mayotte (FR)" />
+			<xs:enumeration value="South Africa" />
+			<xs:enumeration value="Zambia" />
+			<xs:enumeration value="Zimbabwe" />
+			<xs:enumeration value="Curacao" />
+			<xs:enumeration value="Northern Cyprus" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="OwnershipType">
+		<xs:annotation>
+			<xs:documentation>Describes whether the entity is private, public or govt. entity.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Select One" />
+			<xs:enumeration value="Private Entity" />
+			<xs:enumeration value="Public Entity" />
+			<xs:enumeration value="Goverment Entity" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="LegalForm">
+		<xs:annotation>
+			<xs:documentation>Before starting a business, one must decide on a legal structure for it. The legal structure of a business is fundamental to the way it operates. This legal framework determines
+				who shares in the profits and losses, how tax is paid, where legal liabilities rests.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Select One" />
+			<xs:enumeration value="Cooperative"></xs:enumeration>
+			<xs:enumeration value="Corporation/LTD"></xs:enumeration>
+			<xs:enumeration value="Estate"></xs:enumeration>
+			<xs:enumeration value="General Partnership (GP)"></xs:enumeration>
+			<xs:enumeration value="Hindu Undivided Family"></xs:enumeration>
+			<xs:enumeration value="Incorporated Company"></xs:enumeration>
+			<xs:enumeration value="Limited Company"></xs:enumeration>
+			<xs:enumeration value="Limited Liability Company (LLC)"></xs:enumeration>
+			<xs:enumeration value="Limited Liability Limited Partnership (LLLP)"></xs:enumeration>
+			<xs:enumeration value="Limited Liability Partnership (LLP)"></xs:enumeration>
+			<xs:enumeration value="Limited Partnership (LP)"></xs:enumeration>
+			<xs:enumeration value="Private Limited Company"></xs:enumeration>
+			<xs:enumeration value="Partnership"></xs:enumeration>
+			<xs:enumeration value="Professional Corporations"></xs:enumeration>
+			<xs:enumeration value="Private company limited by guarantee"></xs:enumeration>
+			<xs:enumeration value="Public Limited Company"></xs:enumeration>
+			<xs:enumeration value="Professional Limited Liability Company"></xs:enumeration>
+			<xs:enumeration value="Public Sector Undertaking (PSU)"></xs:enumeration>
+			<xs:enumeration value="Sole Proprietorship"></xs:enumeration>
+			<xs:enumeration value="Trust"></xs:enumeration>
+			<xs:enumeration value="Unlimited Company"></xs:enumeration>
+			<xs:enumeration value="Unincorporated Organization/Association"></xs:enumeration>
+			<xs:enumeration value="Society"></xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="ProductList">
+		<xs:annotation>
+			<xs:documentation>List of various products to beused by the target entity.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Select One" />
+			<xs:enumeration value="EQUITIES" />
+			<xs:enumeration value="FIXED INCOME SECURITIES" />
+			<xs:enumeration value="GOVERMENT SECURITIES" />
+			<xs:enumeration value="MORTGAGE-BACKED SECURITIES" />
+			<xs:enumeration value="DERIVATIVES" />
+			<xs:enumeration value="FOREIGN EXCHANGE" />
+			<xs:enumeration value="REPOS" />
+			<xs:enumeration value="OPTIONS" />
+			<xs:enumeration value="CONVERTIBLES" />
+			<xs:enumeration value="GILTS" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="PartyType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Select One" />
+			<xs:enumeration value="Client" />
+			<xs:enumeration value="Beneficial Owners (Corp.)" />
+			<xs:enumeration value="Beneficial Owners (Indiv.)" />
+			<xs:enumeration value="Controllers (Corp.)" />
+			<xs:enumeration value="Controllers (Indiv.)" />
+			<xs:enumeration value="Related Parties (Entity)" />
+			<xs:enumeration value="Related Parties (Indiv.)" />
+			<xs:enumeration value="Direct Appointees" />
+			<xs:enumeration value="Other Entities" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="IndustryClassificationType">
+		<xs:annotation>
+			<xs:documentation>Industry classification or industry taxonomy organizes companies into industrial groupings based on similar production processes, similar products, or similar behavior 
+		in financial markets.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Select One" />
+			<xs:enumeration value="SIC" />
+			<xs:enumeration value="NAICS" />
+			<xs:enumeration value="ISIC" />
+			<xs:enumeration value="UKSIC" />
+			<xs:enumeration value="ANZSIC" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="MessageType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Enrich" />
+			<xs:enumeration value="Top Up" />
+			<xs:enumeration value="Challenge" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="ProfileStatus">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Completed" />
+			<xs:enumeration value="Completed with Missing Information" />
+			<xs:enumeration value="Rejected" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="ReferenceDocuments">
+		<xs:annotation>
+			<xs:documentation>The list of reference documents that were previously identified for this profile.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Document" minOccurs="1" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="MCPID" type="xs:string" minOccurs="1" />
+						<xs:element name="Name" type="xs:string" minOccurs="0" />
+					</xs:sequence>
+					<xs:attribute name="id" type="xs:int"></xs:attribute>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="CmAttribute" abstract="true">
+		<xs:sequence>
+			<xs:element name="ReferenceDocuments" minOccurs="1" maxOccurs="1" type="ReferenceDocuments">
+				<xs:annotation>
+					<xs:documentation>The list of reference documents supporitng the attribute</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ChallengeComment" minOccurs="0" maxOccurs="1" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The reason for challenging this attribute.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+ 			<xs:element name="Comments" minOccurs="0" maxOccurs="unbounded" type="Comments">
+				<xs:annotation>
+					<xs:documentation>The comment for the attribute</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="status" type="AttributeStatus" />
+	</xs:complexType>
+
+	<xs:complexType name="CmAttributeDate">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="xs:date">
+						<xs:annotation>
+							<xs:documentation>
+								The date value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="CmAttributeDateMonthDay">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="xs:gMonthDay">
+						<xs:annotation>
+							<xs:documentation>
+								The date value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="CmAttributeDateTime">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="xs:dateTime">
+						<xs:annotation>
+							<xs:documentation>
+								The date with time value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="CmAttributeDouble">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="xs:double">
+						<xs:annotation>
+							<xs:documentation>
+								The double value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="CmAttributeInteger">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="xs:integer">
+						<xs:annotation>
+							<xs:documentation>
+								The integer value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="CmAttributeInt">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="xs:int">
+						<xs:annotation>
+							<xs:documentation>
+								The int value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="CmAttributeLong">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="xs:long">
+						<xs:annotation>
+							<xs:documentation>
+								The long value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="CmAttributeString">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>
+								The string value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="CmAttributeTime">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="xs:time">
+						<xs:annotation>
+							<xs:documentation>
+								The time value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="CmAttributeBoolean">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="xs:boolean">
+						<xs:annotation>
+							<xs:documentation>
+								The boolean value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="CmAttributeCountry">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="Country">
+						<xs:annotation>
+							<xs:documentation>
+								The country value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="CmAttributeOwnershipType">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="OwnershipType">
+						<xs:annotation>
+							<xs:documentation>
+								The ownership type value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="CmAttributeLegalForm">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="LegalForm">
+						<xs:annotation>
+							<xs:documentation>
+								The legal form value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="CmAttributeGender">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="GenderType">
+						<xs:annotation>
+							<xs:documentation>
+								The gender type value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="CmAttributePartyType">
+		<xs:complexContent>
+			<xs:extension base="CmAttribute">
+				<xs:sequence>
+					<xs:element name="value" minOccurs="1" maxOccurs="1" type="PartyType">
+						<xs:annotation>
+							<xs:documentation>
+								The party type value
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="Address">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="Address_Line_1"  >
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="value" type="xs:string" />
+	    				<xs:element name="comments" type="Comments" />
+					</xs:sequence>
+					<xs:attribute name="status" type="AttributeStatus" />
+				</xs:complexType>
+			</xs:element>
+			<xs:element minOccurs="0" name="Address_Line_2">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="value" type="xs:string" />
+	    				<xs:element name="comments" type="Comments" />
+					</xs:sequence>
+					<xs:attribute name="status" type="AttributeStatus" />
+				</xs:complexType>
+			</xs:element>
+			<xs:element minOccurs="0" name="City">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="value" type="xs:string" />
+	    				<xs:element name="comments" type="Comments" />
+					</xs:sequence>
+					<xs:attribute name="status" type="AttributeStatus" />
+				</xs:complexType>
+			</xs:element>
+			<xs:element minOccurs="0" name="State">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="value" type="xs:string" />
+	    				<xs:element name="comments" type="Comments" />
+					</xs:sequence>
+					<xs:attribute name="status" type="AttributeStatus" />
+				</xs:complexType>
+			</xs:element>
+			<xs:element minOccurs="0" name="Country">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="value" type="xs:string" />
+	    				<xs:element name="comments" type="Comments" />
+					</xs:sequence>
+					<xs:attribute name="status" type="AttributeStatus" />
+				</xs:complexType>
+			</xs:element>
+			<xs:element minOccurs="0" name="ZipCode" >
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="value" type="xs:string" />
+	    				<xs:element name="comments" type="Comments" />
+					</xs:sequence>
+					<xs:attribute name="status" type="AttributeStatus" />
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ReferenceDocuments" type="ReferenceDocuments" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="GenderType">
+		<xs:annotation>
+			<xs:documentation>
+				List of gender types
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Female" />
+			<xs:enumeration value="Male" />
+			<xs:enumeration value="Other" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="EntityType">
+		<xs:annotation>
+			<xs:documentation>
+				List of Entity types
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NBFI" />
+			<xs:enumeration value="Corporate" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="AttributeStatus">
+		<xs:annotation>
+			<xs:documentation>
+				
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="MissingInformation" />
+			<xs:enumeration value="Completed" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="Comments">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="By" type="xs:string" />
+			<xs:element minOccurs="0" name="Group" type="Groups" />
+			<xs:element minOccurs="0" name="Date" type="xs:date" />
+			<xs:element minOccurs="0" name="Type" type="CommentType" />
+			<xs:element minOccurs="0" name="Comment" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:simpleType name="Groups">
+		<xs:annotation>
+			<xs:documentation>
+				Name of team/group (Role)
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Enrichment" />
+			<xs:enumeration value="Client_Outreach" />
+			<xs:enumeration value="QA" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="CommentType">
+		<xs:annotation>
+			<xs:documentation>
+				Type of comment
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Notes" />
+			<xs:enumeration value="MissingInfo" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+</xs:schema>

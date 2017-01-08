@@ -1,0 +1,2580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:CobCmData xmlns:p="www.genpact.com" xmlns:p1="www.genpact.com/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="www.genpact.com cob_cm.xsd ">
+  <RequestInfo>
+    <RequestDate>2001-01-01</RequestDate>
+    <SenderIdentification>SenderIdentification</SenderIdentification>
+    <ReferenceId>ReferenceId</ReferenceId>
+    <EntityType>NBFI</EntityType>
+    <MessageType>Enrich</MessageType>
+    <DueDate>2001-01-01</DueDate>
+    <ChallengeDetails>
+      <PreviousReferenceId>PreviousReferenceId</PreviousReferenceId>
+      <PreviousCmProfileId>PreviousCmProfileId</PreviousCmProfileId>
+      <PreviousResponseDate>2001-01-01</PreviousResponseDate>
+      <Comments>Comments</Comments>
+    </ChallengeDetails>
+    <DocumentList>
+      <MCPID>MCPID</MCPID>
+      <DocumentName>DocumentName</DocumentName>
+      <ExpiryDate>2001-01-01</ExpiryDate>
+      <DocumentType>DocumentType</DocumentType>
+      <Langauage>Langauage</Langauage>
+      <Comments>Comments</Comments>
+    </DocumentList>
+  </RequestInfo>
+  <EntityProfile LastUpdateDate="2001-12-31T12:00:00" ProfileId="">
+    <Jurisdiction>
+      <BookingLocation>BookingLocation</BookingLocation>
+    </Jurisdiction>
+    <Institution>
+      <EntityNames>
+        <ShortName status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </ShortName>
+        <DBA status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </DBA>
+        <PreviousLegalName>
+          <LegalName status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </LegalName>
+          <EndDate status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>2001-01-01</value>
+          </EndDate>
+        </PreviousLegalName>
+      </EntityNames>
+      <Formation>
+        <EntityId>EntityId</EntityId>
+        <LegalName>LegalName</LegalName>
+        <LegalForm>
+          <LegalForm>Select One</LegalForm>
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+        </LegalForm>
+        <EntityStructure status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </EntityStructure>
+        <OwnershipType>
+          <OwnershipType>Select One</OwnershipType>
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+        </OwnershipType>
+        <CountryOfIncorporation>
+          <Country>Select One</Country>
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+        </CountryOfIncorporation>
+        <StateOfIncorporation status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </StateOfIncorporation>
+        <DateOfIncorporation status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>2001-01-01</value>
+        </DateOfIncorporation>
+      </Formation>
+      <Addresses>
+        <RegisteredAddress>
+          <Address_Line_1 status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </Address_Line_1>
+          <Address_Line_2 status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </Address_Line_2>
+          <City status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </City>
+          <State status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </State>
+          <Country status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </Country>
+          <ZipCode status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </ZipCode>
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+        </RegisteredAddress>
+        <PrincipalBusinessAddress>
+          <Address_Line_1 status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </Address_Line_1>
+          <Address_Line_2 status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </Address_Line_2>
+          <City status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </City>
+          <State status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </State>
+          <Country status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </Country>
+          <ZipCode status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </ZipCode>
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+        </PrincipalBusinessAddress>
+        <MailingAddress>
+          <Address_Line_1 status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </Address_Line_1>
+          <Address_Line_2 status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </Address_Line_2>
+          <City status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </City>
+          <State status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </State>
+          <Country status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </Country>
+          <ZipCode status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </ZipCode>
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+        </MailingAddress>
+        <DomicileAddress>
+          <Address_Line_1 status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </Address_Line_1>
+          <Address_Line_2 status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </Address_Line_2>
+          <City status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </City>
+          <State status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </State>
+          <Country status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </Country>
+          <ZipCode status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </ZipCode>
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+        </DomicileAddress>
+      </Addresses>
+      <Contacts>
+        <Role status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </Role>
+        <Position status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </Position>
+        <FirstName status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </FirstName>
+        <MiddleName status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </MiddleName>
+        <LastName status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </LastName>
+        <CountryOfDomicile>
+          <Country>Select One</Country>
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+        </CountryOfDomicile>
+        <CountryOfCitizenship>
+          <Country>Select One</Country>
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+        </CountryOfCitizenship>
+        <Address>
+          <Address_Line_1 status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </Address_Line_1>
+          <Address_Line_2 status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </Address_Line_2>
+          <City status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </City>
+          <State status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </State>
+          <Country status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </Country>
+          <ZipCode status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </ZipCode>
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+        </Address>
+        <Phone status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>0</value>
+        </Phone>
+        <Fax status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>0</value>
+        </Fax>
+        <Email status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </Email>
+      </Contacts>
+      <RegistrationInformation>
+        <RegistrationAuthority status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </RegistrationAuthority>
+        <CountryOfRegistration>
+          <Country>Select One</Country>
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+        </CountryOfRegistration>
+        <StateOfRegistration status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </StateOfRegistration>
+        <RegistrationNumber status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </RegistrationNumber>
+        <RegistrationDate status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>2001-01-01</value>
+        </RegistrationDate>
+        <RegistrationExpiryDate status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>2001-01-01</value>
+        </RegistrationExpiryDate>
+        <RegisteredAgent status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </RegisteredAgent>
+      </RegistrationInformation>
+      <ListedInformation>
+        <IsPublicalyListed status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>true</value>
+        </IsPublicalyListed>
+        <PrimaryExchange id="0">
+          <Name status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </Name>
+          <Country>
+            <Country>Select One</Country>
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+          </Country>
+          <TickerSymbol status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </TickerSymbol>
+          <IsApprovedExchange status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>true</value>
+          </IsApprovedExchange>
+        </PrimaryExchange>
+        <OtherExchanges id="0">
+          <Name status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </Name>
+          <Country>
+            <Country>Select One</Country>
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+          </Country>
+          <TickerSymbol status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </TickerSymbol>
+          <IsApprovedExchange status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>true</value>
+          </IsApprovedExchange>
+        </OtherExchanges>
+      </ListedInformation>
+      <RegulatorInformation>
+        <PrimaryRegulator id="0">
+          <Name status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </Name>
+          <Country>
+            <Country>Select One</Country>
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+          </Country>
+          <IdentificationNumber status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </IdentificationNumber>
+          <IsApprovedRegulator status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>true</value>
+          </IsApprovedRegulator>
+          <SROStatus status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </SROStatus>
+        </PrimaryRegulator>
+        <SecondaryRegulators id="0">
+          <Name status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </Name>
+          <Country>
+            <Country>Select One</Country>
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+          </Country>
+          <IdentificationNumber status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </IdentificationNumber>
+          <IsApprovedRegulator status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>true</value>
+          </IsApprovedRegulator>
+          <SROStatus status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </SROStatus>
+        </SecondaryRegulators>
+      </RegulatorInformation>
+      <ProductInformation>
+        <Products>
+          <Product>Select One</Product>
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+        </Products>
+      </ProductInformation>
+      <BusinessActivities>
+        <NatureOfBusiness status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </NatureOfBusiness>
+        <PrimaryBusinessActivity status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </PrimaryBusinessActivity>
+        <IndustryIdentifier>
+          <Type>Select One</Type>
+          <Value>Value</Value>
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+        </IndustryIdentifier>
+        <PrimaryBusinessPercentRevenue status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>0.0</value>
+        </PrimaryBusinessPercentRevenue>
+      </BusinessActivities>
+      <PlaceOfBusiness>
+        <CountryOfBusiness>
+          <Country>Select One</Country>
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+        </CountryOfBusiness>
+        <PercentageOfBusiness status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>0.0</value>
+        </PercentageOfBusiness>
+        <CountryOfPrimaryOperation>
+          <Country>Select One</Country>
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+        </CountryOfPrimaryOperation>
+      </PlaceOfBusiness>
+      <IndustryIdentifiers>
+        <IdentifierType>
+          <Type>Select One</Type>
+          <Value>Value</Value>
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+        </IdentifierType>
+      </IndustryIdentifiers>
+      <LicenseInformation>
+        <IsLicenseAvailable status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>true</value>
+        </IsLicenseAvailable>
+        <LicenseUnavailableReason status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </LicenseUnavailableReason>
+        <License>
+          <IssuingAuthorityName status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </IssuingAuthorityName>
+          <LicenseNumber status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </LicenseNumber>
+          <LicenseExpiryDate status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>2001-01-01</value>
+          </LicenseExpiryDate>
+          <HasLicenseRestrictions status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>true</value>
+          </HasLicenseRestrictions>
+          <LicenseRestrictionDetails status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </LicenseRestrictionDetails>
+        </License>
+        <HasOffshoreLicense status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>true</value>
+        </HasOffshoreLicense>
+        <SoleOperationOffshoreBanking status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>true</value>
+        </SoleOperationOffshoreBanking>
+      </LicenseInformation>
+      <BearerShares>
+        <CanIssueBearerShares status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>true</value>
+        </CanIssueBearerShares>
+        <BearerSharesIssued status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>0</value>
+        </BearerSharesIssued>
+        <BearerSharesIssuedPercent status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>0.0</value>
+        </BearerSharesIssuedPercent>
+        <HeldInCustody status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>true</value>
+        </HeldInCustody>
+        <CustodialDetails status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </CustodialDetails>
+      </BearerShares>
+      <FinancialInformation>
+        <KeyFinancialIndicator status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </KeyFinancialIndicator>
+        <TotalRevenue status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>0.0</value>
+        </TotalRevenue>
+        <TotalAssets status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>0.0</value>
+        </TotalAssets>
+        <TotalManagementAssets status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>0.0</value>
+        </TotalManagementAssets>
+        <TotalLiquidAssets status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>0.0</value>
+        </TotalLiquidAssets>
+        <IsFinancialInformationAudited status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>true</value>
+        </IsFinancialInformationAudited>
+        <AuditorName status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </AuditorName>
+        <FiscalYearEnd status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>--01-01</value>
+        </FiscalYearEnd>
+      </FinancialInformation>
+      <LegalHierarchy>
+        <ImmediateParent/>
+        <UltimateParent/>
+      </LegalHierarchy>
+      <ControllersAndDirectors>
+        <FirstName status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </FirstName>
+        <MiddleName status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </MiddleName>
+        <LastName status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </LastName>
+        <Position status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </Position>
+        <Designation status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </Designation>
+        <Aliases status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </Aliases>
+        <Gender>
+          <Gender>Female</Gender>
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+        </Gender>
+        <DateOfBirth status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>2001-01-01</value>
+        </DateOfBirth>
+        <ResidentialAddress>
+          <Address_Line_1 status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </Address_Line_1>
+          <Address_Line_2 status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </Address_Line_2>
+          <City status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </City>
+          <State status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </State>
+          <Country status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </Country>
+          <ZipCode status="MissingInformation">
+            <value>value</value>
+            <comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </comments>
+          </ZipCode>
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+        </ResidentialAddress>
+        <CountryOfCitizenship>
+          <Country>Select One</Country>
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+        </CountryOfCitizenship>
+      </ControllersAndDirectors>
+      <BeneficialOwners>
+        <Institutions/>
+        <Individuals>
+          <IndividualId>IndividualId</IndividualId>
+          <Designation status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </Designation>
+          <FirstName status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </FirstName>
+          <MiddleName status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </MiddleName>
+          <LastName status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </LastName>
+          <Aliases status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </Aliases>
+          <Gender>
+            <Gender>Female</Gender>
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+          </Gender>
+          <Address>
+            <Address_Line_1 status="MissingInformation">
+              <value>value</value>
+              <comments>
+                <By>By</By>
+                <Group>Enrichment</Group>
+                <Date>2001-01-01</Date>
+                <Comment>Comment</Comment>
+              </comments>
+            </Address_Line_1>
+            <Address_Line_2 status="MissingInformation">
+              <value>value</value>
+              <comments>
+                <By>By</By>
+                <Group>Enrichment</Group>
+                <Date>2001-01-01</Date>
+                <Comment>Comment</Comment>
+              </comments>
+            </Address_Line_2>
+            <City status="MissingInformation">
+              <value>value</value>
+              <comments>
+                <By>By</By>
+                <Group>Enrichment</Group>
+                <Date>2001-01-01</Date>
+                <Comment>Comment</Comment>
+              </comments>
+            </City>
+            <State status="MissingInformation">
+              <value>value</value>
+              <comments>
+                <By>By</By>
+                <Group>Enrichment</Group>
+                <Date>2001-01-01</Date>
+                <Comment>Comment</Comment>
+              </comments>
+            </State>
+            <Country status="MissingInformation">
+              <value>value</value>
+              <comments>
+                <By>By</By>
+                <Group>Enrichment</Group>
+                <Date>2001-01-01</Date>
+                <Comment>Comment</Comment>
+              </comments>
+            </Country>
+            <ZipCode status="MissingInformation">
+              <value>value</value>
+              <comments>
+                <By>By</By>
+                <Group>Enrichment</Group>
+                <Date>2001-01-01</Date>
+                <Comment>Comment</Comment>
+              </comments>
+            </ZipCode>
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+          </Address>
+          <CountryOfDomicile>
+            <Country>Select One</Country>
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+          </CountryOfDomicile>
+          <CountryOfCitizenship>
+            <Country>Select One</Country>
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+          </CountryOfCitizenship>
+          <PercentOwnership status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>0.0</value>
+          </PercentOwnership>
+          <DateOfBirth status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>2001-01-01</value>
+          </DateOfBirth>
+          <GovtIdInfo>
+            <GovtIdType status="MissingInformation">
+              <ReferenceDocuments>
+                <Document id="0">
+                  <MCPID>MCPID</MCPID>
+                  <Name>Name</Name>
+                </Document>
+              </ReferenceDocuments>
+              <ChallengeComment>ChallengeComment</ChallengeComment>
+              <Comments>
+                <By>By</By>
+                <Group>Enrichment</Group>
+                <Date>2001-01-01</Date>
+                <Comment>Comment</Comment>
+              </Comments>
+              <value>value</value>
+            </GovtIdType>
+            <GovtIdNumber status="MissingInformation">
+              <ReferenceDocuments>
+                <Document id="0">
+                  <MCPID>MCPID</MCPID>
+                  <Name>Name</Name>
+                </Document>
+              </ReferenceDocuments>
+              <ChallengeComment>ChallengeComment</ChallengeComment>
+              <Comments>
+                <By>By</By>
+                <Group>Enrichment</Group>
+                <Date>2001-01-01</Date>
+                <Comment>Comment</Comment>
+              </Comments>
+              <value>value</value>
+            </GovtIdNumber>
+          </GovtIdInfo>
+          <SourceOfWealth status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </SourceOfWealth>
+          <WealthWithHoldingCompany status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>true</value>
+          </WealthWithHoldingCompany>
+        </Individuals>
+        <Trusts>
+          <Designation status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </Designation>
+          <FirstName status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </FirstName>
+          <MiddleName status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </MiddleName>
+          <LastName status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </LastName>
+          <Aliases status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </Aliases>
+          <Gender>
+            <Gender>Female</Gender>
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+          </Gender>
+          <Role status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </Role>
+          <PercentOwnership status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>0.0</value>
+          </PercentOwnership>
+          <DateOfBirth status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>2001-01-01</value>
+          </DateOfBirth>
+          <HasGovtInterest status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>true</value>
+          </HasGovtInterest>
+          <GovernmentOwnership>
+            <name status="MissingInformation">
+              <ReferenceDocuments>
+                <Document id="0">
+                  <MCPID>MCPID</MCPID>
+                  <Name>Name</Name>
+                </Document>
+              </ReferenceDocuments>
+              <ChallengeComment>ChallengeComment</ChallengeComment>
+              <Comments>
+                <By>By</By>
+                <Group>Enrichment</Group>
+                <Date>2001-01-01</Date>
+                <Comment>Comment</Comment>
+              </Comments>
+              <value>value</value>
+            </name>
+            <Percentage status="MissingInformation">
+              <ReferenceDocuments>
+                <Document id="0">
+                  <MCPID>MCPID</MCPID>
+                  <Name>Name</Name>
+                </Document>
+              </ReferenceDocuments>
+              <ChallengeComment>ChallengeComment</ChallengeComment>
+              <Comments>
+                <By>By</By>
+                <Group>Enrichment</Group>
+                <Date>2001-01-01</Date>
+                <Comment>Comment</Comment>
+              </Comments>
+              <value>0.0</value>
+            </Percentage>
+            <Circumstances status="MissingInformation">
+              <ReferenceDocuments>
+                <Document id="0">
+                  <MCPID>MCPID</MCPID>
+                  <Name>Name</Name>
+                </Document>
+              </ReferenceDocuments>
+              <ChallengeComment>ChallengeComment</ChallengeComment>
+              <Comments>
+                <By>By</By>
+                <Group>Enrichment</Group>
+                <Date>2001-01-01</Date>
+                <Comment>Comment</Comment>
+              </Comments>
+              <value>value</value>
+            </Circumstances>
+          </GovernmentOwnership>
+        </Trusts>
+      </BeneficialOwners>
+      <HasGovtInterest status="MissingInformation">
+        <ReferenceDocuments>
+          <Document id="0">
+            <MCPID>MCPID</MCPID>
+            <Name>Name</Name>
+          </Document>
+        </ReferenceDocuments>
+        <ChallengeComment>ChallengeComment</ChallengeComment>
+        <Comments>
+          <By>By</By>
+          <Group>Enrichment</Group>
+          <Date>2001-01-01</Date>
+          <Comment>Comment</Comment>
+        </Comments>
+        <value>true</value>
+      </HasGovtInterest>
+      <GovernmentOwnership>
+        <name status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </name>
+        <Percentage status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>0.0</value>
+        </Percentage>
+        <Circumstances status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </Circumstances>
+      </GovernmentOwnership>
+      <RelatedParty>
+        <Type>
+          <LegalForm>Select One</LegalForm>
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+        </Type>
+        <RelationshipNature status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </RelationshipNature>
+        <Individual>
+          <IndividualId>IndividualId</IndividualId>
+          <Designation status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </Designation>
+          <FirstName status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </FirstName>
+          <MiddleName status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </MiddleName>
+          <LastName status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </LastName>
+          <Aliases status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </Aliases>
+          <Gender>
+            <Gender>Female</Gender>
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+          </Gender>
+          <Address>
+            <Address_Line_1 status="MissingInformation">
+              <value>value</value>
+              <comments>
+                <By>By</By>
+                <Group>Enrichment</Group>
+                <Date>2001-01-01</Date>
+                <Comment>Comment</Comment>
+              </comments>
+            </Address_Line_1>
+            <Address_Line_2 status="MissingInformation">
+              <value>value</value>
+              <comments>
+                <By>By</By>
+                <Group>Enrichment</Group>
+                <Date>2001-01-01</Date>
+                <Comment>Comment</Comment>
+              </comments>
+            </Address_Line_2>
+            <City status="MissingInformation">
+              <value>value</value>
+              <comments>
+                <By>By</By>
+                <Group>Enrichment</Group>
+                <Date>2001-01-01</Date>
+                <Comment>Comment</Comment>
+              </comments>
+            </City>
+            <State status="MissingInformation">
+              <value>value</value>
+              <comments>
+                <By>By</By>
+                <Group>Enrichment</Group>
+                <Date>2001-01-01</Date>
+                <Comment>Comment</Comment>
+              </comments>
+            </State>
+            <Country status="MissingInformation">
+              <value>value</value>
+              <comments>
+                <By>By</By>
+                <Group>Enrichment</Group>
+                <Date>2001-01-01</Date>
+                <Comment>Comment</Comment>
+              </comments>
+            </Country>
+            <ZipCode status="MissingInformation">
+              <value>value</value>
+              <comments>
+                <By>By</By>
+                <Group>Enrichment</Group>
+                <Date>2001-01-01</Date>
+                <Comment>Comment</Comment>
+              </comments>
+            </ZipCode>
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+          </Address>
+          <CountryOfDomicile>
+            <Country>Select One</Country>
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+          </CountryOfDomicile>
+          <CountryOfCitizenship>
+            <Country>Select One</Country>
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+          </CountryOfCitizenship>
+          <PercentOwnership status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>0.0</value>
+          </PercentOwnership>
+          <DateOfBirth status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>2001-01-01</value>
+          </DateOfBirth>
+          <GovtIdInfo>
+            <GovtIdType status="MissingInformation">
+              <ReferenceDocuments>
+                <Document id="0">
+                  <MCPID>MCPID</MCPID>
+                  <Name>Name</Name>
+                </Document>
+              </ReferenceDocuments>
+              <ChallengeComment>ChallengeComment</ChallengeComment>
+              <Comments>
+                <By>By</By>
+                <Group>Enrichment</Group>
+                <Date>2001-01-01</Date>
+                <Comment>Comment</Comment>
+              </Comments>
+              <value>value</value>
+            </GovtIdType>
+            <GovtIdNumber status="MissingInformation">
+              <ReferenceDocuments>
+                <Document id="0">
+                  <MCPID>MCPID</MCPID>
+                  <Name>Name</Name>
+                </Document>
+              </ReferenceDocuments>
+              <ChallengeComment>ChallengeComment</ChallengeComment>
+              <Comments>
+                <By>By</By>
+                <Group>Enrichment</Group>
+                <Date>2001-01-01</Date>
+                <Comment>Comment</Comment>
+              </Comments>
+              <value>value</value>
+            </GovtIdNumber>
+          </GovtIdInfo>
+          <SourceOfWealth status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>value</value>
+          </SourceOfWealth>
+          <WealthWithHoldingCompany status="MissingInformation">
+            <ReferenceDocuments>
+              <Document id="0">
+                <MCPID>MCPID</MCPID>
+                <Name>Name</Name>
+              </Document>
+            </ReferenceDocuments>
+            <ChallengeComment>ChallengeComment</ChallengeComment>
+            <Comments>
+              <By>By</By>
+              <Group>Enrichment</Group>
+              <Date>2001-01-01</Date>
+              <Comment>Comment</Comment>
+            </Comments>
+            <value>true</value>
+          </WealthWithHoldingCompany>
+        </Individual>
+        <SourceOfWealth status="MissingInformation">
+          <ReferenceDocuments>
+            <Document id="0">
+              <MCPID>MCPID</MCPID>
+              <Name>Name</Name>
+            </Document>
+          </ReferenceDocuments>
+          <ChallengeComment>ChallengeComment</ChallengeComment>
+          <Comments>
+            <By>By</By>
+            <Group>Enrichment</Group>
+            <Date>2001-01-01</Date>
+            <Comment>Comment</Comment>
+          </Comments>
+          <value>value</value>
+        </SourceOfWealth>
+      </RelatedParty>
+    </Institution>
+    <ReferenceDocuments>
+      <Document id="0">
+        <MCPID>MCPID</MCPID>
+        <Name>Name</Name>
+      </Document>
+    </ReferenceDocuments>
+  </EntityProfile>
+  <ResponseInfo>
+    <ResponseDate>2001-01-01</ResponseDate>
+    <CmProfileId>CmProfileId</CmProfileId>
+    <ProfileStatus>Completed</ProfileStatus>
+    <Comments>Comments</Comments>
+  </ResponseInfo>
+</p:CobCmData>
